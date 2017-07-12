@@ -1,0 +1,52 @@
+LepGood1_isLepTight\b : LepGood_isTight_ReclMVA[iF_ReclMVA[0]]; AlsoData
+LepGood2_isLepTight\b : LepGood_isTight_ReclMVA[iF_ReclMVA[1]]; AlsoData
+LepGood3_isLepTight\b : LepGood_isTight_ReclMVA[iF_ReclMVA[2]]; AlsoData
+LepGood4_isLepTight\b : LepGood_isTight_ReclMVA[iF_ReclMVA[3]]; AlsoData
+LepGood1_isMatchRightCharge\b : (LepGood_mcMatchId[iF_ReclMVA[0]]!=0 && LepGood_pdgId[iF_ReclMVA[0]]==LepGood_mcMatchPdgId[iF_ReclMVA[0]]); AlsoData
+LepGood2_isMatchRightCharge\b : (LepGood_mcMatchId[iF_ReclMVA[1]]!=0 && LepGood_pdgId[iF_ReclMVA[1]]==LepGood_mcMatchPdgId[iF_ReclMVA[1]]); AlsoData
+LepGood3_isMatchRightCharge\b : (LepGood_mcMatchId[iF_ReclMVA[2]]!=0 && LepGood_pdgId[iF_ReclMVA[2]]==LepGood_mcMatchPdgId[iF_ReclMVA[2]]); AlsoData
+LepGood4_isMatchRightCharge\b : (LepGood_mcMatchId[iF_ReclMVA[3]]!=0 && LepGood_pdgId[iF_ReclMVA[3]]==LepGood_mcMatchPdgId[iF_ReclMVA[3]]); AlsoData
+#iT_ReclMVA[0]
+LepGoodCB1_(\w+) : LepGood_\1[iT_ReclCB[0]]; AlsoData
+LepGoodCB2_(\w+) : LepGood_\1[iT_ReclCB[1]]; AlsoData
+LepGoodCB3_(\w+) : LepGood_\1[iT_ReclCB[2]]; AlsoData
+LepGoodCB4_(\w+) : LepGood_\1[iT_ReclCB[3]]; AlsoData
+LepGood1_(\w+) : LepGood_\1[iT_ReclMVA[0]]; AlsoData
+LepGood2_(\w+) : LepGood_\1[iT_ReclMVA[1]]; AlsoData
+LepGood3_(\w+) : LepGood_\1[iT_ReclMVA[2]]; AlsoData
+LepGood4_(\w+) : LepGood_\1[iT_ReclMVA[3]]; AlsoData
+minDrWHadBLeadJet_Extra : minDrWHadBJet1_Extra; AlsoData
+minDrWHadBSubLeadJet_Extra : minDrWHadBJet2_Extra ; AlsoData
+nLepFOCB\b : nLepFO_ReclCB; AlsoData
+nLepTightCB\b : nLepTight_ReclCB; AlsoData
+nLepFO\b : nLepFO_ReclMVA; AlsoData
+nLepTight\b : nLepTight_ReclMVA; AlsoData
+nTauFO\b : nTauSel_ReclMVA; AlsoData
+nTauTight\b : nTauSel_ReclMVA_isTauTight; AlsoData
+nJets25\b: nJetSel_ReclMVA; AlsoData
+htJet25j\b: htJet25j_ReclMVA; AlsoData
+mhtJet25\b: mhtJet25_ReclMVA; AlsoData
+nJet40\b: nJet40_ReclMVA; AlsoData
+htJet40j\b: htJet40j_ReclMVA; AlsoData
+mhtJet40\b: mhtJet40_ReclMVA; AlsoData
+nBJetLoose25\b: nBJetLoose25_ReclMVA; AlsoData
+nBJetMedium25\b: nBJetMedium25_ReclMVA; AlsoData
+nBJetTight25\b: nBJetTight25_ReclMVA; AlsoData
+nBJetLoose40\b: nBJetLoose40_ReclMVA; AlsoData
+nBJetMedium40\b: nBJetMedium40_ReclMVA; AlsoData
+nBJetTight40\b: nBJetTight40_ReclMVA; AlsoData
+mZ1\b: mZ1_ReclMVA; AlsoData
+mZ1TTCB\b: mZ1TT_ReclCB; AlsoData
+mZ1TT\b: mZ1TT_ReclMVA; AlsoData
+minMllAFASCB\b: minMllAFAS_ReclCB; AlsoData
+minMllAFAS\b: minMllAFAS_ReclMVA; AlsoData
+#minMllAFOS\b: minMllAFOS_ReclMVA; AlsoData
+#minMllAFSS\b: minMllAFSS_ReclMVA; AlsoData
+#minMllSFOS\b: minMllSFOS_ReclMVA; AlsoData
+dTakingEra\b : if3(isData,(run>=275657)+(run>=276315)+(run>=276831)+(run>=277772)+(run>=278820)+(run>=280919),-1); AlsoData # 2016B==0,C,D,E,F,G,H
+elLooseUnc_2lss_up\b : leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[0]],LepGood_pt[iF_ReclMVA[0]],LepGood_eta[iF_ReclMVA[0]],2,1)*leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[1]],LepGood_pt[iF_ReclMVA[1]],LepGood_eta[iF_ReclMVA[1]],2,1)/leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[0]],LepGood_pt[iF_ReclMVA[0]],LepGood_eta[iF_ReclMVA[0]],2)/leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[1]],LepGood_pt[iF_ReclMVA[1]],LepGood_eta[iF_ReclMVA[1]],2); AlsoData
+elLooseUnc_2lss_dn\b : leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[0]],LepGood_pt[iF_ReclMVA[0]],LepGood_eta[iF_ReclMVA[0]],2,-1)*leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[1]],LepGood_pt[iF_ReclMVA[1]],LepGood_eta[iF_ReclMVA[1]],2,-1)/leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[0]],LepGood_pt[iF_ReclMVA[0]],LepGood_eta[iF_ReclMVA[0]],2)/leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[1]],LepGood_pt[iF_ReclMVA[1]],LepGood_eta[iF_ReclMVA[1]],2); AlsoData
+elLooseUnc_3l_up\b : leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[0]],LepGood_pt[iF_ReclMVA[0]],LepGood_eta[iF_ReclMVA[0]],3,1)*leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[1]],LepGood_pt[iF_ReclMVA[1]],LepGood_eta[iF_ReclMVA[1]],3,1)*leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[2]],LepGood_pt[iF_ReclMVA[2]],LepGood_eta[iF_ReclMVA[2]],3,1)/leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[0]],LepGood_pt[iF_ReclMVA[0]],LepGood_eta[iF_ReclMVA[0]],3)/leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[1]],LepGood_pt[iF_ReclMVA[1]],LepGood_eta[iF_ReclMVA[1]],3)/leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[2]],LepGood_pt[iF_ReclMVA[2]],LepGood_eta[iF_ReclMVA[2]],3); AlsoData
+elLooseUnc_3l_dn\b : leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[0]],LepGood_pt[iF_ReclMVA[0]],LepGood_eta[iF_ReclMVA[0]],3,-1)*leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[1]],LepGood_pt[iF_ReclMVA[1]],LepGood_eta[iF_ReclMVA[1]],3,-1)*leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[2]],LepGood_pt[iF_ReclMVA[2]],LepGood_eta[iF_ReclMVA[2]],3,-1)/leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[0]],LepGood_pt[iF_ReclMVA[0]],LepGood_eta[iF_ReclMVA[0]],3)/leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[1]],LepGood_pt[iF_ReclMVA[1]],LepGood_eta[iF_ReclMVA[1]],3)/leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[2]],LepGood_pt[iF_ReclMVA[2]],LepGood_eta[iF_ReclMVA[2]],3); AlsoData
+elLooseUnc_4l_up\b : leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[0]],LepGood_pt[iF_ReclMVA[0]],LepGood_eta[iF_ReclMVA[0]],3,1)*leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[1]],LepGood_pt[iF_ReclMVA[1]],LepGood_eta[iF_ReclMVA[1]],3,1)*leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[2]],LepGood_pt[iF_ReclMVA[2]],LepGood_eta[iF_ReclMVA[2]],3,1)*leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[3]],LepGood_pt[iF_ReclMVA[3]],LepGood_eta[iF_ReclMVA[3]],3,1)/leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[0]],LepGood_pt[iF_ReclMVA[0]],LepGood_eta[iF_ReclMVA[0]],3)/leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[1]],LepGood_pt[iF_ReclMVA[1]],LepGood_eta[iF_ReclMVA[1]],3)/leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[2]],LepGood_pt[iF_ReclMVA[2]],LepGood_eta[iF_ReclMVA[2]],3)/leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[3]],LepGood_pt[iF_ReclMVA[3]],LepGood_eta[iF_ReclMVA[3]],3); AlsoData
+elLooseUnc_4l_dn\b : leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[0]],LepGood_pt[iF_ReclMVA[0]],LepGood_eta[iF_ReclMVA[0]],3,-1)*leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[1]],LepGood_pt[iF_ReclMVA[1]],LepGood_eta[iF_ReclMVA[1]],3,-1)*leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[2]],LepGood_pt[iF_ReclMVA[2]],LepGood_eta[iF_ReclMVA[2]],3,-1)*leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[3]],LepGood_pt[iF_ReclMVA[3]],LepGood_eta[iF_ReclMVA[3]],3,-1)/leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[0]],LepGood_pt[iF_ReclMVA[0]],LepGood_eta[iF_ReclMVA[0]],3)/leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[1]],LepGood_pt[iF_ReclMVA[1]],LepGood_eta[iF_ReclMVA[1]],3)/leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[2]],LepGood_pt[iF_ReclMVA[2]],LepGood_eta[iF_ReclMVA[2]],3)/leptonSF_ttH(LepGood_pdgId[iF_ReclMVA[3]],LepGood_pt[iF_ReclMVA[3]],LepGood_eta[iF_ReclMVA[3]],3); AlsoData

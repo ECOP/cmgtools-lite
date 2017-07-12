@@ -76,7 +76,7 @@ if __name__ == '__main__':
     print "python mcPlots.py --pdir /afs/cern.ch/user/m/mmarionn/www/TTVStudies/test -P /afs/cern.ch/work/m/mmarionn/private/cmssw/cmgTTV8020/src/samplesTTX --Fs /afs/cern.ch/work/m/mmarionn/private/cmssw/cmgTTV8020/src/leptonJetReCleanerTTV_v4 --Fs /afs/cern.ch/work/m/mmarionn/private/cmssw/cmgTTV8020/src/ttvVariables -f -j 8 -l 35.9 --s2v --tree treeProducerSusyMultilepton --mcc ttV-multilepton/lepchoice-ttV-FO.txt --lspam '#bf{CMS} #it{Simulation}' --legendWidth 0.20 --legendFontSize 0.035 --showRatio --maxRatioRange 0 2 --fixRatioRange  --showMCError ttV-multilepton/mca-3l-mc.txt ttV-multilepton/3l_tight.txt ttV-multilepton/3l_extraPlots.txt"
 
 
-    return
+    sys.exit(0)
 
 ##by pass=====================================================
 

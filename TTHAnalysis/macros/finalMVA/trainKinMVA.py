@@ -37,7 +37,7 @@ def get_file_or_copy_local(url, copy_local=True):
         return cacheLocally(url, os.environ.get('TMPDIR', '/tmp'))
 
 
-def load_dataset(name, trainclass, addw=1, path=None, friends=[]):
+def load_dataset(name, trainclass, addw, path=None, friends=[]):
     if not path:
         path = _treepath
         if not path:
@@ -49,7 +49,7 @@ def load_dataset(name, trainclass, addw=1, path=None, friends=[]):
     infile = ROOT.TFile.Open(fileloc)
     _allfiles.append(infile) # Dirty trick to keep the files and trees in memory
 
-    tree = infile.Get('tree')
+    tree = infile.Get('mt2')#tree
 
     # Check if tree was loaded
     try: tree.GetName()
@@ -91,11 +91,11 @@ def train_multiclass(fOutName, options):
         ]
 
     datasets = []
-    for name, trainclass, addw in dsets:
+    for name, trainclass, addw, cut in dsets:
         tree, weight = load_dataset(name, trainclass, addw,
                                     path=options.treepath,
                                     friends=options.friends)
-        datasets.append((name, trainclass, tree, weight))
+        datasets.append((name, trainclass, tree, weight, cut))
 
     fOut = ROOT.TFile(fOutName,"recreate")
     fOut.cd()
@@ -142,8 +142,8 @@ def train_multiclass(fOutName, options):
     factory.AddVariable("met := min(met_pt, 400)", 'F')
 
     ## Add the datasets
-    for name,trainclass,tree,weight in datasets:
-        factory.AddTree(tree, trainclass, weight)
+    for name,trainclass,tree,weight,cut in datasets:
+        factory.AddTree(tree, trainclass, weight,cut)
 
     fOut.cd()
     for trainclass in set([x[1] for x in dsets]):
@@ -174,12 +174,12 @@ def train_multiclass(fOutName, options):
 
 def train_single(allcuts, variables, dsets, fOutName, options, spectators=[]):
     datasets = []
-    for name, trainclass, addw in dsets:
+    for name, trainclass, addw, cut in dsets:
         #print "--->>>> ",options.treepath,options.friends
         tree, weight = load_dataset(name, trainclass, addw,
                                     path=options.treepath,
                                     friends=options.friends)
-        datasets.append((name, trainclass, tree, weight))
+        datasets.append((name, trainclass, tree, weight,ROOT.TCut(cut)))
 
     fOut = ROOT.TFile(fOutName,"recreate")
     fOut.cd()
@@ -203,8 +203,8 @@ def train_single(allcuts, variables, dsets, fOutName, options, spectators=[]):
         factory.AddVariable(var, 'F')
 
     ## Add the datasets
-    for name,trainclass,tree,weight in datasets:
-        factory.AddTree(tree, trainclass, weight)
+    for name,trainclass,tree,weight,cut in datasets:
+        factory.AddTree(tree, trainclass, weight,cut)
 
     fOut.cd()
     #for trainclass in set([x[1] for x in dsets]):
@@ -400,6 +400,34 @@ def train_2d(fOutName, training, options):
 
 
 
+def train_top(fOutName, training, options):
+    allcuts = ROOT.TCut('1')
+    allcuts += "(njet >= 3)"
+    
+    variables = [ # Common variables
+        "numJets_float := njet",
+
+        "lJetPt  := jet_pt[0]",
+        "slJetPt := jet_pt[1]",
+        #"JetPt3 := jet_pt[2]",
+        #"JetPt4 := jet_pt[3]",
+        #"JetPt5 := jet_pt[4]",
+        #"JetPt6 := jet_pt[5]",
+
+        "lBTag  := Max$(jet_btagCSV)",
+        "slBTag := MaxIf$(jet_btagCSV, jet_btagCSV!=Max$(jet_btagCSV) )",
+    ]
+
+    dsets = []
+    dsets += [('top', 'Signal',1., '(Sum$(jet_mcMatchId==6)==3 || Sum$(jet_mcMatchId==-6)==3)')]
+    #if '3l' in training and 'wz' in training:
+    dsets += [('top', 'Background',1., '!(Sum$(jet_mcMatchId==6)==3 || Sum$(jet_mcMatchId==-6)==3)')]
+
+    outname = fOutName+'_'+training+'.root'
+    train_single(allcuts, variables, dsets, outname, options)
+
+
+
 def train_ttZ(fOutName, training, options):
     allcuts = ROOT.TCut('1')
     allcuts += "nLepTight_Recl>=3"
@@ -502,7 +530,8 @@ def main(args, options):
         #train_2d(args[0], '2lss_ttbar', options)
         #train_2d(args[0], '3l_ttv',     options)
         #train_2d(args[0], '3l_ttbar',   options)
-        train_ttZ(args[0], '3l_ttvVsWZ', options)
+        #train_ttZ(args[0], '3l_ttvVsWZ', options)
+        train_top(args[0], 'topBDTvsTop', options)
 
 
 if __name__ == '__main__':

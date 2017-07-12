@@ -9,6 +9,15 @@ nJet25_fit2l:	max(4,min(nJet25,7))			: [3.5,4.5,5.5,6.5,7.5] ; XTitle='N(jet\, p
 nBJetLoose25:	nBJetLoose25				: [-0.5,0.5,1.5,2.5,3.5,4.5,5.5] ; XTitle='N(jet\, p_{T} > 25 GeV\, CSVL)', XNDdiv=505
 nBJetMedium25:	nBJetMedium25				: [-0.5,0.5,1.5,2.5,3.5,4.5,5.5] ; XTitle='N(jet\, p_{T} > 25 GeV\, CSVM)', XNDdiv=505
 
+nJet30_from0: 	nJet30			                : [-0.5,0.5,1.5,2.5,3.5,4.5,5.5,6.5,7.5] ; XTitle='N(jet\, p_{T} > 30 GeV)', XNDdiv=505, xBinLabels="0\,1\,2\,3\,4\,5\,6\,#geq 7"
+nJet30:	    	nJet30					: [1.5,2.5,3.5,4.5,5.5,6.5,7.5] ; XTitle='N(jet\, p_{T} > 30 GeV)', XNDdiv=505, xBinLabels="2\,3\,4\,5\,6\,#geq 7"
+nJet30Large:  	nJets30  				: [-0.5,0.5,1.5,2.5,3.5,4.5,5.5,6.5,7.5,8.5,9.5,10.5,11.5,12.5,13.5,14.5,15.5,16.5,17.5,18.5,19.5,20.5] ; XTitle='N(jet\, p_{T} > 30 GeV)', XNDdiv=505,
+nJet30_from4:  	nJets30  				: [3.5,4.5,5.5,6.5,7.5] ; XTitle='N(jet\, p_{T} > 30 GeV)', XNDdiv=505, xBinLabels="4\,5\,6\,#geq 7"
+nJet30_fit2l:	max(4,min(nJet30,7))			: [3.5,4.5,5.5,6.5,7.5] ; XTitle='N(jet\, p_{T} > 30 GeV)', XNDdiv=505, xBinLabels="4\,5\,6\,#geq 7"
+nBJetLoose30:	nBJetLoose30				: [-0.5,0.5,1.5,2.5,3.5,4.5,5.5] ; XTitle='N(jet\, p_{T} > 30 GeV\, CSVL)', XNDdiv=505
+nBJetMedium30:	nBJetMedium30				: [-0.5,0.5,1.5,2.5,3.5,4.5,5.5] ; XTitle='N(jet\, p_{T} > 30 GeV\, CSVM)', XNDdiv=505
+
+
 nT_3lep_conePt: if3((nLepTight>2)*(LepGood1_isLepTight+LepGood2_isLepTight+LepGood3_isLepTight==2),if3(LepGood1_isLepTight==0,LepGood1_conePt,if3(LepGood2_isLepTight==0,LepGood2_conePt,LepGood3_conePt)),-99) : 60,0,80; XTitle="Lepton cone p_{T} [GeV] in TTL ev."
 nT_3lep_abseta: if3((nLepTight>2)*(LepGood1_isLepTight+LepGood2_isLepTight+LepGood3_isLepTight==2),if3(LepGood1_isLepTight==0,abs(LepGood1_eta),if3(LepGood2_isLepTight==0,abs(LepGood2_eta),abs(LepGood3_eta))),-99) : 60,0,2.5; XTitle="Lepton cone p_{T} [GeV] in TTL ev."
 nT_3lep_mvaTTH: if3((nLepTight>2)*(LepGood1_isLepTight+LepGood2_isLepTight+LepGood3_isLepTight==2),if3(LepGood1_isLepTight==0,LepGood1_mvaTTH,if3(LepGood2_isLepTight==0,LepGood2_mvaTTH,LepGood3_mvaTTH)),-99) : 60,-1,1; XTitle="Lepton cone p_{T} [GeV] in TTL ev."
