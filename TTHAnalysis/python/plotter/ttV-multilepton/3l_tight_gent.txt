@@ -3,7 +3,7 @@ trilep: nLepFO>=3
 exclusive: nLepTight <= 3
 cleanup: minMllAFAS > 12
 trigger: Trigger_3l
-pt402010: LepGood1_conePt>40 && LepGood2_conePt>20 && LepGood3_conePt>10
+pt402010: LepGood1_pt>40 && LepGood2_pt>20 && LepGood3_pt>10
 TTT: LepGood1_isLepTight && LepGood2_isLepTight && LepGood3_isLepTight
 onZ: abs(mZ1TT-91.2) < 10
 q1: abs(LepGood1_charge + LepGood2_charge + LepGood3_charge) == 1
