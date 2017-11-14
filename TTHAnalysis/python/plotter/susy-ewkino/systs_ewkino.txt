@@ -1,19 +1,16 @@
 
 ## flat uncertainties
 
-lumi          : sig_.*|prompt_.*|rares_.*|convs   : .*                : 1.026
+lumi_ML       : sig_.*|prompt_.*|rares_.*|convs   : .*                : 1.026
 trigeff_ML    : sig_.*|prompt_.*|rares_.*|convs   : .*                : 1.03
 
 fakes_ML      : fakes_.*                          : .*                : 1.3
 flips_ML      : flips_.*                          : .*                : 1.2
 convs_ML      : convs                             : .*                : 1.15
 
-SFWZ_ML       : prompt_WZ                         : .*crwz.*          : 1.10
-floatWZ_ML    : prompt_WZ                         : .*crwz.*          : 100   : lnU
-floatWZ_ML    : prompt_WZ                         : .*3lA.*           : 100   : lnU
-normWZ_ML     : prompt_WZ                         : .*3l[B,C,D,E,F].* : 1.30
-normWZ_ML     : prompt_WZ                         : .*4l.*            : 1.30
-normWZ_ML     : prompt_WZ                         : .*2lss.*          : 1.13
+#floatWZ_ML    : prompt_WZ                         : .*                : 1.10 : lnN
+floatWZ_ML    : prompt_WZ                         : .*                : 2 : lnU
+
 normZZH_ML    : prompt_ZZH                        : .*                : 1.25
 normVVV_ML    : rares_VVV                         : .*                : 1.5
 normTTX_ML    : rares_ttX                         : .*                : 1.5
@@ -22,24 +19,38 @@ theoTTV_ML    : rares_ttW|rares_ttZ               : .*                : 1.15
 
 ## shape uncertainties
 
-shapeWZ_ML    : prompt_WZ                         : .*2lss.* : 1.05 : lnN_in_shape_bins : 1,2,3,6,7,8,11,16,17,18,21,22,23,26
-shapeWZ_ML    : prompt_WZ                         : .*2lss.* : 1.10 : lnN_in_shape_bins : 4,5,9,10,14,19,20,24,25,29
+shapeWZ_ML    : prompt_WZ                         : .*2lss.* : 1.05 : lnN_in_shape_bins : 1,6,11,16,21,26
+shapeWZ_ML    : prompt_WZ                         : .*2lss.* : 1.10 : lnN_in_shape_bins : 2,3,7,8,17,18,22,23
+shapeWZ_ML    : prompt_WZ                         : .*2lss.* : 1.20 : lnN_in_shape_bins : 4,5,9,10,19,20,24,25
 shapeWZ_ML    : prompt_WZ                         : .*2lss.* : 1.25 : lnN_in_shape_bins : 12,13,27,28
-shapeWZ_ML    : prompt_WZ                         : .*2lss.* : 1.35 : lnN_in_shape_bins : 15,30
+shapeWZ_ML    : prompt_WZ                         : .*2lss.* : 1.45 : lnN_in_shape_bins : 14,15,29,30
 
-shapeWZ_ML    : prompt_WZ                         : .*3lA1.* : 1.05 : lnN_in_shape_bins : 1,2,6,12,13,14
-shapeWZ_ML    : prompt_WZ                         : .*3lA1.* : 1.10 : lnN_in_shape_bins : 3,4,5,8
-shapeWZ_ML    : prompt_WZ                         : .*3lA1.* : 1.25 : lnN_in_shape_bins : 7
+shapeWZ_ML    : prompt_WZ                         : .*3lA1.* : 1.05 : lnN_in_shape_bins : 1,6
+shapeWZ_ML    : prompt_WZ                         : .*3lA1.* : 1.10 : lnN_in_shape_bins : 2
+shapeWZ_ML    : prompt_WZ                         : .*3lA1.* : 1.20 : lnN_in_shape_bins : 7
+shapeWZ_ML    : prompt_WZ                         : .*3lA1.* : 1.25 : lnN_in_shape_bins : 3,4,5
 shapeWZ_ML    : prompt_WZ                         : .*3lA1.* : 1.30 : lnN_in_shape_bins : 10
-shapeWZ_ML    : prompt_WZ                         : .*3lA1.* : 1.35 : lnN_in_shape_bins : 9
+shapeWZ_ML    : prompt_WZ                         : .*3lA1.* : 1.40 : lnN_in_shape_bins : 12
+shapeWZ_ML    : prompt_WZ                         : .*3lA1.* : 1.45 : lnN_in_shape_bins : 8,9,13,14
 shapeWZ_ML    : prompt_WZ                         : .*3lA1.* : 1.50 : lnN_in_shape_bins : 11
 
-shapeWZ_ML    : prompt_WZ                         : .*3lA2.* : 1.05 : lnN_in_shape_bins : 1,7,17,18,19,20,21,22,13,14,15,16,28,29
-shapeWZ_ML    : prompt_WZ                         : .*3lA2.* : 1.10 : lnN_in_shape_bins : 2,3,4,5,6,9,24
+shapeWZ_ML    : prompt_WZ                         : .*3lA2.* : 1.05 : lnN_in_shape_bins : 7,17,22
+shapeWZ_ML    : prompt_WZ                         : .*3lA2.* : 1.10 : lnN_in_shape_bins : 1,18
+shapeWZ_ML    : prompt_WZ                         : .*3lA2.* : 1.20 : lnN_in_shape_bins : 2,3,4,5,6,19,20,21
 shapeWZ_ML    : prompt_WZ                         : .*3lA2.* : 1.25 : lnN_in_shape_bins : 8,23
 shapeWZ_ML    : prompt_WZ                         : .*3lA2.* : 1.30 : lnN_in_shape_bins : 11,26
-shapeWZ_ML    : prompt_WZ                         : .*3lA2.* : 1.35 : lnN_in_shape_bins : 10,25
+shapeWZ_ML    : prompt_WZ                         : .*3lA2.* : 1.40 : lnN_in_shape_bins : 13,28
+shapeWZ_ML    : prompt_WZ                         : .*3lA2.* : 1.45 : lnN_in_shape_bins : 9,10,14,15,16,24,25,29
 shapeWZ_ML    : prompt_WZ                         : .*3lA2.* : 1.50 : lnN_in_shape_bins : 12,27
+
+shapeWZ_ML    : prompt_WZ                         : .*3lW.*  : 1.05 : lnN_in_shape_bins : 1,5,19,27,32,44
+shapeWZ_ML    : prompt_WZ                         : .*3lW.*  : 1.10 : lnN_in_shape_bins : 2,15,28,40
+shapeWZ_ML    : prompt_WZ                         : .*3lW.*  : 1.20 : lnN_in_shape_bins : 3,4,12,16,17,18,29,30,31,41,42,43,56
+shapeWZ_ML    : prompt_WZ                         : .*3lW.*  : 1.25 : lnN_in_shape_bins : 6,20,33,45
+shapeWZ_ML    : prompt_WZ                         : .*3lW.*  : 1.30 : lnN_in_shape_bins : 8,23,36,50
+shapeWZ_ML    : prompt_WZ                         : .*3lW.*  : 1.40 : lnN_in_shape_bins : 10,25,38,52
+shapeWZ_ML    : prompt_WZ                         : .*3lW.*  : 1.45 : lnN_in_shape_bins : 7,11,13,14,21,22,26,34,35,39,46,47,48,49,53,54,55,57,58
+shapeWZ_ML    : prompt_WZ                         : .*3lW.*  : 1.50 : lnN_in_shape_bins : 9,24,37,51
 
 ##shapeWZ_ML    : prompt_WZ                         : .*2lss.* : 1.05 : lnN_in_shape_bins : 1,6,11,14,16,21,26,29
 ##shapeWZ_ML    : prompt_WZ                         : .*2lss.* : 1.10 : lnN_in_shape_bins : 2,3,7,8,17,18,22,23
@@ -58,22 +69,46 @@ shapeWZ_ML    : prompt_WZ                         : .*3lA2.* : 1.50 : lnN_in_sha
 ##shapeWZ_ML    : prompt_WZ                         : .*3lA2.* : 1.30 : lnN_in_shape_bins : 3,4,5,6,8,10,20,21,23,25
 ##shapeWZ_ML    : prompt_WZ                         : .*3lA2.* : 1.40 : lnN_in_shape_bins : 12,27
 
-ewksub_ML     : fakes_.*                          : .* : ewk        : templates
+## for OS combination
+###JES           : sig_.*|prompt_.*|rares_.*|convs   : .* : 1.20
+###MET           : sig_.*                            : .* : 1.05
+###ISR           : sig_.*                            : .* : 1.05
+###scale         : sig_.*                            : .* : 1.05
+###PUreweighting : sig_.*|prompt_.*|rares_.*|convs   : .* : 1.05
+###lepton_idiso  : sig_.*|prompt_.*|rares_.*|convs   : .* : 1.05
+###lepton_FSsfs  : sig_.*                            : .* : 1.05
+###btag_HF       : sig_.*|prompt_.*|rares_.*|convs   : .* : 1.05
+###btag_LF       : sig_.*|prompt_.*|rares_.*|convs   : .* : 1.05
 
-JES           : sig_.*|prompt_.*|rares_.*|convs   : .* : jec        : templates
-MET           : sig_.*                            : .* : met        : templates
-ISR           : sig_.*                            : .* : isr        : templates
-scale         : sig_.*                            : .* : q2acc      : templates
+ewksub_ML        : fakes_.*                          : .* : ewk        : templates
 
-PUreweighting : sig_.*|prompt_.*|rares_.*|convs   : .* : puw        : templates
+MET              : sig_.*                            : .* : met        : templates
+#ISR              : sig_.*                            : .* : isr        : templates
+ISR              : sig_.*|prompt_WZ                  : .* : isr        : templates
+scale            : sig_.*                            : .* : q2acc      : templates
 
-lepton_idiso  : sig_.*|prompt_.*|rares_.*|convs   : .* : lepSF      : templates
-lepton_FSsfs  : sig_.*                            : .* : lepSFFS    : templates
+## combination
+JES_ML           : prompt_.*|rares_.*|convs          : .* : jec        : templates
+JESsig           : sig_.*                            : .* : jec        : templates
+PUreweighting_ML : prompt_.*|rares_.*|convs          : .* : puw        : templates
+PUsig            : sig_.*                            : .* : puw        : templates
+lepton_bkg_ML    : prompt_.*|rares_.*|convs          : .* : lepSF      : templates
+lepton_idiso     : sig_.*                            : .* : lepSF      : templates
+lepton_FSsfs     : sig_.*                            : .* : lepSFFS    : templates
+btag_HF_ML       : prompt_.*|rares_.*|convs          : .* : bTagHF     : templates
+btag_LF_ML       : prompt_.*|rares_.*|convs          : .* : bTagLF     : templates
+btag_HF          : sig_.*                            : .* : bTagFSHF   : templates
+btag_LF          : sig_.*                            : .* : bTagFSLF   : templates
 
-btag_HF       : sig_.*|prompt_.*|rares_.*|convs   : .* : bTagHF     : templates
-btag_LF       : sig_.*|prompt_.*|rares_.*|convs   : .* : bTagLF     : templates
-btag_FS_HF_ML : sig_.*                            : .* : bTagFSHF   : templates
-btag_FS_LF_ML : sig_.*                            : .* : bTagFSLF   : templates
+## SUS-16-039
+#JES           : sig_.*|prompt_.*|rares_.*|convs   : .* : jec        : templates
+#PUreweighting : sig_.*|prompt_.*|rares_.*|convs   : .* : puw        : templates
+#lepton_idiso  : sig_.*|prompt_.*|rares_.*|convs   : .* : lepSF      : templates
+#lepton_FSsfs  : sig_.*                            : .* : lepSFFS    : templates
+#btag_HF       : sig_.*|prompt_.*|rares_.*|convs   : .* : bTagHF     : templates
+#btag_LF       : sig_.*|prompt_.*|rares_.*|convs   : .* : bTagLF     : templates
+#btag_FS_HF_ML : sig_.*                            : .* : bTagFSHF   : templates
+#btag_FS_LF_ML : sig_.*                            : .* : bTagFSLF   : templates
 
 
 ## statistical uncertainties
@@ -219,5 +254,15 @@ stat4lKttX_ML    : rares_ttX       : .*4lK.*  : 1.0 : stat_foreach_shape_bins : 
 stat4lKVVV_ML    : rares_VVV       : .*4lK.*  : 1.0 : stat_foreach_shape_bins : .*
 stat4lKconvs_ML  : convs           : .*4lK.*  : 1.0 : stat_foreach_shape_bins : .*
 stat4lKfakes_ML  : fakes_appldata  : .*4lK.*  : 1.0 : stat_foreach_shape_bins : .*
+
+stat3lWsig_ML    : sig_.*          : .*3lW.*  : 1.0 : stat_foreach_shape_bins : .*
+stat3lWWZ_ML     : prompt_WZ       : .*3lW.*  : 1.0 : stat_foreach_shape_bins : .*
+stat3lWZZH_ML    : prompt_ZZH      : .*3lW.*  : 1.0 : stat_foreach_shape_bins : .*
+stat3lWttW_ML    : rares_ttW       : .*3lW.*  : 1.0 : stat_foreach_shape_bins : .*
+stat3lWttZ_ML    : rares_ttZ       : .*3lW.*  : 1.0 : stat_foreach_shape_bins : .*
+stat3lWttX_ML    : rares_ttX       : .*3lW.*  : 1.0 : stat_foreach_shape_bins : .*
+stat3lWVVV_ML    : rares_VVV       : .*3lW.*  : 1.0 : stat_foreach_shape_bins : .*
+stat3lWconvs_ML  : convs           : .*3lW.*  : 1.0 : stat_foreach_shape_bins : .*
+stat3lWfakes_ML  : fakes_appldata  : .*3lW.*  : 1.0 : stat_foreach_shape_bins : .*
 
 

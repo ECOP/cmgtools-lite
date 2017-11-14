@@ -1,0 +1,16 @@
+alwaystrue: 1
+blinding  : !isData || run <= 276811 || (run>=278820 && run<=279931); Disable=True
+filters   : $DATA{ METfilters } $MC{1} $FASTSIM{1}
+trigger   : $DATA{(Triggers_ee || Triggers_mm || Triggers_em)} $MC{(Triggers_ee || Triggers_mm || Triggers_em)} $FASTSIM{1}
+cleanup   : minMllSFOS_Recl > 12 || minMllSFOS_Recl == -1
+pt101010  : LepGood1_conePt>10 && LepGood2_conePt>10 && LepGood3_conePt>10 && LepGood1_pt>10 && LepGood2_pt>10 && LepGood3_pt>10
+3looseOS  : nLepFO_Recl == 3 && abs(LepGood1_charge+LepGood2_charge+LepGood3_charge) < 2
+3light    : abs(LepGood1_pdgId)<14 && abs(LepGood2_pdgId)<14 && abs(LepGood3_pdgId)<14
+pt2x1x10  : LepGood1_conePt>20 && (abs(LepGood1_pdgId)!=11 || LepGood1_conePt>25) && LepGood2_conePt>10 && (abs(LepGood2_pdgId)!=11 || LepGood2_conePt>15) && LepGood3_conePt>10
+muee      : !(abs(LepGood1_pdgId)==13 && abs(LepGood2_pdgId)==11 && abs(LepGood3_pdgId)==11 ) || LepGood1_conePt>25
+tight     : nLepSel==3 && LepGood1_isTight_Recl && LepGood2_isTight_Recl && LepGood3_isTight_Recl
+mZ_WZCR   : mllL_3l > 75 && mllL_3l < 105
+mtw_WZCR  : mT      > 50 && mT      < 100
+met_WZCR  : metPt   > 30 && metPt   < 100
+lowHT     : htJet30j < 100
+0bjet     : nBJetMedium25 == 0

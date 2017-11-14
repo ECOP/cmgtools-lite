@@ -24,8 +24,32 @@ btag_efficiency_fullsim = os.path.join(utility_files_dir, "btag", "btageff__ttba
 btag_efficiency_fastsim = os.path.join(utility_files_dir, "btag", "btageff__SMS-T1bbbb-T1qqqq_25ns_Moriond17.root"   )
 bTagEventWeightFullSim   = lambda : bTagWeightAnalyzer(btagsf_payload_fullsim, btag_efficiency_fullsim, recllabel='Mini')
 bTagEventWeightFastSim   = lambda : bTagWeightAnalyzer(btagsf_payload_fastsim, btag_efficiency_fastsim, recllabel='Mini', isFastSim=True)
-MODULES.append( ('bTagEventWeightFullSim'  , bTagEventWeightFullSim ))
-MODULES.append( ('bTagEventWeightFastSim'  , bTagEventWeightFastSim ))
+MODULES.append( ('bTagEventWeightFullSim3L'  , bTagEventWeightFullSim ))
+MODULES.append( ('bTagEventWeightFastSim3L'  , bTagEventWeightFastSim ))
+bTagEventWeightFullSim2L = lambda : bTagWeightAnalyzer(btagsf_payload_fullsim, btag_efficiency_fullsim, recllabel='Recl')
+bTagEventWeightFastSim2L = lambda : bTagWeightAnalyzer(btagsf_payload_fastsim, btag_efficiency_fastsim, recllabel='Recl', isFastSim=True)
+MODULES.append( ('bTagEventWeightFullSim2L', bTagEventWeightFullSim2L ))
+MODULES.append( ('bTagEventWeightFastSim2L', bTagEventWeightFastSim2L ))
+
+
+## PU uncertainty instances
+from CMGTools.TTHAnalysis.tools.fastSimPUW import FastSimPUWProducer
+puwProfile = os.path.join(utility_files_dir, "pileup", "dataProfile_EWKino_M17.root")
+histogram  = "pileup"
+cutsFile2L = os.path.join(utility_files_dir, "pileup", "cutsFile_EWKino_2L.txt")
+cutsFile3L = os.path.join(utility_files_dir, "pileup", "cutsFile_EWKino_3L.txt")
+cutsFile4L = os.path.join(utility_files_dir, "pileup", "cutsFile_EWKino_4L.txt")
+PUWProducer2L = lambda : FastSimPUWProducer(puwProfile, histogram, cutsFile2L)
+PUWProducer3L = lambda : FastSimPUWProducer(puwProfile, histogram, cutsFile3L)
+PUWProducer4L = lambda : FastSimPUWProducer(puwProfile, histogram, cutsFile4L)
+MODULES.append( ('PUWProducer2L', PUWProducer2L) )
+MODULES.append( ('PUWProducer3L', PUWProducer3L) )
+MODULES.append( ('PUWProducer4L', PUWProducer4L) )
+
+
+
+
+
 
 
 #--- Recleaner instances
@@ -94,6 +118,7 @@ MODULES.append( ('leptonJetReCleanerSusyEWK3L', lambda : LeptonJetReCleaner("Min
                    jetPt = 30,
                    bJetPt = 25,
                    coneptdef = lambda lep: conept_EWK(lep, 2),
+                   storeJetVariables = True
                  ) ))
 
 # All jets, needed for tau fakes study

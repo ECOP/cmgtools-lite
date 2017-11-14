@@ -35,11 +35,14 @@ eta3     : LepGood3_eta          : 50,-2.5,2.5     ; XTitle="#eta (third reco le
 #### JET-RELATED VARIABLES 
 nJet40 	   : nJet40               : 2,-0.5,1.5  ; XTitle='N(jet\, p_{T} > 40)', LegendCutoff=1e-3, XNDiv=002
 nJet40_log : nJet40 : 10,-0.5,9.5 ; XTitle='N(jet\, p_{T} > 40)', Logy
+nJet30_log : nJet30_Recl : 10,-0.5,9.5 ; XTitle='N(jet\, p_{T} > 30)', Logy
 
 nBJet25    : nBJetMedium25        : 2,-0.5,1.5   ; XTitle='N(b-jet\, p_{T} > 25\, CSVM)', LegendCutoff=1e-3
 
-htJet40j:   htJet40j: 40,0,400    ; XTitle="H_{T}(jet p_{T} > 40)  [GeV]"
+htJet40j:   htJet40j: 40,0,400    ; XTitle="H_{T}(jet p_{T} > 40)  [GeV]", Logy, LegendCutoff=1e-4
+htJet40j_new:   htJet40j: [0,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,225,250,275,300,350,400,450,500,600]  ; XTitle="H_{T}(jet p_{T} > 40 GeV)  [GeV]", Logy, LegendCutoff=1e-4
 htJet40j_log:   htJet40j: 40,0,400    ; XTitle="H_{T}(jet p_{T} > 40)  [GeV]", Logy
+htJet30j_log:   htJet30j_Recl: 40,0,400    ; XTitle="H_{T}(jet p_{T} > 30)  [GeV]", Logy
 
 jet1Pt:  Jet1_pt: 18,0,300; XTitle="Leading jet p_{T}  [GeV]", Legend='TR'
 

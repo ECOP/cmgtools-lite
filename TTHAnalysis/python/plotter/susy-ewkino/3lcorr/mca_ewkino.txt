@@ -1,0 +1,47 @@
+# Dummy (to plot signals unstacked)
+dummy : TTWToLNu_ext1 : 0 ; FakeRate="susy-ewkino/3lcorr/fakerate_standard_central.txt", Label=""
+
+## Sync samples
+## -----------------------------------------------------------
+incl_sync  : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_sync.txt"
+
+## Signals
+## -----------------------------------------------------------
+#incl_sig_exerc  : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_sig_exerciseM17.txt"
+incl_sig_data   : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_sig_overlaid.txt"
+#incl_sig_wzcorr : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_sig_wzcorr.txt"
+#incl_sig_opt    : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_sig_opt.txt"
+#incl_sig_acc    : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_sig_acc.txt"
+#incl_sig_exc    : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_sig_exercise.txt"
+#incl_sig_fs     : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_sig_fullsim.txt"
+
+## Data
+## -----------------------------------------------------------
+incl_data      : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_data_M17_reminiAOD.txt"
+#incl_data      : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_data_M17.txt"
+#incl_dataAsBkg : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_data_M17_asBkg.txt"
+#incl_data      : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_data_ICHEP.txt"
+
+## WZ (to keep the order)
+## -----------------------------------------------------------
+#prompt_WZ : WZTo3LNu          : 1.22*xsec ; FillColor=ROOT.kOrange, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="WZ", NormSystematic=0.3
+prompt_WZ : WZTo3LNu_amcatnlo : 1.04*xsec ; FillColor=ROOT.kOrange, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="WZ", NormSystematic=0.3
+bare_WZ   : WZTo3LNu_amcatnlo : 1.04*xsec ; FillColor=ROOT.kOrange, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt", Label="WZ", NormSystematic=0.3
+
+## Backgrounds
+## -----------------------------------------------------------
+incl_fakes_appldata : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_fakes_appldata_M17_reminiAOD.txt"
+#incl_fakes_appldata : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_fakes_appldata_M17.txt"
+#incl_fakes_appldata : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_fakes_appldata_ICHEP.txt"
+incl_promptsub      : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_promptsub.txt"
+incl_fakes_bare     : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_fakes_bare.txt"
+incl_fakes_matched  : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_fakes_matched.txt"
+incl_fakes_flavor   : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_fakes_flavorsplit.txt"
+incl_fakes_process  : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_fakes_processsplit.txt"
+incl_flips_appldata : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_flips_appldata_M17_reminiAOD.txt"
+#incl_flips_appldata : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_flips_appldata_M17.txt"
+incl_prompts        : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_prompts.txt"
+incl_bares          : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_bare.txt"
+incl_conf           : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_conf.txt"
+
+

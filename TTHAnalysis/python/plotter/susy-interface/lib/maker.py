@@ -32,15 +32,21 @@ def addMakerOptions(parser):
 	parser.add_option("--sigs"   , dest="sigs"    , type="string" , action="append", default=[], help="Overwrite the sigs from the region")
 	parser.add_option("--sys"    , dest="sysfile" , type="string" , default=None, help="Overwrite the syst file from the config");
 	parser.add_option("--tree"   , dest="treename", type="string", default=None, help="Overwrite the treename from the config")
+	parser.add_option("--sfriends" , dest="sfriends" , action="append", default=[], help="Overwriting (!) the sfriends variable from the config");
+	parser.add_option("--srfriends" , dest="srfriends" , action="append", default=[], help="Overwriting (!) the srfriends variable from the config");
+	parser.add_option("--sfsfriends" , dest="sfsfriends" , action="append", default=[], help="Overwriting (!) the sfsfriends variable from the config");
+	parser.add_option("--srfsfriends", dest="srfsfriends", action="append", default=[], help="Overwriting (!) the srfsfriends variable from the config");
 	return parser
 
 def splitLists(options):
-	options.flags  = splitList(options.flags )
-	options.mccs   = splitList(options.mccs  )
-	options.macros = splitList(options.macros)
-	options.bkgs   = splitList(options.bkgs  )
-	options.sigs   = splitList(options.sigs  )
-	options.procs  = splitList(options.procs )
+	options.flags       = splitList(options.flags      )
+	options.mccs        = splitList(options.mccs       )
+	options.macros      = splitList(options.macros     )
+	options.bkgs        = splitList(options.bkgs       )
+	options.sigs        = splitList(options.sigs       )
+	options.procs       = splitList(options.procs      )
+	options.sfsfriends  = splitList(options.sfsfriends )
+	options.srfsfriends = splitList(options.srfsfriends)
 	return options
 
 class Maker():
@@ -177,8 +183,8 @@ class Maker():
 		return getCut(getattr(self.config, "firstCut", "alwaystrue"), self.getVariable("expr"), self.getVariable("bins"))
 	def getFriends(self,isFastSim=False):
 		friends = []
-		friends += ["-F sf/t {P}/"+f+"/evVarFriend_{cname}.root"     for f in getattr(self.config,"sfriends"   ,[])]
-		friends += ["-F sf/t {RP}/"+f+"/evVarFriend_{cname}.root"    for f in getattr(self.config,"srfriends"  ,[])]
+		friends += ["-F sf/t {P}/"+f+"/evVarFriend_{cname}.root"     for f in getattr(self.options, "sfriends", [])] if len(self.options.sfriends)>0 else ["-F sf/t {P}/"+f+"/evVarFriend_{cname}.root"     for f in getattr(self.config,"sfriends"   ,[])]
+		friends += ["-F sf/t {RP}/"+f+"/evVarFriend_{cname}.root"    for f in getattr(self.options, "srfriends", [])] if len(self.options.srfriends)>0 else ["-F sf/t {RP}/"+f+"/evVarFriend_{cname}.root"     for f in getattr(self.config,"srfriends"  ,[])]
 		friends += getattr(self.config, "friends" , [])
 		friends += ["--FD sf/t {P}/"+f+"/evVarFriend_{cname}.root"   for f in getattr(self.config,"sdfriends"  ,[])]
 		friends += ["--FD sf/t {RP}/"+f+"/evVarFriend_{cname}.root"  for f in getattr(self.config,"srdfriends" ,[])]
@@ -187,8 +193,8 @@ class Maker():
 		friends += ["--FMC sf/t {RP}/"+f+"/evVarFriend_{cname}.root" for f in getattr(self.config,"srmcfriends",[])]
 		friends += getattr(self.config, "mcfriends", [])
 		if isFastSim:
-			friends += ["--FMC sf/t {P}/"+f+"/evVarFriend_{cname}.root"  for f in getattr(self.config,"sfsfriends" ,[])]
-			friends += ["--FMC sf/t {RP}/"+f+"/evVarFriend_{cname}.root" for f in getattr(self.config,"srfsfriends",[])]
+			friends += ["--FMC sf/t {P}/"+f+"/evVarFriend_{cname}.root"  for f in getattr(self.options,"sfsfriends" ,[])] if len(self.options.sfsfriends )>0 else ["--FMC sf/t {P}/"+f+"/evVarFriend_{cname}.root"  for f in getattr(self.config,"sfsfriends" ,[])]
+			friends += ["--FMC sf/t {RP}/"+f+"/evVarFriend_{cname}.root" for f in getattr(self.options,"srfsfriends",[])] if len(self.options.srfsfriends)>0 else ["--FMC sf/t {RP}/"+f+"/evVarFriend_{cname}.root" for f in getattr(self.config,"srfsfriends",[])]
 			friends += getattr(self.config, "fsfriends" , [])
 		return friends
 	def getFriendLocations(self):

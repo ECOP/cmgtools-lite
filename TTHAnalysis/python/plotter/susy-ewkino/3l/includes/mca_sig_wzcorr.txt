@@ -1,0 +1,2 @@
+sig_TChiWZ_200_100+ : TChiWZ_200_100 : 0.10099/1000*1807.39  ; FillColor=ROOT.kGreen+3, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiWZ 200/100", isFastSim, NormSystematic=0.3, LineStyle=2
+sig_TChiWZ_350_250+ : TChiWZ_350_250 : 0.10099/1000*209.439  ; FillColor=ROOT.kGreen, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiWZ 350/250", isFastSim, NormSystematic=0.3

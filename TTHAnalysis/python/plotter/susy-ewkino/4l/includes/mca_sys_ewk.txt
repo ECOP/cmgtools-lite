@@ -1,7 +1,7 @@
 
 ## UP VARIATION
 ## -----------------------------------------------------------
-promptsub_ewk_Up : WZTo3LNu                    : -1*xsec      ; FakeRate="susy-ewkino/4l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/4l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Up : WZTo3LNu                    : -1.12*xsec   ; FakeRate="susy-ewkino/4l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/4l/fakerate_load_isprompt.txt", SkipMe=True
 promptsub_ewk_Up : VHToNonbb                   : -1*xsec      ; FakeRate="susy-ewkino/4l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/4l/fakerate_load_isprompt.txt", SkipMe=True
 promptsub_ewk_Up : GGHZZ4L                     : -1*xsec      ; FakeRate="susy-ewkino/4l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/4l/fakerate_load_isprompt.txt", SkipMe=True
 promptsub_ewk_Up : ZZTo4L                      : -1*xsec      ; FakeRate="susy-ewkino/4l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/4l/fakerate_load_isprompt.txt", SkipMe=True
@@ -23,7 +23,7 @@ promptsub_ewk_Up : tZq_ll                      : -1*xsec      ; FakeRate="susy-e
 
 ## DN VARIATION
 ## -----------------------------------------------------------
-promptsub_ewk_Dn : WZTo3LNu                    : -1*xsec      ; FakeRate="susy-ewkino/4l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/4l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Dn : WZTo3LNu                    : -1.12*xsec   ; FakeRate="susy-ewkino/4l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/4l/fakerate_load_isprompt.txt", SkipMe=True
 promptsub_ewk_Dn : VHToNonbb                   : -1*xsec      ; FakeRate="susy-ewkino/4l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/4l/fakerate_load_isprompt.txt", SkipMe=True
 promptsub_ewk_Dn : GGHZZ4L                     : -1*xsec      ; FakeRate="susy-ewkino/4l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/4l/fakerate_load_isprompt.txt", SkipMe=True
 promptsub_ewk_Dn : ZZTo4L                      : -1*xsec      ; FakeRate="susy-ewkino/4l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/4l/fakerate_load_isprompt.txt", SkipMe=True

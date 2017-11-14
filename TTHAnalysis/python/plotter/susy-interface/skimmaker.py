@@ -24,6 +24,7 @@ def makeMCA(path, samples):
 	f = open(path,"w")
 	for p in samples:
 		f.write(p +" : "+ p +" : 1.0\n")
+		#f.write(p +" : "+ p +" : 1.0 ; FakeRate=\"susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt\", isFastSim\n")
 	f.close()
 
 def collectMcaSamples(mm):

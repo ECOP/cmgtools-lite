@@ -1,4 +1,4 @@
-weight     : EWK3L_flipRate(LepSel_conePt[0], LepSel_eta[0], LepSel_pdgId[0], LepSel_conePt[1], LepSel_eta[1], LepSel_pdgId[1], LepSel_conePt[2], LepSel_eta[2], LepSel_pdgId[2])
+weight     : EWK3L_flipRate(LepSel_pt[0], LepSel_eta[0], LepSel_pdgId[0], LepSel_pt[1], LepSel_eta[1], LepSel_pdgId[1], LepSel_pt[2], LepSel_eta[2], LepSel_pdgId[2])
 cut-change : BR\b           : BRos
 change     : SR\b           : SRos
 
@@ -9,6 +9,15 @@ change     : LepSel4_(\w+)  : LepSel_\1[3]
 change     : nJet30\b       : nJet30_Mini
 change     : htJet30j\b     : htJet30j_Mini
 change     : nBJetMedium25\b: nBJetMedium25_Mini
+
+change    : srMll\b        : srMll(3, mll_3l, mllL_3l, mllT_3l)
+change    : srMt\b         : srMt(3, mT_3l, mTL_3l, mTT_3l)
+change    : SR\b           : SR(3, countTaus(3, LepSel_pdgId[0], LepSel_pdgId[1], LepSel_pdgId[2]), nOSSF_3l, nOSLF_3l, mT2L_3l, mT2T_3l, srMll(3, mll_3l, mllL_3l, mllT_3l), srMt(3, mT_3l, mTL_3l, mTT_3l), met_pt) 
+change    : SRos\b         : SRos(3, countTaus(3, LepSel_pdgId[0], LepSel_pdgId[1], LepSel_pdgId[2]), nOSSF_3l, nOSLF_3l, mT2L_3l, mT2T_3l, srMll(3, mll_3l, mllL_3l, mllT_3l), srMt(3, mT_3l, mTL_3l, mTT_3l), met_pt) 
+change    : SuperSig\b     : SuperSig(3, countTaus(3, LepSel_pdgId[0], LepSel_pdgId[1], LepSel_pdgId[2]), nOSSF_3l, nOSLF_3l, mT2L_3l, mT2T_3l, srMll(3, mll_3l, mllL_3l, mllT_3l), srMt(3, mT_3l, mTL_3l, mTT_3l), met_pt)
+
+change    : SRcorr\b       : SRcorr(mllL_3l, mTL_3l, met_pt, htJet30j_Mini)
+change    : SuperSigcorr\b : SuperSigcorr(mllL_3l, mTL_3l, met_pt, htJet30j_Mini)
 
 load-histo : QF_el : $DATA/fliprate/fliprate_mvaM_EWKino_Moriond2017_36p5.root : elChMId
 

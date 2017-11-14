@@ -28,10 +28,12 @@ for dset in dsets:
     f_t = openRootOrUrl(sys.argv[1]+'/'+dset+'/treeProducerSusyMultilepton/tree.root')
     if not f_t: continue
     t_t = f_t.Get("tree")
+    if not t_t: continue
     n_t = t_t.GetEntries()
     f_t.Close()
     f_f = openRootOrUrl(sys.argv[2]+'/evVarFriend_'+dset+'.root')
     t_f = f_f.Get("sf/t")
+    if not t_f: continue
     n_f = t_f.GetEntries()
     f_f.Close()
     print '%s: %d - %d : %s'%(dset,n_t,n_f,'OK' if n_t==n_f else 'ERROR '*15+' !!!')

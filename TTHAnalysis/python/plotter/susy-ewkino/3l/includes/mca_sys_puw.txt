@@ -1,7 +1,7 @@
 
 ## UP VARIATION
 ## -----------------------------------------------------------
-prompt_WZ_puw_Up  : WZTo3LNu                    : xsec : puw_nInt_Moriond(nTrueInt, 1) ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_WZ_puw_Up  : WZTo3LNu                    : 1.12*xsec : puw_nInt_Moriond(nTrueInt, 1) ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
 prompt_ZZH_puw_Up : VHToNonbb                   : xsec : puw_nInt_Moriond(nTrueInt, 1) ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
 prompt_ZZH_puw_Up : GGHZZ4L                     : xsec : puw_nInt_Moriond(nTrueInt, 1) ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
 prompt_ZZH_puw_Up : ZZTo4L                      : xsec : puw_nInt_Moriond(nTrueInt, 1) ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
@@ -23,7 +23,7 @@ rares_ttX_puw_Up  : tZq_ll                      : xsec : puw_nInt_Moriond(nTrueI
 
 ## DN VARIATION
 ## -----------------------------------------------------------
-prompt_WZ_puw_Dn  : WZTo3LNu                    : xsec : puw_nInt_Moriond(nTrueInt, -1) ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_WZ_puw_Dn  : WZTo3LNu                    : 1.12*xsec : puw_nInt_Moriond(nTrueInt, -1) ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
 prompt_ZZH_puw_Dn : VHToNonbb                   : xsec : puw_nInt_Moriond(nTrueInt, -1) ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
 prompt_ZZH_puw_Dn : GGHZZ4L                     : xsec : puw_nInt_Moriond(nTrueInt, -1) ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
 prompt_ZZH_puw_Dn : ZZTo4L                      : xsec : puw_nInt_Moriond(nTrueInt, -1) ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True

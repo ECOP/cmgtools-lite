@@ -1,0 +1,13 @@
+alwaystrue: 1
+onlyBF    : $DATA{run <= 278808} $MC{1} $FASTSIM{1}
+onlyGH    : $DATA{run >= 278820} $MC{1} $FASTSIM{1}
+filters   : $DATA{METfilters                           } $MC{1} $FASTSIM{1}
+trigger   : $DATA{Triggers_ee||Triggers_em||Triggers_mm} $MC{Triggers_ee||Triggers_em||Triggers_mm} $FASTSIM{1}
+3l        : nLepSel >= 3
+lowmass   : minMllSFOS_Mini > 12 || minMllSFOS_Mini == -1
+sanity    : passPtMll && is_3l
+SRevent   : allTight(3, LepSel_isTight[0], LepSel_isTight[1], LepSel_isTight[2]) 
+onlylight : ((abs(LepSel_pdgId[0])==15)+(abs(LepSel_pdgId[1])==15)+(abs(LepSel_pdgId[2])==15))==0
+veto      : LepSel4_isTight == 0
+onZ       : nOSSF_3l >= 1 && abs(mll_3l-91)<15
+nJets     : nJet30_Mini >= 2

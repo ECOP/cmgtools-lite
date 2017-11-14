@@ -1,0 +1,6 @@
+alwaystrue: 1
+3tight    : nLepSel >= 3 && passPtMll && is_3l && allTight(3, LepSel_isTight[0], LepSel_isTight[1], LepSel_isTight[2])
+4lepveto  : LepSel4_isTight == 0
+convs     : ((BR != 1 && BR != 3) || abs(m3L-91) > 15) && (minMllSFOS_Mini > 12 || minMllSFOS_Mini == -1)
+bJetVeto  : nBJetMedium25 == 0
+met       : met_pt > 50

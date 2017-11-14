@@ -1,0 +1,28 @@
+## Data
+## -----------------------------------------------------------
+incl_data      : + ; IncludeMca="susy-ewkino/2lss_v1/includes/mca_data_M17_reminiAOD.txt"
+
+sig_TChiWH_150_24+ : TChiWH_150_24 : 0.03634/1000*5180.86 : LepGood1_mcUCSXMatchId==0 && LepGood2_mcUCSXMatchId==0 ; FillColor=ROOT.kYellow, FakeRate="susy-ewkino/2lss_v1/fakerate_standard_central.txt", Label="TChiWH 150/24", isFastSim, NormSystematic=0.3
+sig_TChiWH_175_49+ : TChiWH_175_49 : 0.03634/1000*2953.28 : LepGood1_mcUCSXMatchId==0 && LepGood2_mcUCSXMatchId==0 ; FillColor=ROOT.kYellow+1, FakeRate="susy-ewkino/2lss_v1/fakerate_standard_central.txt", Label="TChiWH 175/49", isFastSim, NormSystematic=0.3, LineStyle=2
+sig_TChiWH_175_1+  : TChiWH_175_1  : 0.03634/1000*2953.28 : LepGood1_mcUCSXMatchId==0 && LepGood2_mcUCSXMatchId==0 ; FillColor=ROOT.kYellow+3, FakeRate="susy-ewkino/2lss_v1/fakerate_standard_central.txt", Label="TChiWH 175/1", isFastSim, NormSystematic=0.3
+
+sig_TChiSlepSnu_05_500_350+ : TChiSlepSnux0p05_500_350  : 0.5*46.3533/1000 : LepGood1_mcUCSXMatchId==0 && LepGood2_mcUCSXMatchId==0 ; FakeRate="susy-ewkino/2lss_v1/fakerate_standard_central.txt", FillColor=ROOT.kBlack  , Label="\#tilde{\#chi}^{0}\#tilde{\#chi}^{\#pm}\#rightarrowlll\#nu(500/350)", isFastSim, NormSystematic=0.3, LineStyle=2
+sig_TChiSlepSnu_05_1000_1+  : TChiSlepSnux0p05_1000_1   : 0.5*1.34352/1000 : LepGood1_mcUCSXMatchId==0 && LepGood2_mcUCSXMatchId==0 ; FakeRate="susy-ewkino/2lss_v1/fakerate_standard_central.txt", FillColor=ROOT.kGreen+2, Label="\#tilde{\#chi}^{0}\#tilde{\#chi}^{\#pm}\#rightarrowlll\#nu(1000/1)" , isFastSim, NormSystematic=0.3
+#sig_TChiSlepSnu_05_500_350+ : TChiSlepSnux0p05_500_350  : 0.5*46.3533/1000 : LepGood1_mcUCSXMatchId==0 && LepGood2_mcUCSXMatchId==0 ; FakeRate="susy-ewkino/2lss_v1/fakerate_standard_central.txt", FillColor=ROOT.kGreen  , Label="\#tilde{\#chi}\#tilde{\#chi}\#rightarrow \#tilde{l} \#tilde{l} (500/350)", isFastSim, NormSystematic=0.3, LineStyle=2
+#sig_TChiSlepSnu_05_1000_1+  : TChiSlepSnux0p05_1000_1   : 0.5*1.34352/1000 : LepGood1_mcUCSXMatchId==0 && LepGood2_mcUCSXMatchId==0 ; FakeRate="susy-ewkino/2lss_v1/fakerate_standard_central.txt", FillColor=ROOT.kGreen+2, Label="\#tilde{\#chi}\#tilde{\#chi}\#rightarrow \#tilde{l} \#tilde{l} (1000/1)" , isFastSim, NormSystematic=0.3
+
+sig_TChiSlepSnu_FD_500_350+ : TChiSlepSnux0p5_500_350   : 0.5*46.3533/1000 : LepGood1_mcUCSXMatchId==0 && LepGood2_mcUCSXMatchId==0 ; FakeRate="susy-ewkino/2lss_v1/fakerate_standard_central.txt", FillColor=ROOT.kBlack  , Label="\#tilde{\#chi}^{0}\#tilde{\#chi}^{\#pm}\#rightarrowlll\#nu(500/350)", isFastSim, NormSystematic=0.3, LineStyle=2
+
+## WZ (to keep the order)
+## -----------------------------------------------------------
+prompt_WZ : WZTo3LNu_ext : 0.672*58.59 :  LepGood1_mcUCSXMatchId==0 && LepGood2_mcUCSXMatchId==0 ; FillColor=ROOT.kOrange, FakeRate="susy-ewkino/2lss_v1/fakerate_standard_central.txt", Label="WZ", NormSystematic=0.3
+
+## Backgrounds
+## -----------------------------------------------------------
+incl_fakes_appldata : + ; IncludeMca="susy-ewkino/2lss_v1/includes/mca_fakes_appldata_M17_reminiAOD.txt"
+incl_promptsub      : + ; IncludeMca="susy-ewkino/2lss_v1/includes/mca_promptsub.txt"
+incl_fakes_bare     : + ; IncludeMca="susy-ewkino/2lss_v1/includes/mca_fakes_bare.txt"
+incl_flips_appldata : + ; IncludeMca="susy-ewkino/2lss_v1/includes/mca_flips_appldata_M17_reminiAOD.txt"
+incl_prompts        : + ; IncludeMca="susy-ewkino/2lss_v1/includes/mca_prompt.txt"
+
+

@@ -1,6 +1,11 @@
 cut-change: LepGood_isTight_Recl\[iF_Recl\[0\]\]: 1
 cut-change: LepGood_isTight_Recl\[iF_Recl\[1\]\]: 1
 cut-change: LepGood_isTight_Recl\[iF_Recl\[2\]\]: 1
+change: mT\b: mT_3l
+change: metPt\b: met_pt
+change: metPhi\b: met_phi
+change: nJet40\b: nJet40_Recl
+change: nBJetMedium25\b: nBJetMedium25_Recl
 weight: fakeRateWeight_3l(fetchFR_i(LepGood_conePt[iF_Recl[0]],LepGood_eta[iF_Recl[0]],LepGood_pdgId[iF_Recl[0]],2), LepGood_isTight_Recl[iF_Recl[0]], \
                           fetchFR_i(LepGood_conePt[iF_Recl[1]],LepGood_eta[iF_Recl[1]],LepGood_pdgId[iF_Recl[1]],2), LepGood_isTight_Recl[iF_Recl[1]], \
                           fetchFR_i(LepGood_conePt[iF_Recl[2]],LepGood_eta[iF_Recl[2]],LepGood_pdgId[iF_Recl[2]],2), LepGood_isTight_Recl[iF_Recl[2]] )

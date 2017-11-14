@@ -1,7 +1,7 @@
 
 ## UP VARIATION
 ## -----------------------------------------------------------
-prompt_WZ_bTagLF_Up  : WZTo3LNu                    : xsec : bTagWeight_LF_Up/bTagWeight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_WZ_bTagLF_Up  : WZTo3LNu                    : 1.12*xsec : bTagWeight_LF_Up/bTagWeight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
 prompt_ZZH_bTagLF_Up : VHToNonbb                   : xsec : bTagWeight_LF_Up/bTagWeight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
 prompt_ZZH_bTagLF_Up : GGHZZ4L                     : xsec : bTagWeight_LF_Up/bTagWeight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
 prompt_ZZH_bTagLF_Up : ZZTo4L                      : xsec : bTagWeight_LF_Up/bTagWeight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
@@ -23,7 +23,7 @@ rares_ttX_bTagLF_Up  : tZW_ll                      : xsec : bTagWeight_LF_Up/bTa
 
 ## DN VARIATION
 ## -----------------------------------------------------------
-prompt_WZ_bTagLF_Dn  : WZTo3LNu                    : xsec : bTagWeight_LF_Dn/bTagWeight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_WZ_bTagLF_Dn  : WZTo3LNu                    : 1.12*xsec : bTagWeight_LF_Dn/bTagWeight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
 prompt_ZZH_bTagLF_Dn : VHToNonbb                   : xsec : bTagWeight_LF_Dn/bTagWeight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
 prompt_ZZH_bTagLF_Dn : GGHZZ4L                     : xsec : bTagWeight_LF_Dn/bTagWeight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
 prompt_ZZH_bTagLF_Dn : ZZTo4L                      : xsec : bTagWeight_LF_Dn/bTagWeight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True

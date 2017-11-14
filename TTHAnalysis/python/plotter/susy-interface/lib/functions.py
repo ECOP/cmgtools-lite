@@ -32,16 +32,31 @@ def cp(location, destination):
 def factorial(array):
 	return [prod(array[0:n]) for n in range(len(array))]
 
+##def getAllBins(bins):
+##	if not bins: return []
+##	separated = []
+##	if bins.find("[")>-1:
+##		values = [float(a) for a in bins.strip("[").strip("]").split(",")]
+##	else:
+##		steps, min, max = int(bins.split(",")[0]), float(bins.split(",")[1]), float(bins.split(",")[2])
+##		step = (max-min)/steps
+##		values = [min+step*i for i in range(0,steps+1)]
+##	return ["1,"+str(values[i])+","+str(values[i+1]) for i in range(0,len(values)-1)]
+
 def getAllBins(bins):
-	if not bins: return []
-	separated = []
+	smin,smax = getMinMax(bins)
+	min,max = float(smin), float(smax)
+	allbins = []
 	if bins.find("[")>-1:
-		values = [float(a) for a in bins.strip("[").strip("]").split(",")]
+		theBins = [float(b) for b in bins.lstrip("[").rstrip("]").split(",")]
+		for b in range(1,len(theBins)):
+			allbins.append("["+str(theBins[b-1])+","+str(theBins[b])+"]")
 	else:
-		steps, min, max = int(bins.split(",")[0]), float(bins.split(",")[1]), float(bins.split(",")[2])
-		step = (max-min)/steps
-		values = [min+step*i for i in range(0,steps+1)]
-	return ["1,"+str(values[i])+","+str(values[i+1]) for i in range(0,len(values)-1)]
+		nb = int(bins.split(",")[0])
+		d  = (max-min)/nb
+		for b in range(nb):
+			allbins.append("1,"+str(min+b*d)+","+str(min+(b+1)*d))
+	return allbins
 
 def getBinLength(bins):
 	if not bins: return -1
@@ -49,7 +64,8 @@ def getBinLength(bins):
 		return int(bins.count(","))
 	return int(bins.split(",")[0])
 
-def getCut(firstCut, expr, bins):
+def getCut(options, firstCut, expr, bins):
+	if options.allowoverflow: return ""
 	if not expr or not bins: return ""
 	min, max = getMinMax(bins)
 	return "-A {first} inSR '{EXPR}>={MIN} && {EXPR}<={MAX}'".format(first=firstCut, EXPR=expr, MIN=min, MAX=max)

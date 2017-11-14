@@ -1,0 +1,76 @@
+
+## lepton observables
+## ----------------------------------------------------------
+
+el_pt     : if3(abs(LepGood_pdgId)==11,LepGood_conePt,-1) : 20,0,200    ; YTitle="Electrons", XTitle="p_{T\,cone}(e)"   , IncludeOverflows=False, IncludeOverflow=True, LegendCutoff=1e-4
+mu_pt     : if3(abs(LepGood_pdgId)==13,LepGood_conePt,-1) : 20,0,200    ; YTitle="Muons"    , XTitle="p_{T\,cone}(#mu)" , IncludeOverflows=False, IncludeOverflow=True, LegendCutoff=1e-4
+
+el_eta    : if3(abs(LepGood_pdgId)==11,LepGood_eta,-999)  : 10,-2.5,2.5 ; YTitle="Electrons", XTitle="#eta(e)"   , IncludeOverflows=False, LegendCutoff=1e-4
+mu_eta    : if3(abs(LepGood_pdgId)==13,LepGood_eta,-999)  : 10,-2.5,2.5 ; YTitle="Muons"    , XTitle="#eta(#mu)" , IncludeOverflows=False, LegendCutoff=1e-4
+
+lep1_pt         : LepGood1_conePt      : 30,0,300   ; YTitle="Leptons", XTitle="p_{T\,cone}(leading lep.)"   , LegendCutoff=1e-4, RMin=0.5, RMax=1.5 
+lep2_pt         : LepGood2_conePt      : 30,0,300   ; YTitle="Leptons", XTitle="p_{T\,cone}(subleading lep.)", LegendCutoff=1e-4, RMin=0.5, RMax=1.5 
+lep3_pt         : LepGood3_conePt      : 30,0,300   ; YTitle="Leptons", XTitle="p_{T\,cone}(trailing lep.)"  , LegendCutoff=1e-4, RMin=0.5, RMax=1.5 
+
+lep1_eta        : LepGood1_eta         : 10,-2.5,2.5 ; YTitle="Leptons", XTitle="#eta(leading lep.)"   , LegendCutoff=1e-4, YMin=0.1, YMax=10000
+lep2_eta        : LepGood2_eta         : 10,-2.5,2.5 ; YTitle="Leptons", XTitle="#eta(subleading lep.)", LegendCutoff=1e-4, YMin=0.1, YMax=5000
+lep3_eta        : LepGood3_eta         : 10,-2.5,2.5 ; YTitle="Leptons", XTitle="#eta(trailing lep.)"  , LegendCutoff=1e-4, YMin=0.1, YMax=3000
+
+lep1_flavor     : if3(abs(LepGood1_pdgId)==13,1,0) : 4,-0.5,3.5 ; XTitle="flavor(leading lep.)"   , xBinLabels="e\,#mu\,\,", Legend="TR", LegendCutoff=1e-4, MoreY=2.0
+lep2_flavor     : if3(abs(LepGood2_pdgId)==13,1,0) : 4,-0.5,3.5 ; XTitle="flavor(subleading lep.)", xBinLabels="e\,#mu\,\,", Legend="TR", LegendCutoff=1e-4, MoreY=2.0
+lep3_flavor     : if3(abs(LepGood3_pdgId)==13,1,0) : 4,-0.5,3.5 ; XTitle="flavor(trailing lep.)"  , xBinLabels="e\,#mu\,\,", Legend="TR", LegendCutoff=1e-4, MoreY=2.0
+
+lep1_dxy        : abs(LepGood1_dxy)    : 20,0,0.05  ; YTitle="Leptons", XTitle="#||{d_{xy}}(leading lep.)"   , LegendCutoff=1e-4
+lep2_dxy        : abs(LepGood2_dxy)    : 20,0,0.05  ; YTitle="Leptons", XTitle="#||{d_{xy}}(subleading lep.)", LegendCutoff=1e-4
+lep3_dxy        : abs(LepGood3_dxy)    : 20,0,0.05  ; YTitle="Leptons", XTitle="#||{d_{xy}}(trailing lep.)"  , LegendCutoff=1e-4
+
+lep1_dz         : abs(LepGood1_dz)     : 20,0,0.1   ; YTitle="Leptons", XTitle="#||{d_{z}}(leading lep.)"   , LegendCutoff=1e-4
+lep2_dz         : abs(LepGood2_dz)     : 20,0,0.1   ; YTitle="Leptons", XTitle="#||{d_{z}}(subleading lep.)", LegendCutoff=1e-4
+lep3_dz         : abs(LepGood3_dz)     : 20,0,0.1   ; YTitle="Leptons", XTitle="#||{d_{z}}(trailing lep.)"  , LegendCutoff=1e-4
+
+lep1_sip3d      : LepGood1_sip3d       : 16,0,8.0   ; YTitle="Leptons", XTitle="SIP_{3D}(leading lep.)"   , LegendCutoff=1e-4
+lep2_sip3d      : LepGood2_sip3d       : 16,0,8.0   ; YTitle="Leptons", XTitle="SIP_{3D}(subleading lep.)", LegendCutoff=1e-4
+lep3_sip3d      : LepGood3_sip3d       : 16,0,8.0   ; YTitle="Leptons", XTitle="SIP_{3D}(trailing lep.)"  , LegendCutoff=1e-4
+
+lep1_relIso     : LepGood1_relIso      : 20,0,0.3   ; YTitle="Leptons", XTitle="relIso_{0.3}(leading lep.)"   , LegendCutoff=1e-4
+lep2_relIso     : LepGood2_relIso      : 20,0,0.3   ; YTitle="Leptons", XTitle="relIso_{0.3}(subleading lep.)", LegendCutoff=1e-4
+lep3_relIso     : LepGood3_relIso      : 20,0,0.3   ; YTitle="Leptons", XTitle="relIso_{0.3}(trailing lep.)"  , LegendCutoff=1e-4
+
+lep1_miniRelIso : LepGood1_miniRelIso  : 20,0,0.3   ; YTitle="Leptons", XTitle="miniRelIso(leading lep.)"   , LegendCutoff=1e-4
+lep2_miniRelIso : LepGood2_miniRelIso  : 20,0,0.3   ; YTitle="Leptons", XTitle="miniRelIso(subleading lep.)", LegendCutoff=1e-4
+lep3_miniRelIso : LepGood3_miniRelIso  : 20,0,0.3   ; YTitle="Leptons", XTitle="miniRelIso(trailing lep.)"  , LegendCutoff=1e-4
+
+lep1_ptratio    : LepGood1_ptratio     : 20,0,1     ; YTitle="Leptons", XTitle="p_{T}^{l}/p_{T}^{j}(leading lep.)"   , LegendCutoff=1e-4
+lep2_ptratio    : LepGood2_ptratio     : 20,0,1     ; YTitle="Leptons", XTitle="p_{T}^{l}/p_{T}^{j}(subleading lep.)", LegendCutoff=1e-4
+lep3_ptratio    : LepGood3_ptratio     : 20,0,1     ; YTitle="Leptons", XTitle="p_{T}^{l}/p_{T}^{j}(trailing lep.)"  , LegendCutoff=1e-4
+
+lep1_ptrel      : LepGood1_ptrel       : 20,0,40    ; YTitle="Leptons", XTitle="p_{Trel}(leading lep.)"   , LegendCutoff=1e-4
+lep2_ptrel      : LepGood2_ptrel       : 20,0,40    ; YTitle="Leptons", XTitle="p_{Trel}(subleading lep.)", LegendCutoff=1e-4
+lep3_ptrel      : LepGood3_ptrel       : 20,0,40    ; YTitle="Leptons", XTitle="p_{Trel}(trailing lep.)"  , LegendCutoff=1e-4
+
+lep1_mva        : LepGood1_mva         : 20,0,1     ; YTitle="Leptons", XTitle="MVA(leading lep.)"   , LegendCutoff=1e-4
+lep2_mva        : LepGood2_mva         : 20,0,1     ; YTitle="Leptons", XTitle="MVA(subleading lep.)", LegendCutoff=1e-4
+lep3_mva        : LepGood3_mva         : 20,0,1     ; YTitle="Leptons", XTitle="MVA(trailing lep.)"  , LegendCutoff=1e-4
+
+
+
+## event observables
+## ----------------------------------------------------------
+
+nVert    : nVert         : 50,0,50     ; XTitle="N(PV)"                       , RMin=0.5, RMax=1.5, LegendCutoff=1e-4
+
+met      : met_pt        : 7,30,100    ; XTitle="p_{T}^{miss}  [GeV]"         , RMin=0.5, RMax=1.5, LegendCutoff=1e-4, Legend="TR"
+m3l      : m3L           : 60,0,300    ; XTitle="m_{3L} [GeV]"                , RMin=0.5, RMax=1.5, LegendCutoff=1e-4, Legend="TL"
+mll3l    : mllL_3l       : 15,75,105   ; XTitle="M_{ll} [GeV]"                , RMin=0.5, RMax=1.5, LegendCutoff=1e-4, Legend="TL"
+mtW3l    : mTL_3l        : 5,50,100    ; XTitle="M_{T} [GeV]"                 , RMin=0.5, RMax=1.5, LegendCutoff=1e-4, Legend="TL", YMin=0, YMax=1000
+
+
+htJet30j : htJet30j      : 20,0,100    ; XTitle="H_{T}(jet p_{T} > 30) [GeV]" , RMin=0.5, RMax=1.5, LegendCutoff=1e-4, Logy, YMin=0.1, YMax=10000
+nJet30   : nJet30        : 5,-0.5,4.5  ; XTitle="N(jet\, p_{T} > 30)"         , RMin=0.5, RMax=1.5, LegendCutoff=1e-4
+nBJet25  : nBJetMedium25 : 2,-0.5,1.5  ; XTitle="N(b-jet\, p_{T} > 25\, CSVM)", RMin=0.5, RMax=1.5, LegendCutoff=1e-4
+
+flavor   : (abs(LepGood1_pdgId)+abs(LepGood2_pdgId)+abs(LepGood3_pdgId)-33)/2               : 4,-0.5,3.5 ; XTitle="flavor", xBinLabels="eee\,ee#mu\,e#mu#mu\,#mu#mu#mu", Legend="TL", RMin=0.5, RMax=1.5, LegendCutoff=1e-4, MoreY=2.0
+charge   : if3(LepGood1_pdgId>0,-1,1)+if3(LepGood2_pdgId>0,-1,1)+if3(LepGood3_pdgId>0,-1,1) : 7,-3.5,3.5 ; XTitle="charge", Legend="TL", RMin=0.5, RMax=1.5, LegendCutoff=1e-4, MoreY=2.0
+
+
+

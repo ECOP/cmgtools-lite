@@ -1,0 +1,46 @@
+
+## UP VARIATION
+## -----------------------------------------------------------
+#promptsub_ewk_Up : WZTo3LNu_amcatnlo           : -0.991475*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Up : WZTo3LNu_amcatnlo           : -1.04*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Up : VHToNonbb                   : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Up : GGHZZ4L                     : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Up : ZZTo4L                      : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Up : TTGJets                     : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/3l/fakerate_load_isconv.txt"  , SkipMe=True
+promptsub_ewk_Up : ZGTo2LG                     : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/3l/fakerate_load_isconv.txt"  , SkipMe=True
+promptsub_ewk_Up : TTGJets                     : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Up : ZGTo2LG                     : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Up : WWW                         : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Up : WWZ                         : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Up : WZZ                         : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Up : ZZZ                         : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Up : TTWToLNu_ext1+TTWToLNu_ext2 : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Up : TTZToLLNuNu                 : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Up : TTHnobb_pow                 : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Up : TTLLJets_m1to10             : -1*0.0493 ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Up : TTTT                        : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Up : tZq_ll                      : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Up : tZW_ll                      : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+
+## DN VARIATION
+## -----------------------------------------------------------
+#promptsub_ewk_Dn : WZTo3LNu_amcatnlo           : -0.991475*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Dn : WZTo3LNu_amcatnlo           : -1.04*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Dn : VHToNonbb                   : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Dn : GGHZZ4L                     : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Dn : ZZTo4L                      : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Dn : TTGJets                     : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/3l/fakerate_load_isconv.txt"  , SkipMe=True
+promptsub_ewk_Dn : ZGTo2LG                     : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/3l/fakerate_load_isconv.txt"  , SkipMe=True
+promptsub_ewk_Dn : TTGJets                     : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Dn : ZGTo2LG                     : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Dn : WWW                         : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Dn : WWZ                         : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Dn : WZZ                         : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Dn : ZZZ                         : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Dn : TTWToLNu_ext1+TTWToLNu_ext2 : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Dn : TTZToLLNuNu                 : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Dn : TTHnobb_pow                 : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Dn : TTLLJets_m1to10             : -1*0.0493 ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Dn : TTTT                        : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Dn : tZq_ll                      : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+promptsub_ewk_Dn : tZW_ll                      : -1*xsec ; FakeRate="susy-ewkino/3l/fakerate_fakeappl_ewkDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True

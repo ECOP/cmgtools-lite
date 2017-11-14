@@ -1,6 +1,6 @@
 weight: 1.0
-change: met\b          : met_genPt
-change: met_phi\b      : met_genPhi
-change: nJet30\b       : nJet30_Mini
-change: htJet30j\b     : htJet30j_Mini
-change: nBJetMedium25\b: nBJetMedium25_Mini
+change: metPt\b        : met_genPt
+change: metPhi\b       : met_genPhi
+change: nJet40\b       : nJet40_Recl
+change: nBJetMedium25\b: nBJetMedium25_Recl
+

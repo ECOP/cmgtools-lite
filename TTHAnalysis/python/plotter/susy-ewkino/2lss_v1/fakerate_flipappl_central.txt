@@ -1,0 +1,13 @@
+weight      : chargeFlipWeight_2lss(LepGood_pt[iF_Recl[0] ], LepGood_eta[iF_Recl[0] ], LepGood_pdgId[iF_Recl[0] ], LepGood_pt[iF_Recl[1] ], LepGood_eta[iF_Recl[1] ], LepGood_pdgId[iF_Recl[1] ])
+
+cut-change  : sameSign : !sameSign
+
+change      : metPt\b        : met_pt
+change      : metPhi\b       : met_phi
+change      : nJet40\b       : nJet40_Recl
+change      : nBJetMedium25\b: nBJetMedium25_Recl
+
+load-histo  : QF_el : $DATA/fliprate/fliprate_mvaVT_EWKino_Moriond2017_36p5.root : elChMId
+
+
+

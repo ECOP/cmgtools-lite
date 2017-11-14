@@ -1,18 +1,20 @@
 #!/bin/bash
 
 #T="/mnt/t3nfs01/data01/shome/cheidegg/o/2017-02-04_signalMerger/"
-O="/mnt/t3nfs01/data01/shome/cheidegg/o/2017-02-04_signalSplitter"
-T="/mnt/t3nfs01/data01/shome/cheidegg/o/2017-01-24_treeMerger/"
+#O="/mnt/t3nfs01/data01/shome/cheidegg/o/2017-02-04_signalSplitter"
+#T="/mnt/t3nfs01/data01/shome/cheidegg/o/2017-01-24_treeMerger/"
 #O="/mnt/t3nfs01/data01/shome/cheidegg/o/2017-01-24_signalSplitter"
+O="/mnt/t3nfs01/data01/shome/cheidegg/o/2017-03-22_signalSplitter"
+T="/mnt/t3nfs01/data01/shome/cheidegg/o/2017-03-22_signalMerger"
 QUEUE="-q long.q --email 'constantin.heidegger@cern.ch'"
 
 #python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept T6ttWW
 #python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept T6ttHZ --flags '--branch1 GenSusyMStop --branch2 GenSusyMStop2'
 #python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept T6bbllslepton_mSbottom_1000To1500_mLSP_120To1450
 #python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept T6bbllslepton_mSbottom_400To950_mLSP_120To140
-python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept T6bbllslepton_mSbottom_400To575_mLSP_150To550
-python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept T6bbllslepton_mSbottom_600To775_mLSP_150To725
-python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept T6bbllslepton_mSbottom_800To950_mLSP_150To900 
+#python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept T6bbllslepton_mSbottom_400To575_mLSP_150To550
+#python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept T6bbllslepton_mSbottom_600To775_mLSP_150To725
+#python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept T6bbllslepton_mSbottom_800To950_mLSP_150To900 
 
 #python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept TChiSlepSnux0p5  --flags '--branch1 GenSusyMChargino --branch2 GenSusyMNeutralino'
 #python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept TChiSlepSnux0p05 --flags '--branch1 GenSusyMChargino --branch2 GenSusyMNeutralino'
@@ -28,10 +30,10 @@ python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept T6bbllslepton_m
 #python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept TChiStauStaux0p5 --exclude ext   --flags '--branch1 GenSusyMChargino --branch2 GenSusyMNeutralino'
 #python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept TChiStauStaux0p5ext --flags '--branch1 GenSusyMChargino --branch2 GenSusyMNeutralino'
 
-#python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept TChiZZ4L            --flags '--branch1 GenSusyMNeutralino2 --branch2 GenSusyMNeutralino'
-#python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept TChiZZ2L            --flags '--branch1 GenSusyMNeutralino2 --branch2 GenSusyMNeutralino'
-#python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept TChiHZ              --flags '--branch1 GenSusyMNeutralino2 --branch2 GenSusyMNeutralino'
-#python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept TChiHH              --flags '--branch1 GenSusyMNeutralino2 --branch2 GenSusyMNeutralino'
+python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept TChiZZ4L            --flags '--branch1 GenSusyMNeutralino2 --branch2 GenSusyMNeutralino'
+python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept TChiZZ2L            --flags '--branch1 GenSusyMNeutralino2 --branch2 GenSusyMNeutralino'
+python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept TChiHZ              --flags '--branch1 GenSusyMNeutralino2 --branch2 GenSusyMNeutralino'
+python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept TChiHH              --flags '--branch1 GenSusyMNeutralino2 --branch2 GenSusyMNeutralino'
 
 #python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept T1tttt  
 #python susy-interface/splitmaker.py 3l 3lA $T $O $QUEUE --accept T5qqqqVV

@@ -2,8 +2,8 @@
 ## -----------------------------------------------------------
 incl_data      : + ; IncludeMca="susy-ewkino/crwz/includes/mca_data.txt"
 
-prompt_WZ               : WZTo3LNu                        : xsec*1.04 : ((LepGood1_mcUCSXMatchId==0 || LepGood1_mcUCSXMatchId==1) && (LepGood2_mcUCSXMatchId==0 || LepGood2_mcUCSXMatchId==1) && (LepGood3_mcUCSXMatchId==0 || LepGood3_mcUCSXMatchId==1))            ; FillColor=ROOT.kOrange  , Label="WZ", NormSystematic=0.1
-
+#prompt_WZ      : WZTo3LNu_amcatnlo : xsec : ((LepGood1_mcUCSXMatchId==0 || LepGood1_mcUCSXMatchId==1) && (LepGood2_mcUCSXMatchId==0 || LepGood2_mcUCSXMatchId==1) && (LepGood3_mcUCSXMatchId==0 || LepGood3_mcUCSXMatchId==1)); FakeRate="susy-ewkino/crwz/fakerate_standard_central.txt", FillColor=ROOT.kOrange, Label="WZ", NormSystematic=0.1
+prompt_WZ      : WZTo3LNu : 1.12*xsec : ((LepGood1_mcUCSXMatchId==0 || LepGood1_mcUCSXMatchId==1) && (LepGood2_mcUCSXMatchId==0 || LepGood2_mcUCSXMatchId==1) && (LepGood3_mcUCSXMatchId==0 || LepGood3_mcUCSXMatchId==1)); FakeRate="susy-ewkino/crwz/fakerate_standard_central.txt", FillColor=ROOT.kOrange, Label="WZ", NormSystematic=0.1
 
 incl_MC        : + ; IncludeMca="susy-ewkino/crwz/includes/mca_MC.txt"
 incl_fakesdata : + ; IncludeMca="susy-ewkino/crwz/includes/mca_fakesdata.txt"

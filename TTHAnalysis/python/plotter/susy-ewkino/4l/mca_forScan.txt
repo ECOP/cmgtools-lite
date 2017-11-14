@@ -6,14 +6,14 @@ incl_data : + ; IncludeMca="susy-ewkino/4l/includes/mca_data_M17_reminiAOD.txt"
 
 ## WZ (to keep the order)
 ## -----------------------------------------------------------
-prompt_WZ : WZTo3LNu : xsec ; FillColor=ROOT.kOrange, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/4l/fakerate_load_isprompt.txt", Label="WZ", NormSystematic=0.3
+prompt_WZ : WZTo3LNu : 1.12*xsec ; FillColor=ROOT.kOrange, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/4l/fakerate_load_isprompt.txt", Label="WZ", NormSystematic=0.3
 
 ## Backgrounds
 ## -----------------------------------------------------------
 incl_fakes_appldata : + ; IncludeMca="susy-ewkino/4l/includes/mca_fakes_appldata_M17_reminiAOD.txt"
 #incl_fakes_appldata : + ; IncludeMca="susy-ewkino/4l/includes/mca_fakes_appldata_M17.txt"
 #incl_fakes_appldata : + ; IncludeMca="susy-ewkino/4l/includes/mca_fakes_appldata_ICHEP.txt"
-incl_promptsub      : + ; IncludeMca="susy-ewkino/4l/includes/mca_promptsub_scan.txt"
+incl_promptsub      : + ; IncludeMca="susy-ewkino/4l/includes/mca_promptsub.txt"
 incl_prompts        : + ; IncludeMca="susy-ewkino/4l/includes/mca_prompts.txt"
 
 ## Systematics

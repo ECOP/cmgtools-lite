@@ -1,0 +1,27 @@
+## Base (data, fakes, prompt)
+## -----------------------------------------------------------
+incl_data      : + ; IncludeMca="susy-ewkino/crwzcorr/includes/mca_data.txt"
+
+#sig_TChiWZ_100_1+   : TChiWZ_100_1   : 0.10099*22670.1/1000 : ((LepGood1_mcUCSXMatchId==0 || LepGood1_mcUCSXMatchId==1) && (LepGood2_mcUCSXMatchId==0 || LepGood2_mcUCSXMatchId==1) && (LepGood3_mcUCSXMatchId==0 || LepGood3_mcUCSXMatchId==1)) ; FillColor=ROOT.kGreen, FakeRate="susy-ewkino/crwzcorr/fakerate_standard_central.txt", Label="\#tilde{\#chi}^{0}\#tilde{\#chi}^{\#pm}\#rightarrowWZ(100/1)", isFastSim, NormSystematic=0.3
+#sig_TChiWZ_200_100+ : TChiWZ_200_100 : 0.10099*1807.39/1000 : ((LepGood1_mcUCSXMatchId==0 || LepGood1_mcUCSXMatchId==1) && (LepGood2_mcUCSXMatchId==0 || LepGood2_mcUCSXMatchId==1) && (LepGood3_mcUCSXMatchId==0 || LepGood3_mcUCSXMatchId==1)) ; FillColor=ROOT.kBlack, FakeRate="susy-ewkino/crwzcorr/fakerate_standard_central.txt", Label="\#tilde{\#chi}^{0}\#tilde{\#chi}^{\#pm}\#rightarrowWZ(200/100)", isFastSim, NormSystematic=0.3, LineStyle=2
+#sig_TChiWZ_350_250+ : TChiWZ_350_250 : 0.10099/1000*209.439 : ((LepGood1_mcUCSXMatchId==0 || LepGood1_mcUCSXMatchId==1) && (LepGood2_mcUCSXMatchId==0 || LepGood2_mcUCSXMatchId==1) && (LepGood3_mcUCSXMatchId==0 || LepGood3_mcUCSXMatchId==1)) ; FillColor=ROOT.kGreen, FakeRate="susy-ewkino/crwzcorr/fakerate_standard_central.txt", Label="\#tilde{\#chi}^{0}\#tilde{\#chi}^{\#pm}\#rightarrowWZ(350/250)", isFastSim, NormSystematic=0.3
+
+#prompt_WZ      : WZTo3LNu : xsec : ((LepGood1_mcUCSXMatchId==0 || LepGood1_mcUCSXMatchId==1) && (LepGood2_mcUCSXMatchId==0 || LepGood2_mcUCSXMatchId==1) && (LepGood3_mcUCSXMatchId==0 || LepGood3_mcUCSXMatchId==1)); FakeRate="susy-ewkino/crwzcorr/fakerate_standard_central.txt", FillColor=ROOT.kOrange, Label="WZ", NormSystematic=0.1
+#prompt_WZ      : WZTo3LNu_amcatnlo : 0.991475*xsec : ((LepGood1_mcUCSXMatchId==0 || LepGood1_mcUCSXMatchId==1) && (LepGood2_mcUCSXMatchId==0 || LepGood2_mcUCSXMatchId==1) && (LepGood3_mcUCSXMatchId==0 || LepGood3_mcUCSXMatchId==1)); FakeRate="susy-ewkino/crwzcorr/fakerate_standard_central.txt", FillColor=ROOT.kOrange, Label="WZ", NormSystematic=0.1
+prompt_WZ      : WZTo3LNu_amcatnlo : 1.04*xsec : ((LepGood1_mcUCSXMatchId==0 || LepGood1_mcUCSXMatchId==1) && (LepGood2_mcUCSXMatchId==0 || LepGood2_mcUCSXMatchId==1) && (LepGood3_mcUCSXMatchId==0 || LepGood3_mcUCSXMatchId==1)); FakeRate="susy-ewkino/crwzcorr/fakerate_standard_central.txt", FillColor=ROOT.kOrange, Label="WZ", NormSystematic=0.1
+
+incl_MC        : + ; IncludeMca="susy-ewkino/crwzcorr/includes/mca_MC.txt"
+incl_fakesdata : + ; IncludeMca="susy-ewkino/crwzcorr/includes/mca_fakesdata.txt"
+incl_promptsub : + ; IncludeMca="susy-ewkino/crwzcorr/includes/mca_promptsub.txt"
+#incl_fakesMC : + ; IncludeMca="susy-ewkino/crwzcorr/includes/mca_fakesMC.txt"
+
+## Systematics
+## -----------------------------------------------------------
+incl_sys_puw            : + ; IncludeMca="susy-ewkino/crwzcorr/includes/mca_sys_puw.txt"
+incl_sys_ewk_fakesdata  : + ; IncludeMca="susy-ewkino/crwzcorr/includes/mca_sys_ewk_fakesdata.txt"
+incl_sys_ewk_promptsub  : + ; IncludeMca="susy-ewkino/crwzcorr/includes/mca_sys_ewk_promptsub.txt"
+incl_sys_isr            : + ; IncludeMca="susy-ewkino/crwzcorr/includes/mca_sys_isr.txt"
+incl_sys_jec            : + ; IncludeMca="susy-ewkino/crwzcorr/includes/mca_sys_jec.txt"
+incl_sys_lepSF          : + ; IncludeMca="susy-ewkino/crwzcorr/includes/mca_sys_lepSF.txt"
+incl_sys_bTagHF         : + ; IncludeMca="susy-ewkino/crwzcorr/includes/mca_sys_bTagHF.txt"
+incl_sys_bTagLF         : + ; IncludeMca="susy-ewkino/crwzcorr/includes/mca_sys_bTagLF.txt"

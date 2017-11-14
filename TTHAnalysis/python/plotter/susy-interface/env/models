@@ -59,7 +59,7 @@ BEGIN::TChiZZ4L
 ENDDEF
 
 BEGIN::TChiHZ
-  masspoints  := susy-interface/scan/masspoints/TChiHZ.txt
+  masspoints  := susy-interface/scan/masspoints/TChiHZ_physical.txt
   xsecfile    := susy-interface/scan/xsec/xsec_NeuNeu.txt
   brcorr      := 0.0305/1000.
 ENDDEF

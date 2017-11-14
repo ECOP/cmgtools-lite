@@ -1,0 +1,14 @@
+
+weight    : EWK3L_fakeTransfer(2, EWK3L_fakeRate(LepGood_conePt[iF_Recl[0]],LepGood_eta[iF_Recl[0]],LepGood_pdgId[iF_Recl[0]],LepGood_isTight_Recl[iF_Recl[0]]), isGoodFake2L(LepGood_conePt[iF_Recl[0]],LepGood_isTight_Recl[iF_Recl[0]]), EWK3L_fakeRate(LepGood_conePt[iF_Recl[1]],LepGood_eta[iF_Recl[1]],LepGood_pdgId[iF_Recl[1]],LepGood_isTight_Recl[iF_Recl[1]]), isGoodFake2L(LepGood_conePt[iF_Recl[1]],LepGood_isTight_Recl[iF_Recl[1]]))
+#weight    : fakeRateWeight_2lss_2(LepGood_conePt[iF_Recl[0]],LepGood_eta[iF_Recl[0]],LepGood_pdgId[iF_Recl[0]],LepGood_isTight_Recl[iF_Recl[0]], LepGood_conePt[iF_Recl[1]],LepGood_eta[iF_Recl[1]],LepGood_pdgId[iF_Recl[1]],LepGood_isTight_Recl[iF_Recl[1]])
+
+cut-change: allTight : !allTight
+
+load-histo: FR_el : $DATA/fakerate/fakerate_light_EWKino_Moriond2017_36p5fb.root : FR_susy_wpV_el_QCD
+load-histo: FR_mu : $DATA/fakerate/fakerate_light_EWKino_Moriond2017_36p5fb.root : FR_susy_wpV_mu_QCD
+
+change    : metPt\b        : met_pt
+change    : metPhi\b       : met_phi
+change    : nJet40\b       : nJet40_Recl
+change    : nBJetMedium25\b: nBJetMedium25_Recl
+

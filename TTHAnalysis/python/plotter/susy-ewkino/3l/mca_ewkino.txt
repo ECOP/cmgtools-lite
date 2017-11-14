@@ -8,10 +8,14 @@ incl_sync  : + ; IncludeMca="susy-ewkino/3l/includes/mca_sync.txt"
 ## Signals
 ## -----------------------------------------------------------
 #sig_TChiNeuWZ_350_200+ : TChiNeuWZ_350_200 : xsec ; FillColor=ROOT.kRed, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="WZ 350/200", NormSystematic=0.3
-incl_sig_opt  : + ; IncludeMca="susy-ewkino/3l/includes/mca_sig_opt.txt"
-#incl_sig_acc  : + ; IncludeMca="susy-ewkino/3l/includes/mca_sig_acc.txt"
-#incl_sig_exc  : + ; IncludeMca="susy-ewkino/3l/includes/mca_sig_exercise.txt"
-#incl_sig_fs   : + ; IncludeMca="susy-ewkino/3l/includes/mca_sig_fullsim.txt"
+#sig_TChiStauStaux0p5_225_150 : TChiStauStaux0p5_225_150 : xsec ; FillColor=ROOT.kRed, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt", Label="WZ 350/200", NormSystematic=0.3, isFastSim
+#incl_sig_exerc  : + ; IncludeMca="susy-ewkino/3l/includes/mca_sig_exerciseM17.txt"
+incl_sig_data   : + ; IncludeMca="susy-ewkino/3l/includes/mca_sig_overlaid.txt"
+#incl_sig_wzcorr : + ; IncludeMca="susy-ewkino/3l/includes/mca_sig_wzcorr.txt"
+#incl_sig_opt    : + ; IncludeMca="susy-ewkino/3l/includes/mca_sig_opt.txt"
+#incl_sig_acc    : + ; IncludeMca="susy-ewkino/3l/includes/mca_sig_acc.txt"
+#incl_sig_exc    : + ; IncludeMca="susy-ewkino/3l/includes/mca_sig_exercise.txt"
+#incl_sig_fs     : + ; IncludeMca="susy-ewkino/3l/includes/mca_sig_fullsim.txt"
 
 ## Data
 ## -----------------------------------------------------------
@@ -22,8 +26,8 @@ incl_data      : + ; IncludeMca="susy-ewkino/3l/includes/mca_data_M17_reminiAOD.
 
 ## WZ (to keep the order)
 ## -----------------------------------------------------------
-prompt_WZ : WZTo3LNu : 1.09*xsec ; FillColor=ROOT.kOrange, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="WZ", NormSystematic=0.3
-bare_WZ   : WZTo3LNu : 1.09*xsec ; FillColor=ROOT.kOrange, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt", Label="WZ", NormSystematic=0.3
+prompt_WZ : WZTo3LNu : 1.12*xsec ; FillColor=ROOT.kOrange, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="WZ", NormSystematic=0.3
+bare_WZ   : WZTo3LNu : 1.12*xsec ; FillColor=ROOT.kOrange, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt", Label="WZ", NormSystematic=0.3
 
 ## Backgrounds
 ## -----------------------------------------------------------

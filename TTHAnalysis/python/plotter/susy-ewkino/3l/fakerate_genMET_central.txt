@@ -7,8 +7,15 @@ change: LepSel4_(\w+)  : LepSel_\1[3]
 change: nJet30\b       : nJet30_Mini
 change: htJet30j\b     : htJet30j_Mini
 change: nBJetMedium25\b: nBJetMedium25_Mini
-change: met\b          : met_genPt
+change: met_pt\b       : met_genPt
 change: met_phi\b      : met_genPhi
 change: mT_3l\b        : mT_3l_gen
 change: mT2L_3l\b      : mT2L_3l_gen
 change: mT2T_3l\b      : mT2T_3l_gen
+
+change: srMt\b         : srMt(3, mT_3l_gen, mTL_3l_gen, mTT_3l_gen)
+change: SR\b           : SR(3, countTaus(3, LepSel_pdgId[0], LepSel_pdgId[1], LepSel_pdgId[2]), nOSSF_3l, nOSLF_3l, mT2L_3l_gen, mT2T_3l_gen, srMll(3, mll_3l, mllL_3l, mllT_3l), srMt(3, mT_3l_gen, mTL_3l_gen, mTT_3l_gen), met_genPt) 
+change: SuperSig\b     : SuperSig(3, countTaus(3, LepSel_pdgId[0], LepSel_pdgId[1], LepSel_pdgId[2]), nOSSF_3l, nOSLF_3l, mT2L_3l_gen, mT2T_3l_gen, srMll(3, mll_3l, mllL_3l, mllT_3l), srMt(3, mT_3l_gen, mTL_3l_gen, mTT_3l_gen), met_genPt)
+
+change: SRcorr\b       : SRcorr(mllL_3l, mTL_3l_gen, met_genPt, htJet30j_Mini)
+change: SuperSigcorr\b : SuperSigcorr(mllL_3l, mTL_3l_gen, met_genPt, htJet30j_Mini)

@@ -77,6 +77,7 @@ parser.add_option("--log", "--log-dir", dest="logdir", type="string", default=No
 parser.add_option("--env",   dest="env",     type="string", default="lxbatch", help="Give the environment on which you want to use the batch system (cern, psi, oviedo)");
 parser.add_option("--bk",   dest="bookkeeping",  action="store_true", default=False, help="If given the command used to run the friend tree will be stored");
 parser.add_option("--tra2",  dest="useTRAv2", action="store_true", default=False, help="Use the new experimental version of treeReAnalyzer");
+parser.add_option("--remote",  dest="remoteDir", type="string", default=None, help="Remote directory to copy the friend tree after running");
 (options, args) = parser.parse_args()
 
 
@@ -280,7 +281,7 @@ def _runIt(myargs):
     friends += (options.friendTreesData if data else options.friendTreesMC)
     friends_ = [] # to make sure pyroot does not delete them
     for tf_tree,tf_file in friends:
-        tf = tb.AddFriend(tf_tree, tf_file.format(name=name, cname=name, P=args[0])),
+        tf = tb.AddFriend(tf_tree, tf_file.format(name=name, cname=name, P=args[0], RP=fin[0:fin.rfind("/")])),
         friends_.append(tf) # to make sure pyroot does not delete them
     nev = tb.GetEntries()
     if options.pretend:
@@ -302,11 +303,16 @@ def _runIt(myargs):
     fb.Close()
     time = timer.RealTime()
     nev = el._doneEvents
+    if options.remoteDir:
+        options.remoteDir = options.remoteDir.rstrip("/")
+        if "/pnfs/psi.ch" in options.remoteDir:
+            os.system("lcg-cp -b -D srmv2 "+fout+" srm://t3se01.psi.ch:8443/srm/managerv2?SFN="+options.remoteDir+"/"+fout[fout.rfind("/",0, fout.rfind("/"))+1:])
+        os.system("rm "+fout)
     print "=== %s done (%d entries, %.0f s, %.0f e/s) ====" % ( name, nev, time,(nev/time) )
     if fetchedfile and os.path.exists(fetchedfile):
         print 'Cleaning up: removing %s'%fetchedfile
         os.system("rm %s"%fetchedfile)
-    if options.bookkeeping:
+    if options.bookkeeping and not options.remoteDir:
         if not os.path.exists(fout[:fout.rfind("/")] + "/cmd"): os.system("mkdir -p " + fout[:fout.rfind("/")] + "/cmd")
         fcmd = open(fout[:fout.rfind("/")] + "/cmd/" + fout[fout.rfind("/")+1:].rstrip(".root") + "_command.txt", "w")
         fcmd.write("%s\n\n" % " ".join(sys.argv)) 

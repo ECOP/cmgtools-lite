@@ -1,0 +1,26 @@
+sig_TChiWH_150_24+ : TChiWH_150_24 : 0.03634/1000*5180.86 ; FillColor=ROOT.kYellow, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiWH 150/24", isFastSim, NormSystematic=0.3
+sig_TChiWH_175_49+ : TChiWH_175_49 : 0.03634/1000*2953.28 ; FillColor=ROOT.kYellow+1, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiWH 175/49", isFastSim, NormSystematic=0.3, LineStyle=2
+sig_TChiWH_175_1+  : TChiWH_175_1  : 0.03634/1000*2953.28 ; FillColor=ROOT.kYellow+3, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiWH 175/1", isFastSim, NormSystematic=0.3
+
+#sig_TChiWZ_100_1+     : TChiWZ_100_1 : 0.10099/1000*22670. ; FillColor=ROOT.kGreen, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiWZ 100/1 (pfMET)", isFastSim, NormSystematic=0.3
+#sig_TChiWZ_100_1_gen+ : TChiWZ_100_1 : 0.10099/1000*22670. ; FillColor=ROOT.kGreen+3, FakeRate="susy-ewkino/3l/fakerate_genMET_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiWZ 100/1 (genMET)", isFastSim, NormSystematic=0.3
+#sig_TChiWZ_100_1_avg+ : TChiWZ_100_1 : 0.10099/1000*22670. ; FillColor=ROOT.kGreen+3, FakeRate="susy-ewkino/3l/fakerate_genMET_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiWZ 100/1 (fastsim)", isFastSim, NormSystematic=0.3, LineStyle=2
+
+sig_TChiWZ_175_115+ : TChiWZ_175_115 : 0.10099/1000*2953.28  ; FillColor=ROOT.kGreen, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiWZ 175/115", isFastSim, NormSystematic=0.3
+sig_TChiWZ_350_25+  : TChiWZ_350_25  : 0.10099/1000*209.439  ; FillColor=ROOT.kGreen, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiWZ 350/25", isFastSim, NormSystematic=0.3
+sig_TChiWZ_550_1+   : TChiWZ_550_1   : 0.10099/1000*30.1656  ; FillColor=ROOT.kGreen+3, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiWZ 550/1", isFastSim, NormSystematic=0.3, LineStyle=2
+
+sig_TChiWZ_150_120+ : TChiWZ_150_120 : 0.10099/1000*5180.86  ; FillColor=ROOT.kGreen, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiWZ 150/120", isFastSim, NormSystematic=0.3
+sig_TChiWZ_200_100+ : TChiWZ_200_100 : 0.10099/1000*1807.39  ; FillColor=ROOT.kGreen+3, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiWZ 200/100", isFastSim, NormSystematic=0.3, LineStyle=2
+sig_TChiWZ_250_170+ : TChiWZ_250_170 : 0.10099/1000*782.487  ; FillColor=ROOT.kGreen+3, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiWZ 250/170", isFastSim, NormSystematic=0.3
+sig_TChiWZ_400_150+ : TChiWZ_400_150 : 0.10099/1000*121.013  ; FillColor=ROOT.kGreen, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiWZ 400/150", isFastSim, NormSystematic=0.3
+sig_TChiWZ_400_175+ : TChiWZ_400_175 : 0.10099/1000*121.013  ; FillColor=ROOT.kGreen+1, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiWZ 400/175", isFastSim, NormSystematic=0.3, LineStyle=2
+sig_TChiWZ_450_50+ : TChiWZ_450_50   : 0.10099/1000*73.4361  ; FillColor=ROOT.kGreen+3, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiWZ 450/50", isFastSim, NormSystematic=0.3
+
+sig_TChiSlepSnu_500_400+   : TChiSlepSnux0p5_500_400 : 0.5*46.3533/1000 ; FillColor=ROOT.kGreen, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiSlepSnu 500/400", isFastSim, NormSystematic=0.3
+sig_TChiSlepSnu_1000_600+ : TChiSlepSnux0p5_1000_600 : 0.5*1.34352/1000 ; FillColor=ROOT.kRed, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiSlepSnu 1000/600", isFastSim, NormSystematic=0.3
+sig_TChiSlepSnu_1000_1+   : TChiSlepSnux0p5_1000_1   : 0.5*1.34352/1000 ; FillColor=ROOT.kGreen+1, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiSlepSnu 1000/1", isFastSim, NormSystematic=0.3, LineStyle=2
+sig_TChiSlepSnu_1050_1+   : TChiSlepSnux0p5_1050_1   : 0.5*0.997903/1000 ; FillColor=ROOT.kRed, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiSlepSnu 1050/1", isFastSim, NormSystematic=0.3
+sig_TChiSlepSnu_1050_700+ : TChiSlepSnux0p5_1050_700 : 0.5*0.997903/1000 ; FillColor=ROOT.kGreen+3, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", Label="TChiSlepSnu 1050/700", isFastSim, NormSystematic=0.3
+
+

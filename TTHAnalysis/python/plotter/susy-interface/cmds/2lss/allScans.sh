@@ -5,28 +5,47 @@
 ## This kills memory and performance. Keep in mind to split as good and effective as possible
 ## to optimize performance.
 
-T="/mnt/t3nfs01/data01/shome/cheidegg/o/2016-11-29_ewkskims80X_M17_MERGED/"  ## tree directory
-O="/mnt/t3nfs01/data01/shome/cheidegg/o/2017-01-09_ewk80X_scanTest"          ## output directory
-QUEUE="" #"-q 1nh"
-FLAGS="" #"-X blinding"
-LUMI=36.5
+S="/mnt/t3nfs01/data01/shome/cheidegg/o/2017-02-18_ewktrees80X_M17_signals"
+T="/mnt/t3nfs01/data01/shome/cheidegg/o/2017-02-25_ewkskims80X_M17_2lss_bkg;/mnt/t3nfs01/data01/shome/cheidegg/o/2017-02-23_ewkskims80X_M17_2lss_data;$S"
+#O="/mnt/t3nfs01/data01/shome/cheidegg/o/2017-03-06_ewk80X_approvalScans_TE"
+O="/mnt/t3nfs01/data01/shome/cheidegg/o/2017-03-13_ewk80X_postApprovalScans"
 
+## full dataset
+#LUMI=35.9
+#BLIND="-X blinding"
+
+## ichep
+LUMI=12.9
+BLIND=""
+
+## queue
+QUEUE="-q all.q"
 
 ## background only first
-#python susy-interface/scanmaker.py 2lss 2lss $T $O -l $LUMI -o SR --models TChiNeuWZ --flags '$FLAGS' --bkgOnly --redoBkg $QUEUE 
+#python susy-interface/scanmaker.py 2lss 2lss $T $O -l $LUMI -o SR --models TChiSlepSnu_FD_05 --flags "$BLIND" --bkgOnly --redoBkg $QUEUE --mca susy-ewkino/2lss_v1/mca_forScan.txt
 
-## TChiNeuWH
-#python susy-interface/scanmaker.py 2lss 2lss $T $O -l $LUMI -o SR --models TChiNeuWH --flags '$FLAGS' --sigOnly $QUEUE --postfix '--postfix-pred fakes_appldata*=fixFakePredictionForZeroEvts --frFile $CMSSW_BASE/src/CMGTools/TTHAnalysis/data/fakerate/fakerate_light_EWKino_Moriond2017_36p5fb.root --frMap FR_susy_wpV_FL_data_comb' --check
+## TChiWH
+###python susy-interface/scanmaker.py 2lss 2lss $T $O -l $LUMI -o SR --models TChiWH            --flags "$BLIND" --sigOnly $QUEUE --postfix '--postfix-pred fakes_appldata*=fixFakePredictionForZeroEvts --frFile $CMSSW_BASE/src/CMGTools/TTHAnalysis/data/fakerate/fakerate_light_EWKino_Moriond2017_36p5fb.root --frMap FR_susy_wpV_FL_data_comb --mpfr 2lss' --mca susy-ewkino/2lss_v1/mca_forScan.txt --check
 
-## TChiNeuWZ
-#python susy-interface/scanmaker.py 2lss 2lss $T $O -l $LUMI -o SR --models TChiNeuWZ --flags '$FLAGS' --sigOnly $QUEUE --postfix '--postfix-pred fakes_appldata*=fixFakePredictionForZeroEvts --frFile $CMSSW_BASE/src/CMGTools/TTHAnalysis/data/fakerate/fakerate_light_EWKino_Moriond2017_36p5fb.root --frMap FR_susy_wpV_FL_data_comb' --check
+## TChiWZ
+###python susy-interface/scanmaker.py 2lssWZ 2lss $T $O -l $LUMI -o SR --models TChiWZ            --flags "$BLIND" --sigOnly $QUEUE --postfix '--postfix-pred fakes_appldata*=fixFakePredictionForZeroEvts --frFile $CMSSW_BASE/src/CMGTools/TTHAnalysis/data/fakerate/fakerate_light_EWKino_Moriond2017_36p5fb.root --frMap FR_susy_wpV_FL_data_comb --mpfr 2lss' --mca susy-ewkino/2lss_v1/mca_forScan.txt --check
 
-## TChiNeuSlepSneu_FD
-#python susy-interface/scanmaker.py 2lss 2lss $T $O -l $LUMI -o SR --models TChiNeuSlepSneu_FD --flags '$FLAGS' --sigOnly $QUEUE --postfix '--postfix-pred fakes_appldata*=fixFakePredictionForZeroEvts --frFile $CMSSW_BASE/src/CMGTools/TTHAnalysis/data/fakerate/fakerate_light_EWKino_Moriond2017_36p5fb.root --frMap FR_susy_wpV_FL_data_comb' --check
+## TChiSlepSnu_FD
+##python susy-interface/scanmaker.py 2lss 2lss $T $O -l $LUMI -o SR --models TChiSlepSnu_FD    --flags "$BLIND" --sigOnly $QUEUE --postfix '--postfix-pred fakes_appldata*=fixFakePredictionForZeroEvts --frFile $CMSSW_BASE/src/CMGTools/TTHAnalysis/data/fakerate/fakerate_light_EWKino_Moriond2017_36p5fb.root --frMap FR_susy_wpV_FL_data_comb --mpfr 2lss' --mca susy-ewkino/2lss_v1/mca_forScan.txt --check
 
-## TChiNeuSlepSneu_05
-#python susy-interface/scanmaker.py 2lss 2lss $T $O -l $LUMI -o SR --models TChiNeuSlepSneu_FD --flags '$FLAGS' --sigOnly $QUEUE --postfix '--postfix-pred fakes_appldata*=fixFakePredictionForZeroEvts --frFile $CMSSW_BASE/src/CMGTools/TTHAnalysis/data/fakerate/fakerate_light_EWKino_Moriond2017_36p5fb.root --frMap FR_susy_wpV_FL_data_comb' --check
+## TChiSlepSnu_FD_05
+python susy-interface/scanmaker.py 2lss 2lss $T $O -l $LUMI -o SR --models TChiSlepSnu_FD_05 --flags "$BLIND" --sigOnly $QUEUE --postfix '--postfix-pred fakes_appldata*=fixFakePredictionForZeroEvts --frFile $CMSSW_BASE/src/CMGTools/TTHAnalysis/data/fakerate/fakerate_light_EWKino_Moriond2017_36p5fb.root --frMap FR_susy_wpV_FL_data_comb --mpfr 2lss' --mca susy-ewkino/2lss_v1/mca_forScan.txt --check
 
-## TChiNeuSlepSneu_95
-#python susy-interface/scanmaker.py 2lss 2lss $T $O -l $LUMI -o SR --models TChiNeuSlepSneu_FD --flags '$FLAGS' --sigOnly $QUEUE --postfix '--postfix-pred fakes_appldata*=fixFakePredictionForZeroEvts --frFile $CMSSW_BASE/src/CMGTools/TTHAnalysis/data/fakerate/fakerate_light_EWKino_Moriond2017_36p5fb.root --frMap FR_susy_wpV_FL_data_comb' --check
+## TChiSlepSnu_FD_95
+python susy-interface/scanmaker.py 2lss 2lss $T $O -l $LUMI -o SR --models TChiSlepSnu_FD_95 --flags "$BLIND" --sigOnly $QUEUE --postfix '--postfix-pred fakes_appldata*=fixFakePredictionForZeroEvts --frFile $CMSSW_BASE/src/CMGTools/TTHAnalysis/data/fakerate/fakerate_light_EWKino_Moriond2017_36p5fb.root --frMap FR_susy_wpV_FL_data_comb --mpfr 2lss' --mca susy-ewkino/2lss_v1/mca_forScan.txt --check
 
+
+
+## TChiSlepSnu_TE
+#python susy-interface/scanmaker.py 2lss 2lss $T $O -l $LUMI -o SR --models TChiSlepSnu_TE    --flags "$BLIND" --sigOnly $QUEUE --postfix '--postfix-pred fakes_appldata*=fixFakePredictionForZeroEvts --frFile $CMSSW_BASE/src/CMGTools/TTHAnalysis/data/fakerate/fakerate_light_EWKino_Moriond2017_36p5fb.root --frMap FR_susy_wpV_FL_data_comb --mpfr 2lss' --mca susy-ewkino/2lss_v1/mca_forScan.txt --check
+
+## TChiSlepSnu_TE_05
+#python susy-interface/scanmaker.py 2lss 2lss $T $O -l $LUMI -o SR --models TChiSlepSnu_TE_05 --flags "$BLIND" --sigOnly $QUEUE --postfix '--postfix-pred fakes_appldata*=fixFakePredictionForZeroEvts --frFile $CMSSW_BASE/src/CMGTools/TTHAnalysis/data/fakerate/fakerate_light_EWKino_Moriond2017_36p5fb.root --frMap FR_susy_wpV_FL_data_comb --mpfr 2lss' --mca susy-ewkino/2lss_v1/mca_forScan.txt --check
+
+## TChiSlepSnu_TE_95
+#python susy-interface/scanmaker.py 2lss 2lss $T $O -l $LUMI -o SR --models TChiSlepSnu_TE_95 --flags "$BLIND" --sigOnly $QUEUE --postfix '--postfix-pred fakes_appldata*=fixFakePredictionForZeroEvts --frFile $CMSSW_BASE/src/CMGTools/TTHAnalysis/data/fakerate/fakerate_light_EWKino_Moriond2017_36p5fb.root --frMap FR_susy_wpV_FL_data_comb --mpfr 2lss' --mca susy-ewkino/2lss_v1/mca_forScan.txt --check

@@ -1,0 +1,8 @@
+
+## UP VARIATION
+## -----------------------------------------------------------
+prompt_WZ_wz_Up  : WZTo3LNu_amcatnlo : 1.04*xsec : WZunc(met_pt, mTL_3l, 1) ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+
+## DN VARIATION
+## -----------------------------------------------------------
+prompt_WZ_wz_Dn  : WZTo3LNu_amcatnlo : 1.04*xsec : WZunc(met_pt, mTL_3l, -1) ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True

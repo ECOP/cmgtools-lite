@@ -1,0 +1,22 @@
+## XSEC includes BR already!
+
+_sig_TChiNeu_SlepSneu_FD_750_100+ : TChiNeuSlepSneu_mCh750_mChi100    : xsec   ; Label="LL (750/100) FD", LineStyle=1, FillColor=ROOT.kGreen+4 , FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt"
+_sig_TChiNeu_SlepSneu_FD_450_300+ : TChiNeuSlepSneu_mCh450_mChi300    : xsec   ; Label="LL (450/300) FD", LineStyle=7, FillColor=ROOT.kGreen+3 , FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt"
+_sig_TChiNeu_SlepSneu_FD_300_270+ : TChiNeuSlepSneu_mCh300_mChi270    : xsec   ; Label="LL (300/270) FD", LineStyle=2, FillColor=ROOT.kGreen+2 , FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt"
+
+_sig_TChiNeu_SlepSneu_TD_750_100+ : TChiNeuSlepSneu_mCh750_mChi100_TD : 2*xsec ; Label="LL (750/100) TD", LineStyle=1, FillColor=ROOT.kGreen+4 , FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt"
+_sig_TChiNeu_SlepSneu_TD_450_300+ : TChiNeuSlepSneu_mCh450_mChi300_TD : 2*xsec ; Label="LL (450/300) TD", LineStyle=7, FillColor=ROOT.kGreen+3 , FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt"
+_sig_TChiNeu_SlepSneu_TD_300_270+ : TChiNeuSlepSneu_mCh300_mChi270_TD : 2*xsec ; Label="LL (300/270) TD", LineStyle=2, FillColor=ROOT.kGreen+2 , FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt"
+
+_sig_TChiNeu_SlepSneu_TE_750_100+ : TChiNeuSlepSneu_mCh750_mChi100_TE : 2*xsec ; Label="LL (750/100) TE", LineStyle=1, FillColor=ROOT.kOrange+4, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt"
+_sig_TChiNeu_SlepSneu_TE_450_300+ : TChiNeuSlepSneu_mCh450_mChi300_TE : 2*xsec ; Label="LL (450/300) TE", LineStyle=7, FillColor=ROOT.kOrange+3, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt"
+_sig_TChiNeu_SlepSneu_TE_300_270+ : TChiNeuSlepSneu_mCh300_mChi270_TE : 2*xsec ; Label="LL (300/270) TE", LineStyle=2, FillColor=ROOT.kOrange+2, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt"
+
+_sig_TChiNeu_WZ_350_20+           : TChiNeuWZ_mCh350_mChi20           : xsec   ; Label="WZ (350/20)"    , LineStyle=1, FillColor=ROOT.kRed+3   , FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt"
+_sig_TChiNeu_WZ_350_100+          : TChiNeuWZ_mCh350_mChi100          : xsec   ; Label="WZ (350/100)"   , LineStyle=7, FillColor=ROOT.kRed+2   , FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt"
+_sig_TChiNeu_WZ_200_100+          : TChiNeuWZ_mCh200_mChi100          : xsec   ; Label="WZ (200/100)"   , LineStyle=7, FillColor=ROOT.kRed     , FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt"
+_sig_TChiNeu_WZ_150_120+          : TChiNeuWZ_mCh150_mChi120          : xsec   ; Label="WZ (150/120)"   , LineStyle=2, FillColor=ROOT.kRed-7   , FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt"
+
+_sig_TChiNeu_WH_250_20+           : TChiNeuWH_mCh250_mChi20           : xsec   ; Label="WH (250/20)"    , LineStyle=1, FillColor=ROOT.kAzure+3 , FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt"
+_sig_TChiNeu_WH_150_20+           : TChiNeuWH_mCh150_mChi20           : xsec   ; Label="WH (150/20)"    , LineStyle=7, FillColor=ROOT.kAzure   , FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt"
+

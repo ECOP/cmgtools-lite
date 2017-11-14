@@ -12,3 +12,10 @@ change: met_phi\b      : met_jecDown_phi
 change: mT_3l\b        : mT_3l_jecDown
 change: mT2L_3l\b      : mT2L_3l_jecDown
 change: mT2T_3l\b      : mT2T_3l_jecDown
+
+change: srMt\b         : srMt(3, mT_3l_jecDown, mTL_3l_jecDown, mTT_3l_jecDown)
+change: SR\b           : SR(3, countTaus(3, LepSel_pdgId[0], LepSel_pdgId[1], LepSel_pdgId[2]), nOSSF_3l, nOSLF_3l, mT2L_3l_jecDown, mT2T_3l_jecDown, srMll(3, mll_3l, mllL_3l, mllT_3l), srMt(3, mT_3l_jecDown, mTL_3l_jecDown, mTT_3l_jecDown), met_jecDown_pt) 
+change: SuperSig\b     : SuperSig(3, countTaus(3, LepSel_pdgId[0], LepSel_pdgId[1], LepSel_pdgId[2]), nOSSF_3l, nOSLF_3l, mT2L_3l_jecDown, mT2T_3l_jecDown, srMll(3, mll_3l, mllL_3l, mllT_3l), srMt(3, mT_3l_jecDown, mTL_3l_jecDown, mTT_3l_jecDown), met_jecDown_pt)
+
+change: SRcorr\b       : SRcorr(mllL_3l, mTL_3l_jecDown, met_jecDown_pt, htJet30j_Mini_jecDown)
+change: SuperSigcorr\b : SuperSigcorr(mllL_3l, mTL_3l_jecDown, met_jecDown_pt, htJet30j_Mini_jecDown)

@@ -6,7 +6,7 @@ from PhysicsTools.HeppyCore.statistics.counter import Counter
 if __name__ == "__main__":
     from optparse import OptionParser
     parser = OptionParser(usage="%prog [options] outputDir inputDirs")
-    parser.add_option("--hist", dest="useHist", action="store_true", default='False', help="Use histograms CountSMS and CountSMSWeight to do renomalization (necessary if tree is skimmed)");
+    parser.add_option("--hist", dest="useHist", action="store_true", default=False, help="Use histograms CountSMS and CountSMSWeight to do renomalization (necessary if tree is skimmed)");
     parser.add_option("--keepM2", dest="keepM2", type="float", default=0.0, help="Keep only mass points where the second mass is a multiple of this mass");
     parser.add_option("-t", "--tree",  dest="tree", default='treeProducerSusyMultilepton', help="Pattern for tree name");
     parser.add_option("-u", "--url",  dest="url", default=None, help="Url to remotely save the produced trees")

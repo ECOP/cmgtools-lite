@@ -1,22 +1,44 @@
 BEGIN::2lss
-  expr         := SR_ewk_ss2l(nJet40,LepGood1_conePt,LepGood1_phi, LepGood2_conePt,LepGood2_phi, met_pt,met_phi,LepGood1_charge)
+  expr         := SR_ewk_ss2l(nJet40,LepGood1_conePt,LepGood1_phi, LepGood2_conePt,LepGood2_phi, metPt, metPhi, LepGood1_charge)
   bins         := 30,0.5,30.5
   bkgs        +:= prompt_.*;rares_.*;convs;flips_.*;promptsub;fakes_appldata
   sigs        +:= sig_TChiSlepSnu_FD_.*
   flags       +:= 
-  flagsPlots  +:= --legendHeader '2lSS'
-  plots		  #:= {SR      : SR_log                                                    }
+  flagsPlots  +:= --legendHeader 'SR SS'
+  plots       #:= {perCateg : SR_ss                                                                         }
+  plots       #:= {evt      : MET; METrebin; nJet40; nBJet25; ptdil; ptll; mtWmin; flav; charge ; tot_weight}
   fmt          := {LepSel1_pdgId:+2d} {LepSel1_pt:5.1f} {LepSel1_mcUCSX:2d}\\t{LepSel2_pdgId:+2d} {LepSel2_pt:5.1f} {LepSel2_dz:1.5f} {LepSel2_mcUCSX:2d}\\t{LepSel3_pdgId:+2d} {LepSel3_pt:5.1f} {LepSel3_mcUCSX:2d}\\t{nJet30:d}\\t{nBJetMedium25:2d}\\t{met_pt:5.1f}\\t{htJet30j:6.1f}\\t{mll_3l:6.1f}\\t{mT_3l:6.1f}\\t{mT2L_3l:6.1f}\\t{mT2T_3l:6.1f}
 ENDDEF
 
+BEGIN::3lW
+  expr         := SRcorr
+  bins         := 58,0.5,58.5
+  bkgs        +:= fakes_appldata;promptsub;prompt_.*;rares_.*;convs
+  sigs        +:= sig_TChiWZ_.*;sig_TChiSlepSnu_FD_.*
+  flags       +:= -A 3l BRcut 'BR == 1' 
+  flagsPlots  +:= --legendHeader 'WZ-Corridor'
+  plots       #:= {wzcorr   : mll3l ; met ; mtW3l ; m3l ; jet1_pt ; nJet ; jpTmet ; jpTmT ; metjet1pt }
+  plots       #:= {lep      : lep.*_pt ; lep.*_eta ; flavor3l ; charge3l; minDR3l; minDR3lmm          }
+  plots       #:= {evt      : mll3l ; met ; mtW3l ; htJet30j ; nJet30 ; nBJet25 ; m3l ; mTmll ; nVert }
+  plots       #:= {evtslim  : mll3l ; mtW3l ; mTmll                                                   }
+  plots       #:= {perCateg : SR_W                                                                    }
+  fmt          := {LepSel1_pdgId:+2d} {LepSel1_pt:5.1f} {LepSel1_mcUCSX:2d}\\t{LepSel2_pdgId:+2d} {LepSel2_pt:5.1f} {LepSel2_mcUCSX:2d}\\t{LepSel3_pdgId:+2d} {LepSel3_pt:5.1f} {LepSel3_mcUCSX:2d}\\t{nJet30:d}\\t{nBJetMedium25:2d}\\t{met_pt:5.1f}\\t{htJet30j:6.1f}\\t{mll_3l:6.1f}\\t{mT_3l:6.1f}\\t{mT2L_3l:6.1f}\\t{mT2T_3l:6.1f}\\t{wBG:1.5f}
+ENDDEF
+
 BEGIN::3lA
+#  expr         := newScore200100(met_pt,mTL_3l,mllL_3l)
+#  bins         := 28,1,29
+#  expr         := ParBinner3lAScore(met_pt,mTL_3l,mllL_3l,500,150)
+#  bins         := [-0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.92, 0.94, 0.96, 0.98, 0.99, 1.0]
+#  expr         := SRwz4p6(mllL_3l, mTL_3l, met_pt, htJet30j_Mini)
+#  bins         := 62,0.5,62.5
   expr         := SR
   bins         := 44,0.5,44.5
   bkgs        +:= fakes_appldata;promptsub;prompt_.*;rares_.*;convs
   sigs        +:= sig_TChiWZ_.*;sig_TChiSlepSnu_FD_.*
   flags       +:= -A 3l BRcut 'BR == 1' 
-  flagsPlots  +:= --legendHeader 'A: OSSF'
-  plots       #:= {lep      : .*_pt ; .*_eta ; flavor3l ; charge3l; minDR3l; minDR3lmm                }
+  flagsPlots  +:= --legendHeader 'SR A: OSSF'
+  plots       #:= {lep      : lep.*_pt ; lep.*_eta ; flavor3l ; charge3l; minDR3l; minDR3lmm          }
   plots       #:= {evt      : mll3l ; met ; mtW3l ; htJet30j ; nJet30 ; nBJet25 ; m3l ; mTmll ; nVert }
   plots       #:= {evtslim  : mll3l ; mtW3l ; mTmll                                                   }
   plots       #:= {br       : BR ; SR_3l_.*; SR_4l                                                    }
@@ -32,7 +54,7 @@ BEGIN::3lA1
   bkgs        +:= fakes_appldata;promptsub;prompt_.*;rares_.*;convs
   sigs        +:= sig_TChiWZ_.*;sig_TChiSlepSnu_FD_.*
   flags       +:= -A 3l BRcut 'BR == 1' 
-  flagsPlots  +:= --legendHeader 'A: OSSF'
+  flagsPlots  +:= --legendHeader 'SR A: OSSF'
   plots       #:= {lep      : .*_pt ; .*_eta ; flavor3l ; charge3l; minDR3l; minDR3lmm                }
   plots       #:= {evt      : mll3l ; met ; mtW3l ; htJet30j ; nJet30 ; nBJet25 ; m3l ; mTmll ; nVert }
   plots       #:= {evtslim  : mll3l ; mtW3l ; mTmll                                                   }
@@ -49,7 +71,7 @@ BEGIN::3lA2
   bkgs        +:= fakes_appldata;promptsub;prompt_.*;rares_.*;convs
   sigs        +:= sig_TChiWZ_.*;sig_TChiSlepSnu_FD_.*
   flags       +:= -A 3l BRcut 'BR == 1' 
-  flagsPlots  +:= --legendHeader 'A: OSSF'
+  flagsPlots  +:= --legendHeader 'SR A: OSSF'
   plots       #:= {lep      : .*_pt ; .*_eta ; flavor3l ; charge3l; minDR3l; minDR3lmm                }
   plots       #:= {evt      : mll3l ; met ; mtW3l ; htJet30j ; nJet30 ; nBJet25 ; m3l ; mTmll ; nVert }
   plots       #:= {evtslim  : mll3l ; mtW3l ; mTmll                                                   }
@@ -66,7 +88,7 @@ BEGIN::3lB
   bkgs        +:= fakes_appldata;promptsub;prompt_.*;rares_.*;convs
   sigs        +:= sig_TChiWH_.*;sig_TChiSlepSnu_TE_.*;sig_TChiSlepSneu_TD_.*
   flags       +:= -A 3l BRcut 'BR == 2' 
-  flagsPlots  +:= --legendHeader 'B: noOSSF'
+  flagsPlots  +:= --legendHeader 'SR B: noOSSF'
   plots       #:= {lep      : .*_pt ; .*_eta ; flavor3l ; charge3l; minDR3l; minDR3lmm                }
   plots       #:= {evt      : mll3l ; met ; mtW3l ; htJet30j ; nJet30 ; nBJet25 ; m3l ; mTmll ; nVert }
   plots       #:= {evtslim  : mll3l ; mtW3l ; mTmll                                                   }
@@ -84,7 +106,7 @@ BEGIN::3lC
   sigs        +:= sig_TChiWH_.*;sig_TChiSlepSnu_TE_.*;sig_TChiSlepSneu_TD_.*
   flags       +:= -A 3l BRcut 'BR == 3' 
 ##  flags       +:= -R trigger triggerTau '$DATA{Triggers_ee||Triggers_em||Triggers_mm} $MC{Triggers_ee||Triggers_em||Triggers_mm} $FASTSIM{1}'
-  flagsPlots  +:= --legendHeader 'C: OSSF + \#tau'
+  flagsPlots  +:= --legendHeader 'SR C: OSSF + \#tau'
   plots       #:= {lep      : .*_pt ; .*_eta ; flavor3l ; charge3l; minDR3l; minDR3lmm                          }
   plots       #:= {evt      : mll3l ; met ; mtW3l ; htJet30j ; nJet30 ; nBJet25 ; m3l ; mT2L3l ; mT2T3l ; nVert }
   plots       #:= {evtslim  : mll3l ; mT2L3l ; mTmll                                                            }
@@ -102,7 +124,7 @@ BEGIN::3lD
   sigs        +:= sig_TChiWH_.*;sig_TChiSlepSnu_TE_.*;sig_TChiSlepSneu_TD_.*
   flags       +:= -A 3l BRcut 'BR == 4' 
 ##  flags       +:= -R trigger triggerTau '$DATA{Triggers_ee||Triggers_em||Triggers_mm} $MC{Triggers_ee||Triggers_em||Triggers_mm} $FASTSIM{1}'
-  flagsPlots  +:= --legendHeader 'D: e^{\#pm}\#mu^{\#mp}\#tau'
+  flagsPlots  +:= --legendHeader 'SR D: e^{\#pm}\#mu^{\#mp}\#tau'
   plots       #:= {lep      : .*_pt ; .*_eta ; flavor3l ; charge3l; minDR3l; minDR3lmm                          }
   plots       #:= {evt      : mll3l ; met ; mtW3l ; htJet30j ; nJet30 ; nBJet25 ; m3l ; mT2L3l ; mT2T3l ; nVert }
   plots       #:= {evtslim  : mll3l ; mT2L3l ; mTmll                                                            }
@@ -121,8 +143,8 @@ BEGIN::3lE
   flags       +:= -A 3l BRcut 'BR == 5' 
 ##  flags       +:= -R trigger triggerTau '$DATA{Triggers_ee||Triggers_em||Triggers_mm} $MC{Triggers_ee||Triggers_em||Triggers_mm} $FASTSIM{1}'
   flags       +:= -A sanity tightcharge 'tightChargeCut(3, LepSel1_pdgId, LepSel1_tightCharge, LepSel2_pdgId, LepSel2_tightCharge, LepSel3_pdgId, LepSel3_tightCharge)'
-  flags       +:= -A sanity rightcharge '$DATA{1} $MC{isPromptRightCharge(3, LepSel_mcUCSX[0], LepSel_mcUCSX[1], LepSel_mcUCSX[2])} $FASTSIM{isPromptRightCharge(3, LepSel_mcUCSX[0], LepSel_mcUCSX[1], LepSel_mcUCSX[2])}'
-  flagsPlots  +:= --legendHeader 'E: SS + \#tau'
+  flags       +:= -A sanity rightcharge '$DATA{1} $MC{isPromptRightCharge(3, LepSel_mcUCSX[0], LepSel_mcUCSX[1], LepSel_mcUCSX[2])} $FASTSIM{1}'
+  flagsPlots  +:= --legendHeader 'SR E: SS + \#tau'
   plots       #:= {lep      : .*_pt ; .*_eta ; flavor3l ; charge3l; minDR3l                                     }
   plots       #:= {evt      : mll3l ; met ; mtW3l ; htJet30j ; nJet30 ; nBJet25 ; m3l ; mT2L3l ; mT2T3l ; nVert }
   plots       #:= {evtslim  : mll3l ; mT2T3l ; mTmll                                                            }
@@ -142,7 +164,7 @@ BEGIN::3lF
   flags       +:= -R trigger triggerTau '$DATA{Triggers_sl} $MC{Triggers_sl} $FASTSIM{1}'
   flags       +:= -A sanity tigherpteta 'abs(LepSel1_eta)<2.1 && abs(LepSel2_eta)<2.1 && abs(LepSel3_eta)<2.1' 
   flags       +:= -A sanity tighterpt '(abs(LepSel1_pdgId)==11 && LepSel1_pt>30) || (abs(LepSel1_pdgId)==13 && LepSel1_pt>25) || (abs(LepSel2_pdgId)==11 && LepSel2_pt>30) || (abs(LepSel2_pdgId)==13 && LepSel2_pt>25) || (abs(LepSel3_pdgId)==11 && LepSel3_pt>30) || (abs(LepSel3_pdgId)==13 && LepSel3_pt>25)'
-  flagsPlots  +:= --legendHeader 'F: e/\#mu + \#tau\#tau'
+  flagsPlots  +:= --legendHeader 'SR F: e/\#mu + \#tau\#tau'
   plots       #:= {lep      : .*_pt ; .*_eta ; flavor3l ; charge3l; minDR3l                                     }
   plots       #:= {evt      : mll3l ; met ; mtW3l ; htJet30j ; nJet30 ; nBJet25 ; m3l ; mT2L3l ; mT2T3l ; nVert }
   plots       #:= {evtslim  : mll3l ; mT2T3l ; mTmll                                                            }
@@ -162,7 +184,7 @@ BEGIN::4lG
   sigs        +:= sig_TNeuNeuZZ_.*;sig_TNeuNeuHZ_.*;sig_TNeuNeuHH_.*
   mccs        +:= susy-ewkino/4l/mcc_ewkino.txt;susy-ewkino/mcc_triggerdefs.txt
   flags       +:= -A alwaystrue BRcut 'BR == 7' 
-  flagsPlots  +:= --legendHeader 'G: 2 OSSF'
+  flagsPlots  +:= --legendHeader 'SR G: 2 OSSF'
   plots       #:= {lep      : lep.*._pt ; .*_eta ; flavor4l ; charge4l; minDR4l; minDR4lmm              }
   plots       #:= {evt      : mll4l ; met ; mtW4l ; htJet30j ; nJet30 ; nBJet25 ; m4l ; mT2L4l ; mT2T4l }
   plots       #:= {evtslim  : mll4l ; mT2T4l ; mTmll                                                    }
@@ -259,8 +281,8 @@ BEGIN::crwz
   bkgs        +:= fakes_appldata;promptsub;prompt_.*;rares_.*;convs
   sigs        +:= sig_TChiNeuWZ_.*
   flagsPlots  +:= --legendHeader 'WZ CR'
-  plots       #:= {lep      : lep.*._pt ; .*_eta ; flavor3l ; charge3l                }
-  plots       #:= {evt      : mll3l ; met ; mtW3l ; htJet30j ; nJet30 ; nBJet25 ; m3l }
+  plots       #:= {lep      : lep.*_.* ; el_.* ; mu_.*                                                          }
+  plots       #:= {evt      : nVert ; met ; m3l ; mll3l ; mtW3l ; htJet30j ; nJet30 ; nBJet25 ; flavor ; charge } 
   fmt          := {LepSel1_pdgId:+2d} {LepSel1_pt:5.1f} {LepSel1_mcUCSX:2d}\\t{LepSel2_pdgId:+2d} {LepSel2_pt:5.1f} {LepSel2_mcUCSX:2d}\\t{LepSel3_pdgId:+2d} {LepSel3_pt:5.1f} {LepSel3_mcUCSX:2d}\\t{nJet30:d}\\t{nBJetMedium25:2d}\\t{met_pt:5.1f}\\t{htJet30j:6.1f}\\t{mll_3l:6.1f}\\t{mT_3l:6.1f}\\t{mT2L_3l:6.1f}\\t{mT2T_3l:6.1f}
 ENDDEF
 

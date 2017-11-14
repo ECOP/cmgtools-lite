@@ -1,0 +1,23 @@
+## STANDARD SELECTION (CENTRAL VALUE)
+## ===========================================================
+
+## FAKES IN SIGNAL REGION
+## -----------------------------------------------------------
+matched_dy    : DYJetsToLL_M10to50_LO                                       : xsec : (LepGood1_mcUCSXMatchId==2 || LepGood1_mcUCSXMatchId==3) || (LepGood2_mcUCSXMatchId==2 || LepGood2_mcUCSXMatchId==3); FillColor=ROOT.kBlack, FakeRate="susy-ewkino/2lss_v1/fakerate_standard_central.txt", Label="DY (observed)"
+matched_dy    : DYJetsToLL_M50_LO                                           : xsec : (LepGood1_mcUCSXMatchId==2 || LepGood1_mcUCSXMatchId==3) || (LepGood2_mcUCSXMatchId==2 || LepGood2_mcUCSXMatchId==3); FillColor=ROOT.kBlack, FakeRate="susy-ewkino/2lss_v1/fakerate_standard_central.txt", Label="DY (observed)"
+matched_ttbar : TTJets_DiLepton+TTJets_DiLepton_ext                         : xsec : (LepGood1_mcUCSXMatchId==2 || LepGood1_mcUCSXMatchId==3) || (LepGood2_mcUCSXMatchId==2 || LepGood2_mcUCSXMatchId==3); FillColor=ROOT.kBlack, FakeRate="susy-ewkino/2lss_v1/fakerate_standard_central.txt", Label="TT (observed)"
+matched_ttbar : TTJets_SingleLeptonFromT+TTJets_SingleLeptonFromT_ext       : xsec : (LepGood1_mcUCSXMatchId==2 || LepGood1_mcUCSXMatchId==3) || (LepGood2_mcUCSXMatchId==2 || LepGood2_mcUCSXMatchId==3); FillColor=ROOT.kBlack, FakeRate="susy-ewkino/2lss_v1/fakerate_standard_central.txt", Label="TT (observed)"
+matched_ttbar : TTJets_SingleLeptonFromTbar+TTJets_SingleLeptonFromTbar_ext : xsec : (LepGood1_mcUCSXMatchId==2 || LepGood1_mcUCSXMatchId==3) || (LepGood2_mcUCSXMatchId==2 || LepGood2_mcUCSXMatchId==3); FillColor=ROOT.kBlack, FakeRate="susy-ewkino/2lss_v1/fakerate_standard_central.txt", Label="TT (observed)"
+matched_wjets : WJetsToLNu_LO+WJetsToLNu_LO_ext                             : xsec : (LepGood1_mcUCSXMatchId==2 || LepGood1_mcUCSXMatchId==3) || (LepGood2_mcUCSXMatchId==2 || LepGood2_mcUCSXMatchId==3); FillColor=ROOT.kBlack, FakeRate="susy-ewkino/2lss_v1/fakerate_standard_central.txt", Label="WJ (observed)"
+
+## FAKES FROM SIDEBAND IN MC
+## -----------------------------------------------------------
+appl_dy       : DYJetsToLL_M10to50_LO                                       : xsec ; FillColor=ROOT.kAzure+1, FakeRate="susy-ewkino/2lss_v1/fakerate_fakeappl_closure.txt", Label="DY (predicted)"
+appl_dy       : DYJetsToLL_M50_LO                                           : xsec ; FillColor=ROOT.kAzure+1, FakeRate="susy-ewkino/2lss_v1/fakerate_fakeappl_closure.txt", Label="DY (predicted)"
+appl_ttbar    : TTJets_DiLepton+TTJets_DiLepton_ext                         : xsec ; FillColor=ROOT.kAzure+1, FakeRate="susy-ewkino/2lss_v1/fakerate_fakeappl_closure.txt", Label="TT (predicted)"
+appl_ttbar    : TTJets_SingleLeptonFromT+TTJets_SingleLeptonFromT_ext       : xsec ; FillColor=ROOT.kAzure+1, FakeRate="susy-ewkino/2lss_v1/fakerate_fakeappl_closure.txt", Label="TT (predicted)"
+appl_ttbar    : TTJets_SingleLeptonFromTbar+TTJets_SingleLeptonFromTbar_ext : xsec ; FillColor=ROOT.kAzure+1, FakeRate="susy-ewkino/2lss_v1/fakerate_fakeappl_closure.txt", Label="TT (predicted)"
+appl_wjets    : WJetsToLNu_LO+WJetsToLNu_LO_ext                             : xsec ; FillColor=ROOT.kAzure+1, FakeRate="susy-ewkino/2lss_v1/fakerate_fakeappl_closure.txt", Label="WJ (predicted)"
+
+
+

@@ -1,0 +1,10 @@
+cleanup   : minMllAFAS > 12
+dilep     : nLepFO_Recl>=2
+pt2010    : LepGood_conePt[iF_Recl[0]]>20 && (abs(LepGood_pdgId[iF_Recl[0]])!=11 || LepGood_conePt[iF_Recl[0]]>25) && LepGood_conePt[iF_Recl[1]]>10 && (abs(LepGood_pdgId[iF_Recl[1]])!=11 || LepGood_conePt[iF_Recl[1]]>15)
+pt25      : if3(abs(LepGood_pdgId[iF_Recl[0]])!=13 && abs(LepGood_pdgId[iF_Recl[1]])!=11, LepGood_conePt[iF_Recl[0]]>25, 1)
+TT        : LepGood_isTight_Recl[iF_Recl[0]] && LepGood_isTight_Recl[iF_Recl[1]]
+exclusive : nLepTight_Recl<3 && nTightTauSel_Recl==0
+same-sign : (LepGood_charge[iF_Recl[0]]*LepGood_charge[iF_Recl[1]] > 0)
+met       : met_pt > 60
+0bjetM    : nBJetMedium25_Recl == 0
+0and1jet  : nJet40_Recl <= 1

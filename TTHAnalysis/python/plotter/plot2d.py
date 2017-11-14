@@ -15,6 +15,9 @@ parser.add_option("--lspam", dest="lspam"  , type="string", default="Preliminary
 parser.add_option("--plotmode", dest="plotmode", type="string", default="colz text e", help="Option to use when drawing the plot");
 parser.add_option("--zrange"  , dest="zrange"  , type="float" , nargs=2, default=[0,1], help="Range of the z axis");
 parser.add_option("--digits"  , dest="digits"  , type="float" , default=1.3, help="Format of digits for text on plots");
+parser.add_option("--logx"    , dest="logx"    , action="store_true", default=False, help="Logx");
+parser.add_option("--logy"    , dest="logy"    , action="store_true", default=False, help="Logy");
+parser.add_option("--logz"    , dest="logz"    , action="store_true", default=False, help="Logz");
 (options, args) = parser.parse_args()
 
 
@@ -94,6 +97,9 @@ CMS_lumi.extraText  = options.lspam
 CMS_lumi.lumi_sqrtS = options.energy
 CMS_lumi.CMS_lumi(canvas, 4, 0, 0.05)
 
+if options.logx: canvas.SetLogx()
+if options.logy: canvas.SetLogy()
+if options.logz: canvas.SetLogz()
 
 for ext in options.exts:
 	canvas.SaveAs(args[1]+"."+ext)

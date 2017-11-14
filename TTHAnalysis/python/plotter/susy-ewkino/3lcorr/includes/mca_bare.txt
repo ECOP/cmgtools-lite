@@ -1,0 +1,16 @@
+bare_ZZH   : VHToNonbb                   : xsec ; FillColor=ROOT.kGreen+1 , FakeRate="susy-ewkino/3l/fakerate_standard_central.txt", Label="ZZ/H", NormSystematic=0.25
+bare_ZZH   : GGHZZ4L                     : xsec ; FillColor=ROOT.kGreen+1 , FakeRate="susy-ewkino/3l/fakerate_standard_central.txt", Label="ZZ/H", NormSystematic=0.25
+bare_ZZH   : ZZTo4L                      : xsec ; FillColor=ROOT.kGreen+1 , FakeRate="susy-ewkino/3l/fakerate_standard_central.txt", Label="ZZ/H", NormSystematic=0.25
+bare_convs : TTGJets                     : xsec ; FillColor=ROOT.kOrange+7, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt", Label="Conversions", NormSystematic=0.25
+bare_convs : ZGTo2LG                     : xsec ; FillColor=ROOT.kOrange+7, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt", Label="Conversions", NormSystematic=0.25
+bare_VVV   : WWW                         : xsec ; FillColor=ROOT.kRed+1   , FakeRate="susy-ewkino/3l/fakerate_standard_central.txt", Label="VVV", NormSystematic=0.5
+bare_VVV   : WWZ                         : xsec ; FillColor=ROOT.kRed+1   , FakeRate="susy-ewkino/3l/fakerate_standard_central.txt", Label="VVV", NormSystematic=0.5
+bare_VVV   : WZZ                         : xsec ; FillColor=ROOT.kRed+1   , FakeRate="susy-ewkino/3l/fakerate_standard_central.txt", Label="VVV", NormSystematic=0.5
+bare_VVV   : ZZZ                         : xsec ; FillColor=ROOT.kRed+1   , FakeRate="susy-ewkino/3l/fakerate_standard_central.txt", Label="VVV", NormSystematic=0.5
+bare_ttX   : TTWToLNu_ext1+TTWToLNu_ext2 : xsec ; FillColor=ROOT.kViolet-3, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt", Label="t\#bar{t}X", NormSystematic=0.15
+bare_ttX   : TTZToLLNuNu                 : xsec ; FillColor=ROOT.kViolet-3, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt", Label="t\#bar{t}X", NormSystematic=0.15
+bare_ttX   : TTHnobb_pow                 : xsec ; FillColor=ROOT.kViolet-3, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt", Label="t\#bar{t}X", NormSystematic=0.15
+bare_ttX   : TTLLJets_m1to10             : 0.0493 ; FillColor=ROOT.kViolet-3, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt", Label="t\#bar{t}X", NormSystematic=0.2
+bare_ttX   : TTTT                        : xsec ; FillColor=ROOT.kViolet-3, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt", Label="t\#bar{t}X", NormSystematic=0.2
+bare_ttX   : tZW_ll                      : xsec ; FillColor=ROOT.kViolet-3, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt", Label="t\#bar{t}X", NormSystematic=0.2
+bare_ttX   : tZq_ll                      : xsec ; FillColor=ROOT.kViolet-3, FakeRate="susy-ewkino/3l/fakerate_standard_central.txt", Label="t\#bar{t}X", NormSystematic=0.2

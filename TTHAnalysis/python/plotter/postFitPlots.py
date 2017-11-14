@@ -23,6 +23,7 @@ options = None
 if __name__ == "__main__":
     from optparse import OptionParser
     parser = OptionParser(usage="%prog [options] mcaplot.txt mcafit.txt plotfile varname mlfile channel [onlyNorm]")
+    parser.add_option("--legendCorner", dest="legendCorner", type="string", default="TR", help="Flag only for Cristina to fix the bloody legend position");
     addPlotMakerOptions(parser)
     (options, args) = parser.parse_args()
     options.path = "/data1/peruzzi/mixture_jecv6prompt_datafull_jul20_skimOnlyMC"
@@ -145,7 +146,7 @@ if __name__ == "__main__":
 #      hSigOutline.SetFillStyle(1)
 #      hSigOutline.Scale(5)
 #      hSigOutline.Draw("HIST SAME")
-      leg = doLegend(plots,mcap,corner='TR',textSize=0.045,cutoff=0.01)
+      leg = doLegend(plots,mcap,corner=options.legendCorner,textSize=0.045,cutoff=0.01)
       leg.SetHeader({'prefit': "Pre-fit, #mu = 1", "postfit_b": "Post-fit, #mu = 1", "postfit_s": "Post-fit, #hat{#mu}"}[O]+"\n")
       leg.SetLineColor(0)
 #      leg.AddEntry(hSigOutline, "ttH x 5", "L")

@@ -1,7 +1,7 @@
 
 ## UP VARIATION
 ## -----------------------------------------------------------
-prompt_WZ_jec_Up  : WZTo3LNu                    : 1.02*xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_WZ_jec_Up  : WZTo3LNu                    : 1.12*xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
 prompt_ZZH_jec_Up : VHToNonbb                   : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
 prompt_ZZH_jec_Up : GGHZZ4L                     : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
 prompt_ZZH_jec_Up : ZZTo4L                      : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
@@ -23,7 +23,7 @@ rares_ttX_jec_Up  : tZW_ll                      : xsec ; FakeRate="susy-ewkino/3
 
 ## DN VARIATION
 ## -----------------------------------------------------------
-prompt_WZ_jec_Dn  : WZTo3LNu                    : 1.02*xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_WZ_jec_Dn  : WZTo3LNu                    : 1.12*xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
 prompt_ZZH_jec_Dn : VHToNonbb                   : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
 prompt_ZZH_jec_Dn : GGHZZ4L                     : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
 prompt_ZZH_jec_Dn : ZZTo4L                      : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True

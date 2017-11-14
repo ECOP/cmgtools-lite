@@ -1,0 +1,6 @@
+4l        : nLepSel >= 4
+lowmass   : minMllSFOS > 12 || minMllSFOS == -1
+sanity    : passPtMll && is_4l
+SRevent   : LepSel_isTight[0]+LepSel_isTight[1]+LepSel_isTight[2]+LepSel_isTight[3]==4
+bJetVeto  : nBJetMedium25_Mini == 0
+met       : met_pt > 0

@@ -1,0 +1,46 @@
+
+## UP VARIATION
+## -----------------------------------------------------------
+#prompt_WZ_isr_Up  : WZTo3LNu_amcatnlo           : 0.991475*xsec : ISRweight_Up/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_WZ_isr_Up  : WZTo3LNu_amcatnlo           : 1.04*xsec : ISRweight_Up/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_ZZH_isr_Up : VHToNonbb                   : xsec   : ISRweight_Up/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_ZZH_isr_Up : GGHZZ4L                     : xsec   : ISRweight_Up/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_ZZH_isr_Up : ZZTo4L                      : xsec   : ISRweight_Up/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+convs_isr_Up      : TTGJets                     : xsec   : ISRweight_Up/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isconv.txt"  , SkipMe=True
+convs_isr_Up      : ZGTo2LG                     : xsec   : ISRweight_Up/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isconv.txt"  , SkipMe=True
+convs_isr_Up      : TTGJets                     : xsec   : ISRweight_Up/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+convs_isr_Up      : ZGTo2LG                     : xsec   : ISRweight_Up/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_VVV_isr_Up  : WWW                         : xsec   : ISRweight_Up/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_VVV_isr_Up  : WWZ                         : xsec   : ISRweight_Up/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_VVV_isr_Up  : WZZ                         : xsec   : ISRweight_Up/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_VVV_isr_Up  : ZZZ                         : xsec   : ISRweight_Up/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttW_isr_Up  : TTWToLNu_ext1+TTWToLNu_ext2 : xsec   : ISRweight_Up/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttZ_isr_Up  : TTZToLLNuNu                 : xsec   : ISRweight_Up/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttZ_isr_Up  : TTHnobb_pow                 : xsec   : ISRweight_Up/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttX_isr_Up  : TTLLJets_m1to10             : 0.0493 : ISRweight_Up/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttX_isr_Up  : TTTT                        : xsec   : ISRweight_Up/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttX_isr_Up  : tZW_ll                      : xsec   : ISRweight_Up/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttX_isr_Up  : tZq_ll                      : xsec   : ISRweight_Up/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+
+## DN VARIATION
+## -----------------------------------------------------------
+#prompt_WZ_isr_Dn  : WZTo3LNu_amcatnlo           : 0.991475*xsec : ISRweight_Dn/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_WZ_isr_Dn  : WZTo3LNu_amcatnlo           : 1.04*xsec : ISRweight_Dn/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_ZZH_isr_Dn : VHToNonbb                   : xsec   : ISRweight_Dn/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_ZZH_isr_Dn : GGHZZ4L                     : xsec   : ISRweight_Dn/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_ZZH_isr_Dn : ZZTo4L                      : xsec   : ISRweight_Dn/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+convs_isr_Dn      : TTGJets                     : xsec   : ISRweight_Dn/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isconv.txt"  , SkipMe=True
+convs_isr_Dn      : ZGTo2LG                     : xsec   : ISRweight_Dn/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isconv.txt"  , SkipMe=True
+convs_isr_Dn      : TTGJets                     : xsec   : ISRweight_Dn/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+convs_isr_Dn      : ZGTo2LG                     : xsec   : ISRweight_Dn/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_VVV_isr_Dn  : WWW                         : xsec   : ISRweight_Dn/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_VVV_isr_Dn  : WWZ                         : xsec   : ISRweight_Dn/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_VVV_isr_Dn  : WZZ                         : xsec   : ISRweight_Dn/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_VVV_isr_Dn  : ZZZ                         : xsec   : ISRweight_Dn/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttW_isr_Dn  : TTWToLNu_ext1+TTWToLNu_ext2 : xsec   : ISRweight_Dn/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttZ_isr_Dn  : TTZToLLNuNu                 : xsec   : ISRweight_Dn/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttZ_isr_Dn  : TTHnobb_pow                 : xsec   : ISRweight_Dn/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttX_isr_Dn  : TTLLJets_m1to10             : 0.0493 : ISRweight_Dn/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttX_isr_Dn  : TTTT                        : xsec   : ISRweight_Dn/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttX_isr_Dn  : tZq_ll                      : xsec   : ISRweight_Dn/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttX_isr_Dn  : tZW_ll                      : xsec   : ISRweight_Dn/ISRweight ; FakeRate="susy-ewkino/3l/fakerate_standard_central.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True

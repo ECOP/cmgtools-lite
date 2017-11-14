@@ -1,0 +1,6 @@
+map_el_2l  : abs(LepGood_eta)\:LepGood_conePt : [10,15,20,30,45,100]*[0,1.5,2.5]         ; XTitle="p_{T}(e) [GeV]"   , YTitle="|#eta|(e)"   , UnbinnedData2D=True, PlotMode='COLZ TEXT E'
+map_mu_2l  : abs(LepGood_eta)\:LepGood_conePt : [10,15,20,30,45,100]*[0,1.2,2.4]         ; XTitle="p_{T}(#mu) [GeV]" , YTitle="|#eta|(#mu)" , UnbinnedData2D=True, PlotMode='COLZ TEXT E'
+
+map_el_3l  : abs(LepSel_eta)\:LepSel_conePt   : [10,15,20,30,45,100]*[0,1.5,2.5]         ; XTitle="p_{T}(e) [GeV]"   , YTitle="|#eta|(e)"   , UnbinnedData2D=True, PlotMode='COLZ TEXT E'
+map_mu_3l  : abs(LepSel_eta)\:LepSel_conePt   : [10,15,20,30,45,100]*[0,1.2,2.4]         ; XTitle="p_{T}(#mu) [GeV]" , YTitle="|#eta|(#mu)" , UnbinnedData2D=True, PlotMode='COLZ TEXT E'
+map_tau_3l : abs(LepSel_eta)\:LepSel_conePt   : [20,25,35,50,70,100]*[0,0.5,1,1.5,2,2.5] ; XTitle="p_{T}(#tau) [GeV]", YTitle="|#eta|(#tau)", UnbinnedData2D=True, PlotMode='COLZ TEXT E'

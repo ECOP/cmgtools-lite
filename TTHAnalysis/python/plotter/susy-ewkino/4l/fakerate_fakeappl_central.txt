@@ -10,6 +10,10 @@ change: nJet30\b       : nJet30_Mini
 change: htJet30j\b     : htJet30j_Mini
 change: nBJetMedium25\b: nBJetMedium25_Mini
 
+change    : srMt\b         : srMt(4, mT_4l, mTL_4l, mTT_4l)
+change    : SR\b           : SR(4, countTaus(4, LepSel_pdgId[0], LepSel_pdgId[1], LepSel_pdgId[2], LepSel_pdgId[3]), nOSSF_4l, nOSLF_4l, mT2L_4l, mT2T_4l, srMll(4, mll_4l, mllL_4l, mllT_4l), srMt(4, mT_4l, mTL_4l, mTT_4l), met_pt) 
+change    : SuperSig\b     : SuperSig(4, countTaus(4, LepSel_pdgId[0], LepSel_pdgId[1], LepSel_pdgId[2], LepSel_pdgId[3]), nOSSF_4l, nOSLF_4l, mT2L_4l, mT2T_4l, srMll(4, mll_4l, mllL_4l, mllT_4l), srMt(4, mT_4l, mTL_4l, mTT_4l), met_pt)
+
 load-histo     : FR_el        : $DATA/fakerate/fakerate_light_EWKino_Moriond2017_36p5fb.root        : FR_susy_wpM_el_data_comb
 load-histo     : FR_mu        : $DATA/fakerate/fakerate_light_EWKino_Moriond2017_36p5fb.root        : FR_susy_wpM_mu_data_comb
 load-histo     : FR_tau       : $DATA/fakerate/fakerate_tau_EWKino_Moriond2017_36p5fb_Final.root    : data_ratio

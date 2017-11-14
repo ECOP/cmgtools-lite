@@ -1,0 +1,5 @@
+alwaystrue: 1
+3l        : nLepSel >= 3
+lowmass   : minMllSFOS_Mini > 12 || minMllSFOS_Mini == -1
+sanity    : passPtMll && is_3l
+nJets     : nJet30_Mini >= 2

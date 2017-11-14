@@ -1,0 +1,211 @@
+#TChiNeuWZ_mCh150_mChi120+ : TChiNeuWZ_mCh150_mChi120 : xsec :  LepGood1_isMatchRightCharge && LepGood2_isMatchRightCharge && LepGood3_isMatchRightCharge; Label="WZ (150\,120)", FillColor=ROOT.kBlue-7
+#TChiNeuWZ_mCh200_mChi100+ : TChiNeuWZ_mCh200_mChi100 : xsec :  LepGood1_isMatchRightCharge && LepGood2_isMatchRightCharge && LepGood3_isMatchRightCharge; Label="WZ (200\,100)", FillColor=ROOT.kBlue+1
+#TChiNeuWZ_mCh350_mChi100+ : TChiNeuWZ_mCh350_mChi100 : xsec :  LepGood1_isMatchRightCharge && LepGood2_isMatchRightCharge && LepGood3_isMatchRightCharge; Label="WZ (350\,100)", FillColor=ROOT.kRed-7
+#TChiNeuWZ_mCh350_mChi20+  : TChiNeuWZ_mCh350_mChi20  : xsec :  LepGood1_isMatchRightCharge && LepGood2_isMatchRightCharge && LepGood3_isMatchRightCharge; Label="WZ (350\,20)", FillColor=ROOT.kRed-4
+
+## DATA
+## -----------------------------------------------------------
+
+data : DoubleEG_Run2016B_23Sep2016_v3_runs_273150_275376_skimmed_part1
+data : DoubleEG_Run2016B_23Sep2016_v3_runs_273150_275376_skimmed_part2
+data : DoubleEG_Run2016B_23Sep2016_v3_runs_273150_275376_skimmed_part3
+data : DoubleEG_Run2016B_23Sep2016_v3_runs_273150_275376_skimmed_part4
+data : DoubleEG_Run2016B_23Sep2016_v3_runs_273150_275376_skimmed_part5
+data : DoubleEG_Run2016C_23Sep2016_v1_runs_271036_284044_part1
+data : DoubleEG_Run2016C_23Sep2016_v1_runs_271036_284044_part2
+data : DoubleEG_Run2016C_23Sep2016_v1_runs_271036_284044_part3
+data : DoubleEG_Run2016D_23Sep2016_v1_runs_271036_284044_part1
+data : DoubleEG_Run2016D_23Sep2016_v1_runs_271036_284044_part2
+data : DoubleEG_Run2016D_23Sep2016_v1_runs_271036_284044_part3
+data : DoubleEG_Run2016D_23Sep2016_v1_runs_271036_284044_part4
+data : DoubleEG_Run2016E_23Sep2016_v1_runs_271036_284044_part1
+data : DoubleEG_Run2016E_23Sep2016_v1_runs_271036_284044_part2
+data : DoubleEG_Run2016E_23Sep2016_v1_runs_271036_284044_part3
+data : DoubleEG_Run2016E_23Sep2016_v1_runs_271036_284044_part4
+#data : DoubleEG_Run2016F_23Sep2016_v1_runs_271036_284044_part1
+#data : DoubleEG_Run2016F_23Sep2016_v1_runs_271036_284044_part2
+#data : DoubleEG_Run2016F_23Sep2016_v1_runs_271036_284044_part3
+#data : DoubleEG_Run2016G_23Sep2016_v1_runs_271036_284044_part1
+#data : DoubleEG_Run2016G_23Sep2016_v1_runs_271036_284044_part2
+#data : DoubleEG_Run2016G_23Sep2016_v1_runs_271036_284044_part3
+#data : DoubleEG_Run2016G_23Sep2016_v1_runs_271036_284044_part4
+#data : DoubleEG_Run2016G_23Sep2016_v1_runs_271036_284044_part5
+#data : DoubleEG_Run2016G_23Sep2016_v1_runs_271036_284044_part6
+data : DoubleEG_Run2016H-PromptReco-v2_runs_281613_284035_part1
+data : DoubleEG_Run2016H-PromptReco-v2_runs_281613_284035_part2
+data : DoubleEG_Run2016H-PromptReco-v2_runs_281613_284035_part3
+data : DoubleEG_Run2016H-PromptReco-v2_runs_281613_284035_part4
+data : DoubleEG_Run2016H-PromptReco-v2_runs_281613_284035_part5
+data : DoubleEG_Run2016H-PromptReco-v2_runs_281613_284035_part6
+data : DoubleEG_Run2016H-PromptReco-v3_runs_284036_284044
+
+data : DoubleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_skimmed_part1
+data : DoubleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_skimmed_part10
+data : DoubleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_skimmed_part11
+data : DoubleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_skimmed_part2
+data : DoubleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_skimmed_part3
+data : DoubleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_skimmed_part4
+data : DoubleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_skimmed_part5
+data : DoubleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_skimmed_part6
+data : DoubleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_skimmed_part7
+data : DoubleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_skimmed_part8
+data : DoubleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_skimmed_part9
+data : DoubleMuon_Run2016C_23Sep2016_v1_runs_271036_284044_part1
+data : DoubleMuon_Run2016C_23Sep2016_v1_runs_271036_284044_part2
+data : DoubleMuon_Run2016D_23Sep2016_v1_runs_271036_284044_part1
+data : DoubleMuon_Run2016D_23Sep2016_v1_runs_271036_284044_part2
+data : DoubleMuon_Run2016D_23Sep2016_v1_runs_271036_284044_part3
+data : DoubleMuon_Run2016D_23Sep2016_v1_runs_271036_284044_part4
+data : DoubleMuon_Run2016D_23Sep2016_v1_runs_271036_284044_part5
+data : DoubleMuon_Run2016D_23Sep2016_v1_runs_271036_284044_part6
+data : DoubleMuon_Run2016D_23Sep2016_v1_runs_271036_284044_part7
+data : DoubleMuon_Run2016E_23Sep2016_v1_runs_271036_284044_part1
+data : DoubleMuon_Run2016E_23Sep2016_v1_runs_271036_284044_part2
+data : DoubleMuon_Run2016E_23Sep2016_v1_runs_271036_284044_part3
+data : DoubleMuon_Run2016E_23Sep2016_v1_runs_271036_284044_part4
+data : DoubleMuon_Run2016E_23Sep2016_v1_runs_271036_284044_part5
+data : DoubleMuon_Run2016E_23Sep2016_v1_runs_271036_284044_part6
+#data : DoubleMuon_Run2016F_23Sep2016_v1_runs_271036_284044_part1
+#data : DoubleMuon_Run2016F_23Sep2016_v1_runs_271036_284044_part2
+#data : DoubleMuon_Run2016F_23Sep2016_v1_runs_271036_284044_part3
+#data : DoubleMuon_Run2016F_23Sep2016_v1_runs_271036_284044_part4
+#data : DoubleMuon_Run2016F_23Sep2016_v1_runs_271036_284044_part5
+#data : DoubleMuon_Run2016G_23Sep2016_v1_runs_271036_284044_part1
+#data : DoubleMuon_Run2016G_23Sep2016_v1_runs_271036_284044_part2
+#data : DoubleMuon_Run2016G_23Sep2016_v1_runs_271036_284044_part3
+##data : DoubleMuon_Run2016G_23Sep2016_v1_runs_271036_284044_part4
+#data : DoubleMuon_Run2016G_23Sep2016_v1_runs_271036_284044_part5
+#data : DoubleMuon_Run2016G_23Sep2016_v1_runs_271036_284044_part6
+#data : DoubleMuon_Run2016G_23Sep2016_v1_runs_271036_284044_part7
+#data : DoubleMuon_Run2016G_23Sep2016_v1_runs_271036_284044_part8
+#data : DoubleMuon_Run2016G_23Sep2016_v1_runs_271036_284044_part9
+data : DoubleMuon_Run2016H-PromptReco-v2_runs_281613_284035_part1
+data : DoubleMuon_Run2016H-PromptReco-v2_runs_281613_284035_part10
+data : DoubleMuon_Run2016H-PromptReco-v2_runs_281613_284035_part2
+data : DoubleMuon_Run2016H-PromptReco-v2_runs_281613_284035_part3
+data : DoubleMuon_Run2016H-PromptReco-v2_runs_281613_284035_part4
+data : DoubleMuon_Run2016H-PromptReco-v2_runs_281613_284035_part5
+data : DoubleMuon_Run2016H-PromptReco-v2_runs_281613_284035_part6
+data : DoubleMuon_Run2016H-PromptReco-v2_runs_281613_284035_part7
+data : DoubleMuon_Run2016H-PromptReco-v2_runs_281613_284035_part8
+data : DoubleMuon_Run2016H-PromptReco-v2_runs_281613_284035_part9
+data : DoubleMuon_Run2016H-PromptReco-v3_runs_284036_284044
+
+data : MuonEG_Run2016B_23Sep2016_v3_runs_273150_275376_part1
+data : MuonEG_Run2016B_23Sep2016_v3_runs_273150_275376_part2
+data : MuonEG_Run2016B_23Sep2016_v3_runs_273150_275376_part3
+data : MuonEG_Run2016B_23Sep2016_v3_runs_273150_275376_part4
+data : MuonEG_Run2016C_23Sep2016_v1_runs_271036_284044
+data : MuonEG_Run2016D_23Sep2016_v1_runs_271036_284044
+data : MuonEG_Run2016E_23Sep2016_v1_runs_271036_284044
+#data : MuonEG_Run2016F_23Sep2016_v1_runs_271036_284044
+#data : MuonEG_Run2016G_23Sep2016_v1_runs_271036_284044_part1
+#data : MuonEG_Run2016G_23Sep2016_v1_runs_271036_284044_part2
+data : MuonEG_Run2016H-PromptReco-v2_runs_281613_284035
+data : MuonEG_Run2016H-PromptReco-v3_runs_284036_284044
+#####data : SingleElectron_Run2016B_23Sep2016_v3_runs_273150_275376_part1
+#####data : SingleElectron_Run2016B_23Sep2016_v3_runs_273150_275376_part10
+#####data : SingleElectron_Run2016B_23Sep2016_v3_runs_273150_275376_part11
+#####data : SingleElectron_Run2016B_23Sep2016_v3_runs_273150_275376_part12
+#####data : SingleElectron_Run2016B_23Sep2016_v3_runs_273150_275376_part13
+#####data : SingleElectron_Run2016B_23Sep2016_v3_runs_273150_275376_part14
+#####data : SingleElectron_Run2016B_23Sep2016_v3_runs_273150_275376_part15
+#####data : SingleElectron_Run2016B_23Sep2016_v3_runs_273150_275376_part16
+#####data : SingleElectron_Run2016B_23Sep2016_v3_runs_273150_275376_part17
+#####data : SingleElectron_Run2016B_23Sep2016_v3_runs_273150_275376_part18
+#####data : SingleElectron_Run2016B_23Sep2016_v3_runs_273150_275376_part2
+#####data : SingleElectron_Run2016B_23Sep2016_v3_runs_273150_275376_part3
+#####data : SingleElectron_Run2016B_23Sep2016_v3_runs_273150_275376_part4
+#####data : SingleElectron_Run2016B_23Sep2016_v3_runs_273150_275376_part5
+#####data : SingleElectron_Run2016B_23Sep2016_v3_runs_273150_275376_part6
+#####data : SingleElectron_Run2016B_23Sep2016_v3_runs_273150_275376_part7
+#####data : SingleElectron_Run2016B_23Sep2016_v3_runs_273150_275376_part8
+#####data : SingleElectron_Run2016B_23Sep2016_v3_runs_273150_275376_part9
+#####data : SingleElectron_Run2016C_23Sep2016_v1_runs_271036_284044
+#####data : SingleElectron_Run2016D_23Sep2016_v1_runs_271036_284044
+#####data : SingleElectron_Run2016E_23Sep2016_v1_runs_271036_284044
+######data : SingleElectron_Run2016F_23Sep2016_v1_runs_271036_284044
+######data : SingleElectron_Run2016G_23Sep2016_v1_runs_271036_284044
+#####data : SingleElectron_Run2016H-PromptReco-v2_runs_281613_284035
+#####data : SingleElectron_Run2016H-PromptReco-v3_runs_284036_284044
+#####data : SingleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_part1
+#####data : SingleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_part10
+#####data : SingleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_part11
+#####data : SingleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_part12
+#####data : SingleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_part13
+#####data : SingleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_part14
+#####data : SingleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_part15
+#####data : SingleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_part16
+#####data : SingleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_part17
+#####data : SingleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_part18
+#####data : SingleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_part2
+#####data : SingleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_part3
+#####data : SingleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_part4
+#####data : SingleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_part5
+#####data : SingleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_part6
+#####data : SingleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_part7
+#####data : SingleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_part8
+#####data : SingleMuon_Run2016B_23Sep2016_v3_runs_273150_275376_part9
+#####data : SingleMuon_Run2016C_23Sep2016_v1_runs_271036_284044
+#####data : SingleMuon_Run2016D_23Sep2016_v1_runs_271036_284044
+#####data : SingleMuon_Run2016E_23Sep2016_v1_runs_271036_284044
+######data : SingleMuon_Run2016F_23Sep2016_v1_runs_271036_284044
+######data : SingleMuon_Run2016G_23Sep2016_v1_runs_271036_284044_part1
+######data : SingleMuon_Run2016G_23Sep2016_v1_runs_271036_284044_part2
+#####data : SingleMuon_Run2016H-PromptReco-v2_runs_281613_284035_part1
+#####data : SingleMuon_Run2016H-PromptReco-v2_runs_281613_284035_part2
+#####data : SingleMuon_Run2016H-PromptReco-v3_runs_284036_284044
+
+
+
+
+
+## WZ
+## -----------------------------------------------------------
+prompt_WZ               : WZTo3LNu                        : xsec : LepGood1_isMatchRightCharge && LepGood2_isMatchRightCharge && LepGood3_isMatchRightCharge            ; FillColor=ROOT.kOrange  , Label="WZ", NormSystematic=0.1
+
+
+
+#fakes_dy : DYJetsToLL_M10to50_LO : xsec : ((LepGood1_mcMatchId==0 && LepGood1_mcPromptGamma==1) || (LepGood2_mcMatchId==0 && LepGood2_mcPromptGamma==1) || (LepGood3_mcMatchId==0 && LepGood3_mcPromptGamma==1)) ; FillColor=ROOT.kCyan, Label="Nonprompt (DY LO)" , NormSystematic=0.3
+#fakes_dy : DYJetsToLL_M50_LO     : xsec : ((LepGood1_mcMatchId==0 && LepGood1_mcPromptGamma==1) || (LepGood2_mcMatchId==0 && LepGood2_mcPromptGamma==1) || (LepGood3_mcMatchId==0 && LepGood3_mcPromptGamma==1)) ; FillColor=ROOT.kCyan, Label="Nonprompt (DY LO)" , NormSystematic=0.3
+#fakes_dy : DYJetsToLL_M10to50 : xsec : ((LepGood1_mcMatchId==0 && LepGood1_mcPromptGamma==1) || (LepGood2_mcMatchId==0 && LepGood2_mcPromptGamma==1) || (LepGood3_mcMatchId==0 && LepGood3_mcPromptGamma==1)) ; FillColor=ROOT.kCyan, Label="Nonprompt (DY)" , NormSystematic=0.3
+#fakes_dy : DYJetsToLL_M50     : xsec : ((LepGood1_mcMatchId==0 && LepGood1_mcPromptGamma==1) || (LepGood2_mcMatchId==0 && LepGood2_mcPromptGamma==1) || (LepGood3_mcMatchId==0 && LepGood3_mcPromptGamma==1)) ; FillColor=ROOT.kCyan, Label="Nonprompt (DY)" , NormSystematic=0.3
+#fakes_tt : TTJets_DiLepton    : xsec : ((LepGood1_mcMatchId==0 && LepGood1_mcPromptGamma==1) || (LepGood2_mcMatchId==0 && LepGood2_mcPromptGamma==1) || (LepGood3_mcMatchId==0 && LepGood3_mcPromptGamma==1)) ; FillColor=ROOT.kRed-4, Label="Nonprompt (tt)" , NormSystematic=0.3
+#fakes_tt : TTJets_SingleLeptonFromTbar    : xsec : ((LepGood1_mcMatchId==0 && LepGood1_mcPromptGamma==1) || (LepGood2_mcMatchId==0 && LepGood2_mcPromptGamma==1) || (LepGood3_mcMatchId==0 && LepGood3_mcPromptGamma==1)) ; FillColor=ROOT.kRed-4, Label="Nonprompt (tt)" , NormSystematic=0.3
+#fakes_tt : TTJets_SingleLeptonFromT       : xsec : ((LepGood1_mcMatchId==0 && LepGood1_mcPromptGamma==1) || (LepGood2_mcMatchId==0 && LepGood2_mcPromptGamma==1) || (LepGood3_mcMatchId==0 && LepGood3_mcPromptGamma==1)) ; FillColor=ROOT.kRed-4, Label="Nonprompt (tt)" , NormSystematic=0.3
+
+
+#fakes_MC : DYJetsToLL_M10to50 : xsec : ((LepGood1_mcMatchId==0 && LepGood1_mcPromptGamma==1) || (LepGood2_mcMatchId==0 && LepGood2_mcPromptGamma==1) || (LepGood3_mcMatchId==0 && LepGood3_mcPromptGamma==1)) ; FillColor=ROOT.kAzure+1, Label="Nonprompt" , NormSystematic=0.3
+#fakes_MC : DYJetsToLL_M50     : xsec : ((LepGood1_mcMatchId==0 && LepGood1_mcPromptGamma==1) || (LepGood2_mcMatchId==0 && LepGood2_mcPromptGamma==1) || (LepGood3_mcMatchId==0 && LepGood3_mcPromptGamma==1)) ; FillColor=ROOT.kAzure+1, Label="Nonprompt" , NormSystematic=0.3
+fakes_MC : DYJetsToLL_M10to50_LO : xsec : ((LepGood1_mcMatchId==0 && LepGood1_mcPromptGamma==1) || (LepGood2_mcMatchId==0 && LepGood2_mcPromptGamma==1) || (LepGood3_mcMatchId==0 && LepGood3_mcPromptGamma==1)) ; FillColor=ROOT.kAzure+1, Label="Nonprompt" , NormSystematic=0.3
+fakes_MC : DYJetsToLL_M50_LO_part1+DYJetsToLL_M50_LO_part2+DYJetsToLL_M50_LO_part3+DYJetsToLL_M50_LO_part4+DYJetsToLL_M50_LO_part5     : xsec : ((LepGood1_mcMatchId==0 && LepGood1_mcPromptGamma==1) || (LepGood2_mcMatchId==0 && LepGood2_mcPromptGamma==1) || (LepGood3_mcMatchId==0 && LepGood3_mcPromptGamma==1)) ; FillColor=ROOT.kAzure+1, Label="Nonprompt" , NormSystematic=0.3
+
+fakes_MC : TTJets_DiLepton_part1+TTJets_DiLepton_part2+TTJets_DiLepton_part3    : xsec : ((LepGood1_mcMatchId==0 && LepGood1_mcPromptGamma==1) || (LepGood2_mcMatchId==0 && LepGood2_mcPromptGamma==1) || (LepGood3_mcMatchId==0 && LepGood3_mcPromptGamma==1)) ; FillColor=ROOT.kAzure+1, Label="Nonprompt" , NormSystematic=0.3
+fakes_MC : TTJets_SingleLeptonFromTbar_part1+TTJets_SingleLeptonFromTbar_part2+TTJets_SingleLeptonFromTbar_part3+TTJets_SingleLeptonFromTbar_part4    : xsec : ((LepGood1_mcMatchId==0 && LepGood1_mcPromptGamma==1) || (LepGood2_mcMatchId==0 && LepGood2_mcPromptGamma==1) || (LepGood3_mcMatchId==0 && LepGood3_mcPromptGamma==1)) ; FillColor=ROOT.kAzure+1, Label="Nonprompt" , NormSystematic=0.3
+fakes_MC : TTJets_SingleLeptonFromT_part1+TTJets_SingleLeptonFromT_part2+TTJets_SingleLeptonFromT_part3       : xsec : ((LepGood1_mcMatchId==0 && LepGood1_mcPromptGamma==1) || (LepGood2_mcMatchId==0 && LepGood2_mcPromptGamma==1) || (LepGood3_mcMatchId==0 && LepGood3_mcPromptGamma==1)) ; FillColor=ROOT.kAzure+1, Label="Nonprompt" , NormSystematic=0.3
+fakes_MC : WJetsToLNu_LO                        : xsec : ((LepGood1_mcMatchId==0 && LepGood1_mcPromptGamma==1) || (LepGood2_mcMatchId==0 && LepGood2_mcPromptGamma==1) || (LepGood3_mcMatchId==0 && LepGood3_mcPromptGamma==1)) ; FillColor=ROOT.kAzure+1, Label="Nonprompt" , NormSystematic=0.3
+
+
+prompt_ttX    : TTWToLNu                    : xsec : LepGood1_isMatchRightCharge && LepGood2_isMatchRightCharge && LepGood3_isMatchRightCharge ; FillColor=ROOT.kViolet-3, Label="ttX", NormSystematic=0.2
+prompt_ttX     : TTHnobb_pow                 : xsec : LepGood1_isMatchRightCharge && LepGood2_isMatchRightCharge && LepGood3_isMatchRightCharge ; FillColor=ROOT.kViolet-3, Label="ttX", NormSystematic=0.2
+prompt_ttX     : TTZToLLNuNu                 : xsec : LepGood1_isMatchRightCharge && LepGood2_isMatchRightCharge && LepGood3_isMatchRightCharge ; FillColor=ROOT.kViolet-3, Label="ttX", NormSystematic=0.2
+prompt_ttX     : TTLLJets_m1to10             : xsec : LepGood1_isMatchRightCharge && LepGood2_isMatchRightCharge && LepGood3_isMatchRightCharge ; FillColor=ROOT.kViolet-3, Label="ttX", NormSystematic=0.2
+prompt_ttX     : tZq_ll                      : xsec : LepGood1_isMatchRightCharge && LepGood2_isMatchRightCharge && LepGood3_isMatchRightCharge ; FillColor=ROOT.kViolet-3, Label="ttX", NormSystematic=0.2
+
+prompt_XG  : TTGJets_part1+TTGJets_part2  : xsec : ((LepGood1_mcMatchId==0 && LepGood1_mcPromptGamma==1) || (LepGood2_mcMatchId==0 && LepGood2_mcPromptGamma==1) || (LepGood3_mcMatchId==0 && LepGood3_mcPromptGamma==1)) ; FillColor=ROOT.kOrange+7, Label="Conversions", NormSystematic=0.5
+prompt_XG  : ZGTo2LG  : xsec : ((LepGood1_mcMatchId==0 && LepGood1_mcPromptGamma==1) || (LepGood2_mcMatchId==0 && LepGood2_mcPromptGamma==1) || (LepGood3_mcMatchId==0 && LepGood3_mcPromptGamma==1)) ; FillColor=ROOT.kOrange+7, Label="Conversions", NormSystematic=0.5
+prompt_XG  : WGToLNuG : xsec : ((LepGood1_mcMatchId==0 && LepGood1_mcPromptGamma==1) || (LepGood2_mcMatchId==0 && LepGood2_mcPromptGamma==1) || (LepGood3_mcMatchId==0 && LepGood3_mcPromptGamma==1)) ; FillColor=ROOT.kOrange+7, Label="Conversions", NormSystematic=0.5
+prompt_XG  : TGJets   : xsec : ((LepGood1_mcMatchId==0 && LepGood1_mcPromptGamma==1) || (LepGood2_mcMatchId==0 && LepGood2_mcPromptGamma==1) || (LepGood3_mcMatchId==0 && LepGood3_mcPromptGamma==1)) ; FillColor=ROOT.kOrange+7, Label="Conversions", NormSystematic=0.5
+
+
+prompt_ZZH : GGHZZ4L   : xsec : LepGood1_isMatchRightCharge && LepGood2_isMatchRightCharge && LepGood3_isMatchRightCharge ; FillColor=ROOT.kGreen+1, Label="ZZ/H", NormSystematic=0.25
+prompt_ZZH : ZZTo4L    : xsec : LepGood1_isMatchRightCharge && LepGood2_isMatchRightCharge && LepGood3_isMatchRightCharge ; FillColor=ROOT.kGreen+1, Label="ZZ/H", NormSystematic=0.25
+prompt_ZZH : VHToNonbb : xsec : LepGood1_isMatchRightCharge && LepGood2_isMatchRightCharge && LepGood3_isMatchRightCharge ; FillColor=ROOT.kGreen+1, Label="ZZ/H", NormSystematic=0.25
+
+prompt_Rares : WWW       : xsec : LepGood1_isMatchRightCharge && LepGood2_isMatchRightCharge && LepGood3_isMatchRightCharge ; FillColor=ROOT.kRed+1 , Label="VVV", NormSystematic=0.5
+prompt_Rares : WWZ       : xsec : LepGood1_isMatchRightCharge && LepGood2_isMatchRightCharge && LepGood3_isMatchRightCharge ; FillColor=ROOT.kRed+1 , Label="VVV", NormSystematic=0.5
+prompt_Rares : WZZ       : xsec : LepGood1_isMatchRightCharge && LepGood2_isMatchRightCharge && LepGood3_isMatchRightCharge ; FillColor=ROOT.kRed+1 , Label="VVV", NormSystematic=0.5
+prompt_Rares : ZZZ       : xsec : LepGood1_isMatchRightCharge && LepGood2_isMatchRightCharge && LepGood3_isMatchRightCharge ; FillColor=ROOT.kRed+1 , Label="VVV", NormSystematic=0.5
+#prompt_Rares : WpWpJJ    : xsec : LepGood1_isMatchRightCharge && LepGood2_isMatchRightCharge && LepGood3_isMatchRightCharge ; FillColor=ROOT.kRed+1 , Label="VVV", NormSystematic=0.5
+#prompt_Rares : WWDouble  : xsec : LepGood1_isMatchRightCharge && LepGood2_isMatchRightCharge && LepGood3_isMatchRightCharge ; FillColor=ROOT.kRed+1 , Label="VVV", NormSystematic=0.5
+

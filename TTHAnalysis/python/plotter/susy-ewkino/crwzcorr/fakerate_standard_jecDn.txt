@@ -1,0 +1,8 @@
+weight: 1.0
+
+change: mT\b           : mTL_3l_jecDown
+change: metPt\b        : met_jecDown_pt
+change: metPhi\b       : met_jecDown_phi
+change: nJet30\b       : nJet30_Recl_jecDown
+change: htJet30j\b     : htJet30j_Recl_jecDown
+change: nBJetMedium25\b: nBJetMedium25_Recl_jecDown

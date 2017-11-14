@@ -1,0 +1,46 @@
+
+## UP VARIATION
+## -----------------------------------------------------------
+#prompt_WZ_jec_Up  : WZTo3LNu_amcatnlo           : 0.991475*xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_WZ_jec_Up  : WZTo3LNu_amcatnlo           : 1.04*xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_ZZH_jec_Up : VHToNonbb                   : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_ZZH_jec_Up : GGHZZ4L                     : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_ZZH_jec_Up : ZZTo4L                      : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+convs_jec_Up      : TTGJets                     : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isconv.txt"  , SkipMe=True
+convs_jec_Up      : ZGTo2LG                     : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isconv.txt"  , SkipMe=True
+convs_jec_Up      : TTGJets                     : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+convs_jec_Up      : ZGTo2LG                     : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_VVV_jec_Up  : WWW                         : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_VVV_jec_Up  : WWZ                         : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_VVV_jec_Up  : WZZ                         : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_VVV_jec_Up  : ZZZ                         : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttW_jec_Up  : TTWToLNu_ext1+TTWToLNu_ext2 : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttZ_jec_Up  : TTZToLLNuNu                 : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttZ_jec_Up  : TTHnobb_pow                 : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttX_jec_Up  : TTLLJets_m1to10             : 0.0493 ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttX_jec_Up  : TTTT                        : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttX_jec_Up  : tZq_ll                      : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttX_jec_Up  : tZW_ll                      : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecUp.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+
+## DN VARIATION
+## -----------------------------------------------------------
+#prompt_WZ_jec_Dn  : WZTo3LNu_amcatnlo           : 0.991475*xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_WZ_jec_Dn  : WZTo3LNu_amcatnlo           : 1.04*xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_ZZH_jec_Dn : VHToNonbb                   : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_ZZH_jec_Dn : GGHZZ4L                     : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+prompt_ZZH_jec_Dn : ZZTo4L                      : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+convs_jec_Dn      : TTGJets                     : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isconv.txt"  , SkipMe=True
+convs_jec_Dn      : ZGTo2LG                     : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isconv.txt"  , SkipMe=True
+convs_jec_Dn      : TTGJets                     : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+convs_jec_Dn      : ZGTo2LG                     : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_VVV_jec_Dn  : WWW                         : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_VVV_jec_Dn  : WWZ                         : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_VVV_jec_Dn  : WZZ                         : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_VVV_jec_Dn  : ZZZ                         : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttW_jec_Dn  : TTWToLNu_ext1+TTWToLNu_ext2 : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttZ_jec_Dn  : TTZToLLNuNu                 : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttZ_jec_Dn  : TTHnobb_pow                 : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttX_jec_Dn  : TTLLJets_m1to10             : 0.0493 ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttX_jec_Dn  : TTTT                        : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttX_jec_Dn  : tZW_ll                      : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True
+rares_ttX_jec_Dn  : tZq_ll                      : xsec ; FakeRate="susy-ewkino/3l/fakerate_standard_jecDn.txt\,susy-ewkino/3l/fakerate_load_isprompt.txt", SkipMe=True

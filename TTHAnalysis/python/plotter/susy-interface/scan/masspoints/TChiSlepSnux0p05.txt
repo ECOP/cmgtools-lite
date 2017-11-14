@@ -1,3 +1,4 @@
+300 : 100 : TChiSlepSnux0p05_300_100
 1300 : 350 : TChiSlepSnux0p05_1300_350
 600 : 500 : TChiSlepSnux0p05_600_500
 900 : 1 : TChiSlepSnux0p05_900_1
@@ -23,7 +24,6 @@
 900 : 650 : TChiSlepSnux0p05_900_650
 750 : 400 : TChiSlepSnux0p05_750_400
 700 : 300 : TChiSlepSnux0p05_700_300
-300 : 100 : TChiSlepSnux0p05_300_100
 150 : 125 : TChiSlepSnux0p05_150_125
 750 : 200 : TChiSlepSnux0p05_750_200
 1150 : 500 : TChiSlepSnux0p05_1150_500

@@ -13,6 +13,11 @@ if "/bin2Dto1Dlib_cc.so" not in ROOT.gSystem.GetLibraries():
 if "/fakeRate_cc.so" not in ROOT.gSystem.GetLibraries(): 
     ROOT.gROOT.ProcessLine(".L %s/src/CMGTools/TTHAnalysis/python/plotter/fakeRate.cc+" % os.environ['CMSSW_BASE']);
 
+def evenBinning(hist):
+    first = hist.GetXaxis().GetBinWidth(1)
+    for b in range(2,hist.GetNbinsX()+1):
+        if hist.GetXaxis().GetBinWidth(b)!=first: return False
+    return True
 SAFE_COLOR_LIST=[
 ROOT.kBlack, ROOT.kRed, ROOT.kGreen+2, ROOT.kBlue, ROOT.kMagenta+1, ROOT.kOrange+7, ROOT.kCyan+1, ROOT.kGray+2, ROOT.kViolet+5, ROOT.kSpring+5, ROOT.kAzure+1, ROOT.kPink+7, ROOT.kOrange+3, ROOT.kBlue+3, ROOT.kMagenta+3, ROOT.kRed+2,
 ]+range(11,40)
@@ -522,25 +527,21 @@ def doRatioHists(pspec,pmap,total,totalSyst,maxRange,fixRange=False,fitRatio=Non
             unity.GetXaxis().SetBinLabel(i,blist[i-1]) 
         unity.GetXaxis().SetLabelSize(0.15)
     #ratio.SetMarkerSize(0.7*ratio.GetMarkerSize()) # no it is confusing
-    binlabels = pspec.getOption("xBinLabels","")
-    if binlabels != "" and len(binlabels.split(",")) == unity.GetNbinsX():
-        blist = binlabels.split(",")
-        for i in range(1,unity.GetNbinsX()+1): 
-            unity.GetXaxis().SetBinLabel(i,blist[i-1]) 
     #$ROOT.gStyle.SetErrorX(0.0);
     line = ROOT.TLine(unity.GetXaxis().GetXmin(),1,unity.GetXaxis().GetXmax(),1)
     line.SetLineWidth(2);
     line.SetLineColor(58);
     line.Draw("L")
     for ratio in ratios:
-        ratio.Draw("E SAME" if ratio.ClassName() != "TGraphAsymmErrors" else "PZ SAME");
+        ratio.Draw("E SAME" if ratio.ClassName() != "TGraphAsymmErrors" else "P0Z SAME");
+    unity.Draw("AXIS SAME");
     leg0 = ROOT.TLegend(0.12 if doWide else 0.2, 0.8, 0.25 if doWide else 0.45, 0.9)
     leg0.SetFillColor(0)
     leg0.SetShadowColor(0)
     leg0.SetLineColor(0)
     leg0.SetTextFont(42)
     leg0.SetTextSize(0.035*0.7/0.3)
-    leg0.AddEntry(unity0, "stat. bkg. unc.", "F")
+    leg0.AddEntry(unity0, "Stat. bkg. unc.", "F")
     if showStatTotLegend: leg0.Draw()
     leg1 = ROOT.TLegend(0.25 if doWide else 0.45, 0.8, 0.38 if doWide else 0.7, 0.9)
     leg1.SetFillColor(0)
@@ -548,7 +549,7 @@ def doRatioHists(pspec,pmap,total,totalSyst,maxRange,fixRange=False,fitRatio=Non
     leg1.SetLineColor(0)
     leg1.SetTextFont(42)
     leg1.SetTextSize(0.035*0.7/0.3)
-    leg1.AddEntry(unity, "total bkg. unc.", "F")
+    leg1.AddEntry(unity, "Total bkg. unc.", "F")
     if showStatTotLegend: leg1.Draw()
     global legendratio0_, legendratio1_
     legendratio0_ = leg0
@@ -643,7 +644,7 @@ def doLegend(pmap,mca,corner="TR",textSize=0.035,cutoff=1e-2,cutoffSignals=True,
         total = sum([x.Integral() for x in pmap.itervalues()])
         for (plot,label,style) in sigEntries: leg.AddEntry(plot,label,style)
         for (plot,label,style) in  bgEntries: leg.AddEntry(plot,label,style)
-        if totalError: leg.AddEntry(totalError,"total bkg. unc.","F") 
+        if totalError: leg.AddEntry(totalError,"Total bkg. unc.","F") 
         leg.Draw()
         ## assign it to a global variable so it's not deleted
         global legend_
@@ -695,13 +696,27 @@ class PlotMaker:
                 if len(options.addHistos)>0:
                     for theFile in options.addHistos:
                         if not os.path.exists(theFile[0]): continue
+                        print theFile[0]
                         tf = ROOT.TFile.Open(theFile[0], "read")
                         for proc in pmap.keys():
+                            #theDir = ""
                             theDir = theFile[1]+"/" if len(theFile)>0 and theFile[1] else ""
-                            toAdd  = tf.Get(theDir+pspec.name+"_"+proc)
-                            print theDir+pspec.name+"_"+proc
+                            toAdd  = tf.Get(theDir+proc)
+                            print theDir+proc
                             print toAdd
-                            if toAdd: pmap[proc].Add(toAdd)
+                            if proc=="data":
+                                pmap[proc].Reset()
+                                for point in range(toAdd.GetN()):
+                                    pmap[proc].SetBinContent(pmap[proc].GetXaxis().FindBin(toAdd.GetX()[point]), toAdd.GetY()[point])
+                                    pmap[proc].SetBinError  (pmap[proc].GetXaxis().FindBin(toAdd.GetX()[point]), max(toAdd.GetErrorYlow(point), toAdd.GetErrorYhigh(point)))
+                                #for point in range(pmap[proc].GetN()):
+                                #    pmap[proc].RemovePoint(point)
+                                #for point in range(toAdd.GetN()):
+                                #    pmap[proc].SetPoint     (point, toAdd.GetX()[point], toAdd.GetY()[point])
+                                #    pmap[proc].SetPointError(point, toAdd.GetErrorXlow(point), toAdd.GetErrorXhigh(point), toAdd.GetErrorYlow(point), toAdd.GetErrorYhigh(point))
+                            elif toAdd: 
+                                pmap[proc].Reset()
+                                pmap[proc].Add(toAdd)
                             if not toAdd and proc=="fakes_appldata":
                                 toAdd = tf.Get(pspec.name+"_fakes_data")
                                 if toAdd: pmap["fakes_appldata"].Add(toAdd)
@@ -867,9 +882,9 @@ class PlotMaker:
                 binlabels = pspec.getOption("xBinLabels","")
                 if binlabels != "" and len(binlabels.split(",")) == total.GetNbinsX():
                     blist = binlabels.split(",")
+                    total.GetXaxis().SetLabelSize(0.05)
                     for i in range(1,total.GetNbinsX()+1): 
                         total.GetXaxis().SetBinLabel(i,blist[i-1]) 
-                        total.GetYaxis().SetLabelSize(0.05)
 
                 if not self._options.emptyStack and stack.GetNhists() == 0:
                     print "ERROR: for %s, all histograms are empty\n " % pspec.name
@@ -883,6 +898,8 @@ class PlotMaker:
 
                 stack.Draw("GOFF")
                 ytitle = "Events" if not self._options.printBinning else "Events / %s" %(self._options.printBinning)
+                if "GeV" in pspec.getOption('XTitle',outputName) and evenBinning(total): 
+                    ytitle = "Events / %d GeV"%(int(round((total.GetXaxis().GetXmax()-total.GetXaxis().GetXmin())/total.GetNbinsX(),0)))
                 total.GetXaxis().SetTitleFont(42)
                 total.GetXaxis().SetTitleSize(0.05)
                 total.GetXaxis().SetTitleOffset(0.9)
@@ -959,7 +976,7 @@ class PlotMaker:
                 if plotmode == "closure":
                     if options.poisson and not is2D:
                         pdatalike = getDataPoissonErrors(pmap[options.numerator], False, True)
-                        pdatalike.Draw("PZ SAME")
+                        pdatalike.Draw("P0Z SAME")
                         pmap[options.numerator].poissonGraph = pdatalike ## attach it so it doesn't get deleted
                     else:
                         pmap[options.numerator].Draw("E SAME")
@@ -992,6 +1009,7 @@ class PlotMaker:
                         if outputDir: 
                             signorm.SetDirectory(outputDir); outputDir.WriteTObject(signorm)
                         reMax(total,signorm,islog,doWide=doWide)
+                total.Draw("AXIS SAME")
                 legendCutoff = pspec.getOption('LegendCutoff', 1e-5 if c1.GetLogy() else 1e-2)
                 if plotmode == "norm": legendCutoff = 0 
                 if plotmode in ["stack","closure"]:
@@ -1186,7 +1204,7 @@ def addPlotMakerOptions(parser, addAlsoMCAnalysis=True):
     parser.add_option("--showRatio", dest="showRatio", action="store_true", default=False, help="Add a data/sim ratio plot at the bottom")
     parser.add_option("--ratioDen", dest="ratioDen", type="string", default="background", help="Denominator of the ratio, when comparing MCs")
     parser.add_option("--ratioNums", dest="ratioNums", type="string", default="signal", help="Numerator(s) of the ratio, when comparing MCs (comma separated list of regexps)")
-    parser.add_option("--ratioYLabel", dest="ratioYLabel", type="string", default="Data/pred.", help="Y axis label of the ratio histogram.")
+    parser.add_option("--ratioYLabel", dest="ratioYLabel", type="string", default="Data / pred.", help="Y axis label of the ratio histogram.")
     parser.add_option("--noErrorBandOnRatio", dest="errorBandOnRatio", action="store_false", default=True, help="Do not show the error band on the reference in the ratio plots")
     parser.add_option("--fitRatio", dest="fitRatio", type="int", default=None, help="Fit the ratio with a polynomial of the specified order")
     parser.add_option("--scaleSigToData", dest="scaleSignalToData", action="store_true", default=False, help="Scale all signal processes so that the overall event yield matches the observed one")
@@ -1200,7 +1218,7 @@ def addPlotMakerOptions(parser, addAlsoMCAnalysis=True):
     parser.add_option("--plotmode", dest="plotmode", type="string", default="stack", help="Show as stacked plot (stack), a stacked comparison of MC-only (closure), a non-stacked comparison (nostack), and a non-stacked comparison of normalized shapes (norm)")
     parser.add_option('--numerator', dest='numerator' , type='string', default=None, help='Name of the process to plot as data on top of stacked MC in plotmode "closure".')
     parser.add_option("--rebin", dest="globalRebin", type="int", default="0", help="Rebin all plots by this factor")
-    parser.add_option("--poisson", dest="poisson", action="store_true", default=True, help="Draw Poisson error bars (default)")
+    #parser.add_option("--poisson", dest="poisson", action="store_true", default=True, help="Draw Poisson error bars (default)")
     parser.add_option("--no-poisson", dest="poisson", action="store_false", default=True, help="Don't draw Poisson error bars")
     parser.add_option("--unblind", dest="unblind", action="store_true", default=False, help="Unblind plots irrespectively of plot file")
     parser.add_option("--select-plot", "--sP", dest="plotselect", action="append", default=[], help="Select only these plots out of the full file")

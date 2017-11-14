@@ -1,0 +1,17 @@
+alwaystrue : 1
+blinding  : $DATA{run <= 276811} $MC{1} $FASTSIM{1}
+filters   : $DATA{ METfilters } $MC{1} $FASTSIM{1}
+trigger   : $DATA{(Triggers_ee || Triggers_mm || Triggers_em)} $MC{(Triggers_ee || Triggers_mm || Triggers_em)} $FASTSIM{1}
+cleanup   : minMllAFAS > 12
+dilep     : nLepFO>=2
+exclusive : nLepTight<3 && nTightTauSel==0
+pt2010    : LepGood1_conePt>20 && (abs(LepGood1_pdgId)!=11 || LepGood1_conePt>25) && LepGood2_conePt>10 && (abs(LepGood2_pdgId)!=11 || LepGood2_conePt>15)
+pt25      : if3(abs(LepGood1_pdgId)!=13 && abs(LepGood2_pdgId)!=11,LepGood1_conePt>25,1)
+TT        : allTight(LepGood1_isTight_Recl, LepGood2_isTight_Recl)
+same-sign : sameSign(LepGood1_charge, LepGood2_charge)
+met       : metPt > 60
+0bjetM    : nBJetMedium25 == 0
+0and1jet  : nJet40<=1
+
+
+

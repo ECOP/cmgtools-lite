@@ -9,6 +9,11 @@ change: nJet30\b       : nJet30_Mini
 change: htJet30j\b     : htJet30j_Mini
 change: nBJetMedium25\b: nBJetMedium25_Mini
 
+change    : srMll\b        : srMll(3, mll_3l, mllL_3l, mllT_3l)
+change    : srMt\b         : srMt(3, mT_3l, mTL_3l, mTT_3l)
+change    : SR\b           : SR(3, countTaus(3, LepSel_pdgId[0], LepSel_pdgId[1], LepSel_pdgId[2]), nOSSF_3l, nOSLF_3l, mT2L_3l, mT2T_3l, srMll(3, mll_3l, mllL_3l, mllT_3l), srMt(3, mT_3l, mTL_3l, mTT_3l), met_pt) 
+change    : SuperSig\b     : SuperSig(3, countTaus(3, LepSel_pdgId[0], LepSel_pdgId[1], LepSel_pdgId[2]), nOSSF_3l, nOSLF_3l, mT2L_3l, mT2T_3l, srMll(3, mll_3l, mllL_3l, mllT_3l), srMt(3, mT_3l, mTL_3l, mTT_3l), met_pt)
+
 load-histo     : FR_el           : $DATA/fakerate/fakerate_light_EWKino_Moriond2017_36p5fb.root        : FR_susy_wpM_el_QCD
 load-histo     : FR_mu           : $DATA/fakerate/fakerate_light_EWKino_Moriond2017_36p5fb.root        : FR_susy_wpM_mu_QCD
 load-histo     : FR_tau          : $DATA/fakerate/fakerate_tau_EWKino_Moriond2017_36p5fb_Final.root    : dy_ratio

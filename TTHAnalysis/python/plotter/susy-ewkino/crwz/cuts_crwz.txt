@@ -2,7 +2,7 @@ alwaystrue: 1
 blinding: !isData || run <= 276811 || (run>=278820 && run<=279931); Disable=True
 filters: $DATA{ METfilters } $MC{1} $FASTSIM{1}
 trigger: $DATA{(Triggers_ee || Triggers_mm || Triggers_em)} $MC{(Triggers_ee || Triggers_mm || Triggers_em)} $FASTSIM{1}
-cleanup: minMllAFAS > 12
+cleanup: minMllSFOS > 12 || minMllSFOS==-1
 pt101010: LepGood1_conePt>10 && LepGood2_conePt>10 && LepGood3_conePt>10 && LepGood1_pt>10 && LepGood2_pt>10 && LepGood3_pt>10
 3loose:  nLepFO == 3 && abs(LepGood1_charge+LepGood2_charge+LepGood3_charge) < 2
 3light:  abs(LepGood1_pdgId)<14 && abs(LepGood2_pdgId)<14 && abs(LepGood3_pdgId)<14
@@ -13,8 +13,8 @@ tight:  LepGood1_isTight && LepGood2_isTight && LepGood3_isTight
 0or1jet: nJet40<=1
 0bjet: nBJetMedium25 == 0
 mZ_WZCR:  mll_3l > 75 && mll_3l < 105
-mtw_WZCR: mT_3l > 50 && mT_3l < 100
-met_WZCR: met_pt > 30 && met_pt < 100
+mtw_WZCR: mT    > 50 && mT    < 100
+met_WZCR: metPt  > 30 && metPt  < 100
 
 
 # some cuts that are off by default but can be turned on with -E

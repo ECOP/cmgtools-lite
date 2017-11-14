@@ -1,5 +1,6 @@
 alwaystrue: 1
-blinding  : $DATA{run <= 276811 || (run>=278820 && run<=279931)} $MC{1} $FASTSIM{1}
+blinding  : $DATA{run <= 276811} $MC{1} $FASTSIM{1}
+#blinding  : $DATA{run <= 276811 || (run>=278820 && run<=279931)} $MC{1} $FASTSIM{1}
 filters   : $DATA{METfilters                                   } $MC{1} $FASTSIM{1}
 trigger   : $DATA{Triggers_ee||Triggers_em||Triggers_mm        } $MC{Triggers_ee||Triggers_em||Triggers_mm} $FASTSIM{1}
 #blinding  : !isData || (run <= 276811 || (run>=278820 && run<=279931))

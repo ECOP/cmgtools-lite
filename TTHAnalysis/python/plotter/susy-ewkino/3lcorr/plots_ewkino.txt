@@ -1,0 +1,181 @@
+
+## super signal regions
+## ----------------------------------------------------------
+SSR         : SuperSigcorr  : 1,0.5,1.5   ; YTitle="Events", XTitle="Aggregated search region", Legend="TR", IncludeOverflows=False, LegendCutoff=1e-5, Logy 
+
+
+## signal region per mll (EPS)
+## ----------------------------------------------------------
+SR_W        : SRcorr        : 58,0.5,58.5 ; YTitle="Events", XTitle="Search region" , xBinLabels="01\,\,03\,\,05\,\,07\,\,09\,\,11\,\,13\,\,15\,\,17\,\,19\,\,21\,\,23\,\,25\,\,27\,\,29\,\,31\,\,33\,\,35\,\,37\,\,39\,\,41\,\,43\,\,45\,\,47\,\,49\,\,51\,\,53\,\,55\,\,57\,", Wide=True, Legend="TR", IncludeOverflows=False, LegendCutoff=1e-5, LegendHeader="WZ-Corridor", RMin=0, RMax=3, YMin=0.1, YMax=50000, Logy
+
+
+## basic lepton observables
+## ----------------------------------------------------------
+
+el_pt     : if3(abs(LepSel_pdgId)==11,LepSel_conePt,-1) : 20,0,200    ; YTitle="Electrons", XTitle="p_{T\,cone}(e)"   , IncludeOverflows=False, IncludeOverflow=True, LegendCutoff=1e-4, Logy, YMin=0.1, YMax=1000
+mu_pt     : if3(abs(LepSel_pdgId)==13,LepSel_conePt,-1) : 20,0,200    ; YTitle="Muons"    , XTitle="p_{T\,cone}(#mu)" , IncludeOverflows=False, IncludeOverflow=True, LegendCutoff=1e-4, Logy, YMin=0.1, YMax=5000
+tau_pt    : if3(abs(LepSel_pdgId)==15,LepSel_conePt,-1) : 20,0,200    ; YTitle="Taus"     , XTitle="p_{T\,cone}(#tau)", IncludeOverflows=False, IncludeOverflow=True, LegendCutoff=1e-4, Logy, YMin=0.1, YMax=1000
+
+el_eta    : if3(abs(LepSel_pdgId)==11,LepSel_eta,-999)  : 10,-2.5,2.5 ; YTitle="Electrons", XTitle="#eta(e)"   , IncludeOverflows=False, LegendCutoff=1e-4, Logy, YMin=0.1, YMax=5000
+mu_eta    : if3(abs(LepSel_pdgId)==13,LepSel_eta,-999)  : 10,-2.5,2.5 ; YTitle="Muons"    , XTitle="#eta(#mu)" , IncludeOverflows=False, LegendCutoff=1e-4, Logy, YMin=0.1, YMax=5000
+tau_eta   : if3(abs(LepSel_pdgId)==15,LepSel_eta,-999)  : 10,-2.5,2.5 ; YTitle="Taus"     , XTitle="#eta(#tau)", IncludeOverflows=False, LegendCutoff=1e-4, Logy, YMin=0.1, YMax=5000
+
+
+## further lepton observables
+## ----------------------------------------------------------
+
+lep1_pt          : LepSel1_conePt      : 30,0,300   ; YTitle="Leptons", XTitle="p_{T\,cone}(leading lep.)"   , LegendCutoff=1e-4, YMin=0.1, YMax=10000, Logy
+lep2_pt          : LepSel2_conePt      : 30,0,300   ; YTitle="Leptons", XTitle="p_{T\,cone}(subleading lep.)", LegendCutoff=1e-4, YMin=0.1, YMax=5000, Logy
+lep3_pt          : LepSel3_conePt      : 30,0,300   ; YTitle="Leptons", XTitle="p_{T\,cone}(third lep.)"     , LegendCutoff=1e-4, YMin=0.1, YMax=3000, Logy
+lep4_pt          : LepSel4_conePt      : 30,0,300   ; YTitle="Leptons", XTitle="p_{T\,cone}(forth lep.)"     , LegendCutoff=1e-4, YMin=0.1, YMax=10000, Logy
+
+lep1_eta         : LepSel1_eta         : 10,-2.5,2.5 ; YTitle="Leptons", XTitle="#eta(leading lep.)"   , LegendCutoff=1e-4, YMin=0.1, YMax=10000, Logy
+lep2_eta         : LepSel2_eta         : 10,-2.5,2.5 ; YTitle="Leptons", XTitle="#eta(subleading lep.)", LegendCutoff=1e-4, YMin=0.1, YMax=5000, Logy
+lep3_eta         : LepSel3_eta         : 10,-2.5,2.5 ; YTitle="Leptons", XTitle="#eta(third lep.)"     , LegendCutoff=1e-4, YMin=0.1, YMax=3000, Logy
+lep4_eta         : LepSel4_eta         : 10,-2.5,2.5 ; YTitle="Leptons", XTitle="#eta(forth lep.)"     , LegendCutoff=1e-4, YMin=0.1, YMax=10000, Logy
+
+lep1_dxy         : abs(LepSel1_dxy)    : 20,0,0.05  ; YTitle="Leptons", XTitle="#||{d_{xy}}(leading lep.)"   , LegendCutoff=1e-4
+lep2_dxy         : abs(LepSel2_dxy)    : 20,0,0.05  ; YTitle="Leptons", XTitle="#||{d_{xy}}(subleading lep.)", LegendCutoff=1e-4
+lep3_dxy         : abs(LepSel3_dxy)    : 20,0,0.05  ; YTitle="Leptons", XTitle="#||{d_{xy}}(third lep.)"     , LegendCutoff=1e-4
+lep4_dxy         : abs(LepSel4_dxy)    : 20,0,0.05  ; YTitle="Leptons", XTitle="#||{d_{xy}}(forth lep.)"     , LegendCutoff=1e-4
+
+lep1_dz          : abs(LepSel1_dz)     : 20,0,0.1   ; YTitle="Leptons", XTitle="#||{d_{z}}(leading lep.)"   , LegendCutoff=1e-4
+lep2_dz          : abs(LepSel2_dz)     : 20,0,0.1   ; YTitle="Leptons", XTitle="#||{d_{z}}(subleading lep.)", LegendCutoff=1e-4
+lep3_dz          : abs(LepSel3_dz)     : 20,0,0.1   ; YTitle="Leptons", XTitle="#||{d_{z}}(third lep.)"     , LegendCutoff=1e-4
+lep4_dz          : abs(LepSel4_dz)     : 20,0,0.1   ; YTitle="Leptons", XTitle="#||{d_{z}}(forth lep.)"     , LegendCutoff=1e-4
+
+lep1_sip3d       : LepSel1_sip3d       : 16,0,8.0   ; YTitle="Leptons", XTitle="SIP_{3D}(leading lep.)"   , LegendCutoff=1e-4
+lep2_sip3d       : LepSel2_sip3d       : 16,0,8.0   ; YTitle="Leptons", XTitle="SIP_{3D}(subleading lep.)", LegendCutoff=1e-4
+lep3_sip3d       : LepSel3_sip3d       : 16,0,8.0   ; YTitle="Leptons", XTitle="SIP_{3D}(third lep.)"     , LegendCutoff=1e-4
+lep4_sip3d       : LepSel4_sip3d       : 16,0,8.0   ; YTitle="Leptons", XTitle="SIP_{3D}(forth lep.)"     , LegendCutoff=1e-4
+
+lep1_relIso      : LepSel1_relIso      : 20,0,0.3   ; YTitle="Leptons", XTitle="relIso_{0.3}(leading lep.)"   , LegendCutoff=1e-4
+lep2_relIso      : LepSel2_relIso      : 20,0,0.3   ; YTitle="Leptons", XTitle="relIso_{0.3}(subleading lep.)", LegendCutoff=1e-4
+lep3_relIso      : LepSel3_relIso      : 20,0,0.3   ; YTitle="Leptons", XTitle="relIso_{0.3}(third lep.)"     , LegendCutoff=1e-4
+lep4_relIso      : LepSel4_relIso      : 20,0,0.3   ; YTitle="Leptons", XTitle="relIso_{0.3}(forth lep.)"     , LegendCutoff=1e-4
+
+lep1_miniRelIso  : LepSel1_miniRelIso  : 20,0,0.3   ; YTitle="Leptons", XTitle="miniRelIso(leading lep.)"   , LegendCutoff=1e-4
+lep2_miniRelIso  : LepSel2_miniRelIso  : 20,0,0.3   ; YTitle="Leptons", XTitle="miniRelIso(subleading lep.)", LegendCutoff=1e-4
+lep3_miniRelIso  : LepSel3_miniRelIso  : 20,0,0.3   ; YTitle="Leptons", XTitle="miniRelIso(third lep.)"     , LegendCutoff=1e-4
+lep4_miniRelIso  : LepSel4_miniRelIso  : 20,0,0.3   ; YTitle="Leptons", XTitle="miniRelIso(forth lep.)"     , LegendCutoff=1e-4
+
+lep1_ptratio     : LepSel1_ptratio     : 20,0,1     ; YTitle="Leptons", XTitle="p_{T}^{l}/p_{T}^{j}(leading lep.)"   , LegendCutoff=1e-4
+lep2_ptratio     : LepSel2_ptratio     : 20,0,1     ; YTitle="Leptons", XTitle="p_{T}^{l}/p_{T}^{j}(subleading lep.)", LegendCutoff=1e-4
+lep3_ptratio     : LepSel3_ptratio     : 20,0,1     ; YTitle="Leptons", XTitle="p_{T}^{l}/p_{T}^{j}(third lep.)"     , LegendCutoff=1e-4
+lep4_ptratio     : LepSel4_ptratio     : 20,0,1     ; YTitle="Leptons", XTitle="p_{T}^{l}/p_{T}^{j}(forth lep.)"     , LegendCutoff=1e-4
+
+lep1_ptrel       : LepSel1_ptrel       : 20,0,40    ; YTitle="Leptons", XTitle="p_{Trel}(leading lep.)"   , LegendCutoff=1e-4
+lep2_ptrel       : LepSel2_ptrel       : 20,0,40    ; YTitle="Leptons", XTitle="p_{Trel}(subleading lep.)", LegendCutoff=1e-4
+lep3_ptrel       : LepSel3_ptrel       : 20,0,40    ; YTitle="Leptons", XTitle="p_{Trel}(third lep.)"     , LegendCutoff=1e-4
+lep4_ptrel       : LepSel4_ptrel       : 20,0,40    ; YTitle="Leptons", XTitle="p_{Trel}(forth lep.)"     , LegendCutoff=1e-4
+
+lep1_mva         : LepSel1_mva         : 20,0,1     ; YTitle="Leptons", XTitle="MVA(leading lep.)"   , LegendCutoff=1e-4
+lep2_mva         : LepSel2_mva         : 20,0,1     ; YTitle="Leptons", XTitle="MVA(subleading lep.)", LegendCutoff=1e-4
+lep3_mva         : LepSel3_mva         : 20,0,1     ; YTitle="Leptons", XTitle="MVA(third lep.)"     , LegendCutoff=1e-4
+lep4_mva         : LepSel4_mva         : 20,0,1     ; YTitle="Leptons", XTitle="MVA(forth lep.)"     , LegendCutoff=1e-4
+
+lep_ptErrPt      : LepSel_pterr[imTL_3l]/LepSel_pt[imTL_3l] : 40,0,1  ; YTitle="muons", XTitle="#Delta p_{T}/p_{T}(#mu)", LegendCutoff=1e-4, Logy, YMin=0.001, YMax=2000
+
+## event observables
+## ----------------------------------------------------------
+
+nInt       : nTrueInt       : 50,0,50     ; XTitle="N(TrueInt)"                  , LegendCutoff=1e-4
+nVert      : nVert          : 50,0,50     ; XTitle="N(PV)"                       , LegendCutoff=1e-4
+puw        : puw_nInt_Moriond(nTrueInt,0,evt) : 60,-1,2   ; XTitle="puw"                       , LegendCutoff=1e-4
+
+met        : met_pt         : 10,50,300   ; XTitle="p_{T}^{miss}  [GeV]"         , LegendCutoff=1e-4, Logy, YMin=0.7, YMax=10000, Legend="TR"
+htJet30j   : htJet30j       : 20,0,200    ; XTitle="H_{T}(jet p_{T} > 30 GeV) [GeV]" , LegendCutoff=1e-4, Logy, YMax=10000, YMin=0.9
+nJet30     : nJet30         : 10,-0.5,9.5 ; XTitle="N(jet\, p_{T} > 30)"         , LegendCutoff=1e-4, Logy, YMax=10000, YMin=0.009
+htJet40j   : htJet40j       : 20,0,200    ; XTitle="H_{T}(jet p_{T} > 30) [GeV]" , LegendCutoff=1e-4, Logy, YMax=10000, YMin=0.9
+nJet40     : nJet40         : 10,-0.5,9.5 ; XTitle="N(jet\, p_{T} > 30)"         , LegendCutoff=1e-4, Logy, YMax=10000, YMin=0.009
+htJet50j   : htJet50j       : 20,0,200    ; XTitle="H_{T}(jet p_{T} > 30) [GeV]" , LegendCutoff=1e-4, Logy, YMax=10000, YMin=0.9
+nJet50     : nJet50         : 10,-0.5,9.5 ; XTitle="N(jet\, p_{T} > 30)"         , LegendCutoff=1e-4, Logy, YMax=10000, YMin=0.009
+htJet60j   : htJet60j       : 20,0,200    ; XTitle="H_{T}(jet p_{T} > 30) [GeV]" , LegendCutoff=1e-4, Logy, YMax=10000, YMin=0.9
+nJet60     : nJet60         : 10,-0.5,9.5 ; XTitle="N(jet\, p_{T} > 30)"         , LegendCutoff=1e-4, Logy, YMax=10000, YMin=0.009
+nBJet25    : nBJetMedium25  : 5,-0.5,4.5  ; XTitle="N(b-jet\, p_{T} > 25\, CSVM)", LegendCutoff=1e-4, Logy, YMax=10000, YMin=0.9
+
+m3l        : m3L            : 40,0,200    ; XTitle="m_{3L} [GeV]"                , LegendCutoff=1e-4, Logy, Legend="TL"
+mll3l      : mllL_3l        : 28,0,210    ; XTitle="M_{ll} [GeV]"                , LegendCutoff=1e-4, Logy, YMin=0.7, YMax=100000, Legend="TR"
+mtW3l      : mTL_3l         : 10,0,200    ; XTitle="M_{T} [GeV]"                 , LegendCutoff=1e-4, Logy, YMin=0.7, YMax=500000, Legend="TR"
+mT2L3l     : mT2L_3l        : 30,0,300    ; XTitle="M_{T2}(l\,l) [GeV]"          , LegendCutoff=1e-4, Logy, YMin=0.005, YMax=10000
+mT2T3l     : mT2T_3l        : 30,0,300    ; XTitle="M_{T2}(l\,#tau) [GeV]"       , LegendCutoff=1e-4, Logy, YMin=0.005, YMax=10000 
+
+m4l        : m4L            : 40,0,400    ; XTitle="m_{4L} [GeV]"                , LegendCutoff=1e-4, Logy, Legend="TL"
+mll4l      : mll_4l         : 28,0,210    ; XTitle="M_{ll} [GeV]"                , LegendCutoff=1e-4, Logy
+mtW4l      : mT_4l          : 10,0,200    ; XTitle="M_{T} [GeV]"                 , LegendCutoff=1e-4, Logy
+mT2L4l     : mT2L_4l        : 30,0,300    ; XTitle="M_{T2}(l\,l) [GeV]"          , LegendCutoff=1e-4, Logy
+mT2T4l     : mT2T_4l        : 30,0,300    ; XTitle="M_{T2}(l\,#tau) [GeV]"       , LegendCutoff=1e-4, Logy
+
+flavor3l   : (abs(LepSel1_pdgId)+abs(LepSel2_pdgId)+abs(LepSel3_pdgId)-33)/2  : 4,-0.5,3.5 ; XTitle="flavor", xBinLabels="eee\,ee#mu\,e#mu#mu\,#mu#mu#mu", Legend="TL", LegendCutoff=1e-4, MoreY=2.0
+charge3l   : if3(LepSel1_pdgId>0,-1,1)+if3(LepSel2_pdgId>0,-1,1)+if3(LepSel3_pdgId>0,-1,1) : 7,-3.5,3.5 ; XTitle="charge", Legend="TL", LegendCutoff=1e-4, MoreY=2.0
+flavor4l   : (abs(LepSel1_pdgId)+abs(LepSel2_pdgId)+abs(LepSel3_pdgId)+abs(LepSel4_pdgId)-44)/2  : 5,-0.5,4.5 ; XTitle="flavor", xBinLabels="eeee\,eee#mu\,ee#mu#mu\,e#mu#mu#mu\,#mu#mu#mu#mu", Legend="TL", LegendCutoff=1e-4, MoreY=2.0
+charge4l   : if3(LepSel1_pdgId>0,-1,1)+if3(LepSel2_pdgId>0,-1,1)+if3(LepSel3_pdgId>0,-1,1)+if3(LepSel4_pdgId>0,-1,1) :9,-4.5,4.5 ; XTitle="charge", Legend="TL", LegendCutoff=1e-4, MoreY=2.0
+
+mllsplit4l : if3(abs(mll[0]-91.2)<15 && abs(mll[1]-91.2)<15,1,if3(abs(mll[0]-91.2)>15 && abs(mll[1]-91.2)>15,3,2)) : 3,0.5,3.5 ; XTitle="composition", xBinLabels="onZ-onZ\,onZ-offZ\,offZ-offZ", Legend="TL", LegendCutoff=1e-4, MoreY=2.0
+
+mTmll      : mT_3l\:mllL_3l : [0,75,105,200]*[0,40,80,100,120,140,160,200] ; XTitle="M(ll) [GeV]", YTitle="M_{T}^{W} [GeV]", UnbinnedData2D=True, PlotMode='COLZ'
+mTmet      : mT_3l\:met     : [50,100,150,200,300]*[0,40,80,100,120,140,160,200] ; XTitle="E_{T}^{miss} [GeV]", YTitle="M_{T}^{W} [GeV]", UnbinnedData2D=True, PlotMode='COLZ'
+mtautau    : mass_2(FirstTau_conePt, FirstTau_eta, FirstTau_phi, 1.776, SeconTau_conePt, SeconTau_eta, SeconTau_phi, 1.776) : 14,0,210    ; XTitle="M(#tau#tau) [GeV]"                 , LegendCutoff=1e-4, Logy, YMin=0.7, YMax=100000, Legend="TR"
+
+minDR3l    : minDeltaR_3l      : 50,0,5 ; XTitle="minDeltaR(l\,l)", LegendCutoff=1e-4, IncludeOverflows=False
+minDR4l    : minDeltaR_4l      : 50,0,5 ; XTitle="minDeltaR(l\,l)", LegendCutoff=1e-4, IncludeOverflows=False
+minDR3lmm  : minDeltaR_3l_mumu : 50,0,5 ; XTitle="minDeltaR(#mu\,#mu)", LegendCutoff=1e-4, IncludeOverflows=False
+minDR4lmm  : minDeltaR_4l_mumu : 50,0,5 ; XTitle="minDeltaR(#mu\,#mu)", LegendCutoff=1e-4, IncludeOverflows=False
+
+mu_pt_badClone    : badCloneMuonMoriond2017_maxPt    : 100,0,100 ; YTitle="Events", XTitle="p_{T}(bad #mu clone)"    , LegendCutoff=1e-4, Logy, YMin=0.1, YMax=10000
+mu_pt_badNotClone : badNotCloneMuonMoriond2017_maxPt : 100,0,100 ; YTitle="Events", XTitle="p_{T}(bad #mu not clone)", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=10000
+
+
+## jet stuff
+## ----------------------------------------------------------
+
+nJet     : nJetSel_Mini      : 10,-0.5,9.5 ; XTitle="N(selected jet)"         , LegendCutoff=1e-4, Logy, YMax=10000, YMin=0.009
+
+jet1_pt  : if3(nJetSel_Mini>0, JetSel_Mini_pt[0]     , -99) : 40,0,400 ; XTitle="p_{T}(leading jet) [GeV]", YTitle="Jets", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=5000
+jet2_pt  : if3(nJetSel_Mini>0, JetSel_Mini_pt[1]     , -99) : 40,0,400 ; XTitle="p_{T}(subleading jet) [GeV]", YTitle="Jets", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=5000
+jet3_pt  : if3(nJetSel_Mini>0, JetSel_Mini_pt[2]     , -99) : 40,0,400 ; XTitle="p_{T}(third jet) [GeV]", YTitle="Jets", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=5000
+jet4_pt  : if3(nJetSel_Mini>0, JetSel_Mini_pt[3]     , -99) : 40,0,400 ; XTitle="p_{T}(fourth jet) [GeV]", YTitle="Jets", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=5000
+
+jet1_csv : if3(nJetSel_Mini>0, JetSel_Mini_btagCSV[0], -99) : 20,0,1   ; IncludeOverflows=True, XTitle="CSVv2(leading jet)", YTitle="Jets", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=100000
+jet2_csv : if3(nJetSel_Mini>0, JetSel_Mini_btagCSV[1], -99) : 20,0,1   ; IncludeOverflows=True, XTitle="CSVv2(subleading jet)", YTitle="Jets", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=100000
+jet3_csv : if3(nJetSel_Mini>0, JetSel_Mini_btagCSV[2], -99) : 20,0,1   ; IncludeOverflows=True, XTitle="CSVv2(third jet)", YTitle="Jets", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=100000
+jet4_csv : if3(nJetSel_Mini>0, JetSel_Mini_btagCSV[3], -99) : 20,0,1   ; IncludeOverflows=True, XTitle="CSVv2(fourth jet)", YTitle="Jets", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=100000
+jet5_csv : if3(nJetSel_Mini>0, JetSel_Mini_btagCSV[4], -99) : 20,0,1   ; IncludeOverflows=True, XTitle="CSVv2(fifth jet)" , YTitle="Jets", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=100000
+jet6_csv : if3(nJetSel_Mini>0, JetSel_Mini_btagCSV[5], -99) : 20,0,1   ; IncludeOverflows=True, XTitle="CSVv2(sixth jet)" , YTitle="Jets", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=100000
+jet7_csv : if3(nJetSel_Mini>0, JetSel_Mini_btagCSV[6], -99) : 20,0,1   ; IncludeOverflows=True, XTitle="CSVv2(seventh jet)", YTitle="Jets", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=100000
+
+hTmet    : met_pt\:htJet30j_Mini  : [0,50,100,150,200,250,300,350,400,450,500,550]*[50,100,150,200,300] ; YTitle="p_{T}^{miss} [GeV]", XTitle="H_{T} [GeV]", UnbinnedData2D=True, PlotMode='COLZ'
+hTmT     : mTL_3l\:htJet30j_Mini  : [0,50,100,150,200,250,300,350,400,450,500,550]*[0,40,80,100,120,140,160,200] ; YTitle="M_{T}^{W} [GeV]", XTitle="H_{T} [GeV]", UnbinnedData2D=True, PlotMode='COLZ'
+hTmll    : mllL_3l\:htJet30j_Mini : [0,50,100,150,200,250,300,350,400,450,500,550]*[0,50,75,80,85,90,95,100,105,130,200] ; YTitle="M_{ll} [GeV]", XTitle="H_{T} [GeV]", UnbinnedData2D=True, PlotMode='COLZ'
+#hTmet    : met_pt\:htJet30j_Mini : [30,70,110,150,190,230,270,310,350,390,430,470,510,550]*[50,100,150,200,300] ; YTitle="p_{T}^{miss} [GeV]", XTitle="H_{T} [GeV]", UnbinnedData2D=True, PlotMode='COLZ'
+#hTmT     : mTL_3l\:htJet30j_Mini : [30,70,110,150,190,230,270,310,350,390,430,470,510,550]*[0,40,80,100,120,140,160,200] ; YTitle="M_{T}^{W} [GeV]", XTitle="H_{T} [GeV]", UnbinnedData2D=True, PlotMode='COLZ'
+jpTmet   : met_pt\:if3(nJetSel_Mini>0, JetSel_Mini_pt[0], -99) : [30,50,70,90,110,130,150,170,190,210,230,250,270,290,310,330,350]*[50,100,150,200,300] ; YTitle="p_{T}^{miss} [GeV]", XTitle="p_{T}(leading jet) [GeV]", UnbinnedData2D=True, PlotMode='COLZ'
+jpTmT    : mTL_3l\:if3(nJetSel_Mini>0, JetSel_Mini_pt[0], -99) : [30,50,70,90,110,130,150,170,190,210,230,250,270,290,310,330,350]*[0,40,80,100,120,140,160,200] ; YTitle="M_{T}^{W} [GeV]", XTitle="p_{T}(leading jet) [GeV]", UnbinnedData2D=True, PlotMode='COLZ'
+
+metjet1pt  : if3(nJetSel_Mini>0, met_pt/JetSel_Mini_pt[0], -99)  : 40,0,400 ; XTitle="p_{T}^{miss}/p_{T}(leading jet)", YTitle="Events", LegendCutoff=1e-4, Logy
+#metjet1phi : if3(nJetSel_Mini>0, abs(deltaPhi(met_pt, JetSel_Mini_phi[0]), -99)  : 35,0,3.5 ; XTitle="#Delta#phi(p_{T}^{miss}, leading jet)", YTitle="Events", LegendCutoff=1e-4, Logy
+#metjet1phi : if3(nJetSel_Mini>0, abs(deltaPhi(met_pt, JetSel_Mini_phi[0]), -99)  : 35,0,3.5 ; XTitle="#Delta#phi(p_{T}^{miss}, leading jet)", YTitle="Events", LegendCutoff=1e-4, Logy
+
+
+
+## other stuff
+## ----------------------------------------------------------
+
+new_score           : ParBinner3lAScore(met_pt,mTL_3l,mllL_3l,500,150) : 200,-1,1 ; IncludeOverflows=False, XTitle="new-score", YTitle="Events", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=10000
+new_score_200_100   : ParBinner3lAScore(met_pt,mTL_3l,mllL_3l,200,100) : 200,-1,1 ; IncludeOverflows=False, XTitle="new-score", YTitle="Events", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=10000
+new_score50         : ParBinner3lAScore(met_pt,mTL_3l,mllL_3l,500,150) : 50,0.5,1 ; IncludeOverflows=False, XTitle="new-score", YTitle="Events", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=10000
+new_score50_200_100 : ParBinner3lAScore(met_pt,mTL_3l,mllL_3l,200,100) : 50,0.5,1 ; IncludeOverflows=False, XTitle="new-score", YTitle="Events", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=10000
+
+newScore_200_100 : newScore200100(met_pt,mTL_3l,mllL_3l) : 28,1,29; IncludeOverflows=False, XTitle="bins", YTitle="Events", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=10000
+newScore_500_150 : ParBinner3lAScore(met_pt,mTL_3l,mllL_3l,500,150) : [-0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.92, 0.94, 0.96, 0.98, 0.99, 1.0]; IncludeOverflows=False, XTitle="bins", YTitle="Events", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=10000
+
+
+SRwz2 : SRwz2(LepSel_conePt[0], mT2L_3l, mT2T_3l, mllL_3l, mTL_3l, met_pt) : 72,0.5,72.5 ; IncludeOverflows=False, XTitle="SRwz2", YTitle="Events", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=10000, Wide=True
+
+SR_wz3 : SRwz3(mllL_3l, mTL_3l, met_pt, htJet30j_Mini) : 64,0.5,64.5 ; IncludeOverflows=False, XTitle="SR", YTitle="Events", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=10000, Wide=True
+SR_wz4 : SRwz4(mllL_3l, mTL_3l, met_pt, htJet30j_Mini) : 108,0.5,108.5 ; IncludeOverflows=False, XTitle="SR", YTitle="Events", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=10000, Wide=True
+SR_wz4p1 : SRwz4p1(mllL_3l, mTL_3l, met_pt, htJet30j_Mini) : 83,0.5,83.5 ; IncludeOverflows=False, XTitle="SR", YTitle="Events", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=10000, Wide=True
+SR_wz4p4 : SRwz4p4(mllL_3l, mTL_3l, met_pt, htJet30j_Mini) : 64,0.5,64.5 ; IncludeOverflows=False, XTitle="SR", YTitle="Events", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=10000, Wide=True
+SR_wz4p5 : SRwz4p5(mllL_3l, mTL_3l, met_pt, htJet30j_Mini) : 56,0.5,56.5 ; IncludeOverflows=False, XTitle="SR", YTitle="Events", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=100000, Wide=True, Legend="TR"
+SR_wz4p6 : SRwz4p6(mllL_3l, mTL_3l, met_pt, htJet30j_Mini) : 62,0.5,62.5 ; IncludeOverflows=False, XTitle="SR", YTitle="Events", LegendCutoff=1e-4, Logy, YMin=0.1, YMax=100000, Wide=True, Legend="TR"
+

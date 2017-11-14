@@ -29,7 +29,7 @@ def collectProcesses(mm, make):
 	if len(mm.options.procs)>0: 
 		procs = " ".join(["-p "+b for b in mm.getProcs()])
 		add = ""
-		if make=="sigs" or make=="mix": add="--showIndivSigs --noStackSig "
+		if make in ["sigs", "mix", "datasig"]: add="--showIndivSigs --noStackSig "
 		if make=="sigs": add="--empytStack -p dummy "+add
 		return add + procs
 	bkgs = " ".join(["-p "+b for b in mm.getBkgs()])

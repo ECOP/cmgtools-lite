@@ -27,15 +27,19 @@ QUEUE="" #"-q all.q"
 
 
 ## to myself
-T="/scratch/cheidegg/2017-01-25_o_fullstatus/2016-11-29_ewkskims80X_M17_MERGED"
-O="/afs/cern.ch/user/c/cheidegg/www/heppy/2017-01-30_ewk80X_testing"
-python susy-interface/dumpmaker.py 3l 3lB $T $O -p dataOld --flags '-X blinding -A alwaystrue firstBin "SR==47"' $QUEUE
-#mv /afs/cern.ch/user/c/cheidegg/www/heppy/2017-01-30_ewk80X_testing/dump/3l/3lB/12p9fb/dump_data.txt /afs/cern.ch/user/c/cheidegg/www/heppy/2017-01-30_ewk80X_testing/dump/3l/3lB/12p9fb/dump_dataOld.txt
+#T="/scratch/cheidegg/2017-01-25_o_fullstatus/2016-11-29_ewkskims80X_M17_MERGED"
+#O="/afs/cern.ch/user/c/cheidegg/www/heppy/2017-01-30_ewk80X_testing"
+#python susy-interface/dumpmaker.py 3l 3lB $T $O -p dataOld --flags '-X blinding -A alwaystrue firstBin "SR==47"' $QUEUE
+##mv /afs/cern.ch/user/c/cheidegg/www/heppy/2017-01-30_ewk80X_testing/dump/3l/3lB/12p9fb/dump_data.txt /afs/cern.ch/user/c/cheidegg/www/heppy/2017-01-30_ewk80X_testing/dump/3l/3lB/12p9fb/dump_dataOld.txt
+#
+#T="/mnt/t3nfs01/data01/shome/cheidegg/o/2017-01-27_ewkskims80X_M17_MERGED/"
+#O="/afs/cern.ch/user/c/cheidegg/www/heppy/2017-01-30_ewk80X_testing"
+#python susy-interface/dumpmaker.py 3l 3lB $T $O -p data --flags '-X blinding -A alwaystrue firstBin "SR==47"' $QUEUE
+#mv /afs/cern.ch/user/c/cheidegg/www/heppy/2017-01-30_ewk80X_testing/dump/3l/3lB/12p9fb/dump_data.txt /afs/cern.ch/user/c/cheidegg/www/heppy/2017-01-30_ewk80X_testing/dump/3l/3lB/12p9fb/dump_dataNew.txt
 
-T="/mnt/t3nfs01/data01/shome/cheidegg/o/2017-01-27_ewkskims80X_M17_MERGED/"
-O="/afs/cern.ch/user/c/cheidegg/www/heppy/2017-01-30_ewk80X_testing"
-python susy-interface/dumpmaker.py 3l 3lB $T $O -p data --flags '-X blinding -A alwaystrue firstBin "SR==47"' $QUEUE
-mv /afs/cern.ch/user/c/cheidegg/www/heppy/2017-01-30_ewk80X_testing/dump/3l/3lB/12p9fb/dump_data.txt /afs/cern.ch/user/c/cheidegg/www/heppy/2017-01-30_ewk80X_testing/dump/3l/3lB/12p9fb/dump_dataNew.txt
 
-
+## checking tau signals
+T="/mnt/t3nfs01/data01/shome/cheidegg/o/2017-02-18_ewktrees80X_M17_signals"
+O="/afs/cern.ch/user/c/cheidegg/www/heppy/2017-03-06_ewk80X_testingTauSig"
+python susy-interface/dumpmaker.py 3l 3lF $T $O -p sig_TChiStauStaux0p5_225_150 --flags '-X blinding -A alwaystrue firstBin "SR==97"' $QUEUE
 

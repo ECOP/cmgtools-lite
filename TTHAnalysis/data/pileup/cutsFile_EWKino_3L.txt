@@ -1,0 +1,8 @@
+alwaystrue: 1
+3l        : nLepSel >= 3
+lowmass   : minMllSFOS_Mini > 12 || minMllSFOS_Mini == -1
+sanity    : passPtMll && is_3l
+SRevent   : LepSel_isTight[0]+LepSel_isTight[1]+LepSel_isTight[2]==3
+veto      : LepSel_isTight[3] == 0
+bJetVeto  : nBJetMedium25_Mini == 0
+met       : met_pt > 50

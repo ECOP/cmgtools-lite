@@ -1,0 +1,34 @@
+## Data
+## -----------------------------------------------------------
+incl_data : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_data_M17_reminiAOD.txt"
+#incl_data : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_data_M17.txt"
+#incl_data : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_data_ICHEP.txt"
+
+## WZ (to keep the order)
+## -----------------------------------------------------------
+prompt_WZ : WZTo3LNu_amcatnlo : 1.08*xsec ; FillColor=ROOT.kOrange, FakeRate="susy-ewkino/3lcorr/fakerate_standard_central.txt\,susy-ewkino/3lcorr/fakerate_load_isprompt.txt", Label="WZ", NormSystematic=0.3
+
+## Backgrounds
+## -----------------------------------------------------------
+incl_fakes_appldata : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_fakes_appldata_M17_reminiAOD.txt"
+#incl_fakes_appldata : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_fakes_appldata_M17.txt"
+#incl_fakes_appldata : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_fakes_appldata_ICHEP.txt"
+incl_flips_appldata : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_flips_appldata_M17_reminiAOD.txt"
+incl_promptsub      : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_promptsub.txt"
+incl_prompts        : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_prompts.txt"
+
+## Systematics
+## -----------------------------------------------------------
+incl_puw            : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_sys_puw.txt"
+incl_ewk_data       : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_sys_ewk_M17_reminiAOD.txt"
+#incl_ewk_data       : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_sys_ewk_M17.txt"
+#incl_ewk_data       : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_sys_ewk_ICHEP.txt"
+incl_ewk_mc         : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_sys_ewk.txt"
+incl_isr            : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_sys_isr.txt"
+incl_jec            : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_sys_jec.txt"
+incl_lepSF          : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_sys_lepSF.txt"
+incl_bTagHF         : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_sys_bTagHF.txt"
+incl_bTagLF         : + ; IncludeMca="susy-ewkino/3lcorr/includes/mca_sys_bTagLF.txt"
+
+## Signal
+## -----------------------------------------------------------

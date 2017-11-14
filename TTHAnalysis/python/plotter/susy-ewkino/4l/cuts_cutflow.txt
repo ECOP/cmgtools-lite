@@ -1,0 +1,5 @@
+alwaystrue: 1
+4tight    : nLepSel >= 4 && passPtMll && is_4l && allTight(4, LepSel_isTight[0], LepSel_isTight[1], LepSel_isTight[2], LepSel_isTight[3]) && BR>=7
+lowmass   : minMllSFOS_Mini > 12 || minMllSFOS_Mini == -1
+bJetVeto  : nBJetMedium25 == 0
+met       : met_pt>=100
